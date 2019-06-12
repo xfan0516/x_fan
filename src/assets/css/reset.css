@@ -58,6 +58,8 @@ body ,html{
 	font-family:"Microsoft YaHei", "宋体","Arial";
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   	-webkit-touch-callout: none;
+  	    font-size: .12rem
+
 }
 .arial {
   font-family: "Arial";
@@ -86,13 +88,12 @@ p {
     /* font-size: 1rem; */
 	/*text-align: justify;*/
 }
-/* .h0 {font-size: 1.6rem;}
-.h1,h1 {font-size: 1.5rem;}
-.h2,h2 {font-size: 1.4rem;}
-.h3,h3 {font-size: 1.3rem;}
-.h4,h4 {font-size: 1.2rem;}
-.h5,h5 {font-size: 1.1rem;}
-.h6,h6 {font-size: 1rem;} */
+.h1,h1 {font-size: .16rem;}
+.h2,h2 {font-size: .14rem;}
+.h3,h3 {font-size: .13rem;}
+.h4,h4 {font-size: .12rem;}
+.h5,h5 {font-size: .11rem;}
+.h6,h6 {font-size: .1rem;} 
 
 
 /*文字颜色*/

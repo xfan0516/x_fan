@@ -35,16 +35,16 @@ export default {
         top 0
         left 0
         width 100%
-        height 1rem
+        height .4rem
         border-bottom 1px solid #eee
         background #fff
         text-align center
 
         span{
 
-            width 1rem
-            height 1rem
-            line-height 1rem
+            width .4rem
+            height .4rem
+            line-height .4rem
         }
 
     }

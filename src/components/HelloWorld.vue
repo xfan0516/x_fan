@@ -27,7 +27,37 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul> -->
 <h4>按钮</h4>
-      <span class="btn">完成</span>
+<ul>
+  <li class="x_flex">
+    <x-btn text="Default">Default</x-btn>
+    <x-btn text="primary" type="primary">primary</x-btn>
+    <x-btn text="uccess" type="success">success</x-btn>
+    
+  </li>
+  <li class="x_flex">
+    <x-btn text="Default" size="small">Default</x-btn>
+    <x-btn text="primary" type="primary" size="small">primary</x-btn>
+    <x-btn text="uccess" type="success" size="small">success</x-btn>
+    
+  </li>
+  <li class="x_flex">
+    <x-btn text="Default" size="big">Default</x-btn>
+    <x-btn text="primary" type="primary" size="big">primary</x-btn>
+    <x-btn text="uccess" type="success" size="big">success</x-btn>
+    
+  </li>
+  <li >
+    <x-btn text="Default" size="lg">Default</x-btn>
+    <x-btn text="primary" type="primary" size="lg">primary</x-btn>
+    <x-btn text="uccess" type="success" size="lg">success</x-btn>
+  </li>
+</ul>
+<h4>列表</h4>
+<ul>
+  <li></li>
+</ul>
+    <!--   <span class="x_btn">完成</span>
+      <span class="x_btn-primary">完成</span> -->
  
   </div>
 </template>
@@ -37,19 +67,42 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  components:{
+    XBtn: reslove => require(['./common/XBtn.vue'],reslove)
+  },
+  metohds:{
+
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus">
- .btn
-    display inline-block
-    height .8rem
-    line-height .8rem
-    padding 0 .3rem
-    background #09f
-    border-radius .15rem
-    color #fff
+.x_flex{
+        display flex
+        flex-direction row
+        flex-wrap wrap
+        align-items center
+        justify-content space-between
+    }
+.hello{
 
+  ul li, h4 {
+    padding 2px 10px
+  }
+}
+/* [class^="x_btn"]
+    display inline-block
+    height .24rem
+    line-height .24rem
+    padding 0 .1rem
+    background #ccc
+    border-radius .03rem
+    color #333
+  .x_btn-primary{
+    background #09f
+    color #fff
+  }
+*/
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <x-header title="首页" back />
+    <span></span>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -8,11 +9,20 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+// import XHeader from '@/components/common/Header.vue'
 
 export default {
   name: 'home',
+
   components: {
-    HelloWorld
+    HelloWorld,
+    XHeader: reslove =>require(['@/components/common/Header.vue'],reslove),
+    // "x-header" : () =>require('./../components/common/Header.vue')
   }
 }
 </script>
+<style lang="stylus" scoped>
+ 
+    
+</style>
+

@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
+    <!-- <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
@@ -26,7 +25,10 @@
       <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    </ul> -->
+<h4>按钮</h4>
+      <span class="btn">完成</span>
+ 
   </div>
 </template>
 
@@ -40,18 +42,14 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="stylus">
-h3
-  margin 40px 0 0
+<style lang="stylus">
+ .btn
+    display inline-block
+    height .8rem
+    line-height .8rem
+    padding 0 .3rem
+    background #09f
+    border-radius .15rem
+    color #fff
 
-ul
-  list-style-type none
-  padding 0
-
-li
-  display inline-block
-  margin 0 10px
-
-a
-  color #42b983
 </style>

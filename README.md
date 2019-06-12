@@ -28,7 +28,7 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### XBtn
+### 按钮组件 XBtn
 ```
     <x-btn type="success" size="small">success</x-btn>
     type：按钮类型 Default, primary, success 默认：Default

@@ -49,13 +49,17 @@
   <li >
     <x-btn text="Default" size="lg">Default</x-btn>
     <x-btn text="primary" type="primary" size="lg">primary</x-btn>
-    <x-btn text="uccess" type="success" size="lg">success</x-btn>
+    <x-btn text="uccess" type="success" size="lg"  @click="toast">success</x-btn>
   </li>
 </ul>
 <h4>列表</h4>
 <ul>
-  <li></li>
+    
+  <li>
+    <XBtn text="primary" type="primary" @click="toast" >提示框</XBtn>
+  </li>
 </ul>
+<!-- <Toast msg="这是提示框" /> -->
     <!--   <span class="x_btn">完成</span>
       <span class="x_btn-primary">完成</span> -->
  
@@ -68,11 +72,21 @@ export default {
   props: {
     msg: String
   },
-  components:{
-    XBtn: reslove => require(['./common/XBtn.vue'],reslove)
+  components: {
+    XBtn: reslove => require(['./common/XBtn.vue'],reslove),
   },
-  metohds:{
-
+  methods: {
+    toast () {
+      let p = document.createElement('p');
+      p.className = 'toast';
+      let span = document.createElement('span');
+      p.append(span)
+      span.innerHTML = '这是提示框'
+      document.body.append(p)
+      setTimeout(() => {
+        p.remove()
+      }, 1000);
+    }
   }
 }
 </script>
@@ -92,6 +106,18 @@ export default {
     padding 2px 10px
   }
 }
+.toast 
+  position: fixed;
+  bottom: 20%;
+  left: 0;
+  width: 100%;
+  text-align center
+  span 
+    display inline-block
+    padding .1rem .15rem
+    border-radius .05rem
+    background rgba(0,0,0,.8)
+    color #fff
 /* [class^="x_btn"]
     display inline-block
     height .24rem

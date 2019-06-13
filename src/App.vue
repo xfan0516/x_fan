@@ -5,6 +5,8 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+    <Footer />
+
   </div>
 </template>
 <style lang="stylus">

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <x-header title="首页" back />
+    <Header title="首页" back />
     <span></span>
    <x-icon type="ios-home" size="small"/>small
     
@@ -18,8 +18,6 @@ export default {
 
   components: {
     HelloWorld,
-    XHeader: reslove =>require(['@/components/common/Header.vue'],reslove),
-    // "x-header" : () =>require('./../components/common/Header.vue')
   },
   created(){
     console.log(this)

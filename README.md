@@ -45,3 +45,10 @@ type：图标名称 *必填项
 size：图标大小 small, Default, big,自定义大小 默认：Default
 color：图标颜色
 ```
+### header组件 Header
+```
+<x-header title="首页" back />
+title：标题
+back：是否有返回按钮  默认：false
+<!-- headerR： 是否有返回按钮  默认：false -->
+```

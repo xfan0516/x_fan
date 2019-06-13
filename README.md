@@ -38,3 +38,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 Message.info(msg) //msg:字符串
 ```
+### 图标组件 XIcon
+```
+<x-icon type="ios-home" size=".24rem" color="#f90"/>
+type：图标名称 *必填项
+size：图标大小 small, Default, big,自定义大小 默认：Default
+color：图标颜色
+```

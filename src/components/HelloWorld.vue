@@ -52,7 +52,7 @@
     <x-btn text="uccess" type="success" size="lg"  @click="toast">success</x-btn>
   </li>
 </ul>
-<h4>列表</h4>
+<h4>提示信息</h4>
 <ul>
     
   <li>
@@ -60,6 +60,13 @@
     <XBtn text="primary" type="primary" @click="message" >全局提示框</XBtn>
   </li>
 </ul>
+<h4>图标</h4>
+ <li>
+   <x-icon type="ios-home" size="small"/>small
+   <x-icon type="ios-home" />default
+   <x-icon type="ios-home" size="big"/>big
+   <x-icon type="ios-home" size=".24rem" color="#f90"/> 自定义大小
+  </li>
 <!-- <Toast msg="这是提示框" /> -->
     <!--   <span class="x_btn">完成</span>
       <span class="x_btn-primary">完成</span> -->
@@ -76,6 +83,7 @@ export default {
   },
   components: {
     XBtn: reslove => require(['./common/XBtn.vue'],reslove),
+    XIcon: reslove => require(['./common/XIcon.vue'],reslove),
   },
   methods: {
     toast () {
@@ -106,9 +114,14 @@ export default {
         justify-content space-between
     }
 .hello{
-
-  ul li, h4 {
+  padding-top .4rem
+  ul, li{
+    list-style none
     padding 2px 10px
+  }
+  h4 {
+    background: #eee;
+    padding: .05rem 10px;
   }
 }
 .toast 
@@ -123,17 +136,4 @@ export default {
     border-radius .05rem
     background rgba(0,0,0,.8)
     color #fff
-/* [class^="x_btn"]
-    display inline-block
-    height .24rem
-    line-height .24rem
-    padding 0 .1rem
-    background #ccc
-    border-radius .03rem
-    color #333
-  .x_btn-primary{
-    background #09f
-    color #fff
-  }
-*/
 </style>

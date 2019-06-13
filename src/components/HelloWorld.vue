@@ -57,6 +57,7 @@
     
   <li>
     <XBtn text="primary" type="primary" @click="toast" >提示框</XBtn>
+    <XBtn text="primary" type="primary" @click="message" >全局提示框</XBtn>
   </li>
 </ul>
 <!-- <Toast msg="这是提示框" /> -->
@@ -67,6 +68,7 @@
 </template>
 
 <script>
+import message from './common/Message'
 export default {
   name: 'HelloWorld',
   props: {
@@ -86,6 +88,9 @@ export default {
       setTimeout(() => {
         p.remove()
       }, 1000);
+    },
+    message(){
+      message.info('这是全局提示框')
     }
   }
 }

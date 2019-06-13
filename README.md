@@ -34,3 +34,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
     type：按钮类型 Default, primary, success 默认：Default
     size：按钮大小 small, Default, big, lg 默认：Default
 ```
+### 提示信息 Message
+```
+Message.info(msg) //msg:字符串
+```

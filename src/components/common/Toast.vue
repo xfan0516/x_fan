@@ -1,5 +1,5 @@
 <template>
-  <p class="toast">
+  <p class="toast" ref="toast">
     <span>{{msg}}</span>
   </p>
 </template>
@@ -13,7 +13,9 @@ export default {
     return {};
   },
   created(){
-    console.log(2)
+      setTimeout(() => {
+        this.$refs.toast.style.opacity = 0;
+      }, 2000);
   }
 };
 </script>

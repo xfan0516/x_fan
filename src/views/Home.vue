@@ -1,9 +1,6 @@
 <template>
   <div class="home">
-    <Header title="首页" back />
-    <span></span>
-   <x-icon type="ios-home" size="small"/>small
-    
+    <Header title="首页" back />    
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>

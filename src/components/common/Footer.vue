@@ -20,7 +20,6 @@
   </footer>
 </template>
 <script>
-import { homedir } from 'os';
 export default {
   name: "Footer",
  
@@ -63,13 +62,7 @@ export default {
   }
 }
 
-.flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
+
 
 .flex_space-around {
   display: flex;

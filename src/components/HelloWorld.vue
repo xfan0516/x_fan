@@ -25,115 +25,112 @@
       <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul> -->
-<h4>按钮</h4>
-<ul>
-  <li class="x_flex">
-    <x-btn text="Default">Default</x-btn>
-    <x-btn text="primary" type="primary">primary</x-btn>
-    <x-btn text="uccess" type="success">success</x-btn>
-    
-  </li>
-  <li class="x_flex">
-    <x-btn text="Default" size="small">Default</x-btn>
-    <x-btn text="primary" type="primary" size="small">primary</x-btn>
-    <x-btn text="uccess" type="success" size="small">success</x-btn>
-    
-  </li>
-  <li class="x_flex">
-    <x-btn text="Default" size="big">Default</x-btn>
-    <x-btn text="primary" type="primary" size="big">primary</x-btn>
-    <x-btn text="uccess" type="success" size="big">success</x-btn>
-    
-  </li>
-  <li >
-    <x-btn text="Default" size="lg">Default</x-btn>
-    <x-btn text="primary" type="primary" size="lg">primary</x-btn>
-    <x-btn text="uccess" type="success" size="lg"  @click="toast">success</x-btn>
-  </li>
-</ul>
-<h4>提示信息</h4>
-<ul>
-    
-  <li>
-    <XBtn text="primary" type="primary" @click="toast" >提示框</XBtn>
-    <XBtn text="primary" type="primary" @click="message" >全局提示框</XBtn>
-  </li>
-</ul>
-<h4>图标</h4>
- <li>
-   <x-icon type="ios-home" size="small"/>small
-   <x-icon type="ios-home" />default
-   <x-icon type="ios-home" size="big"/>big
-   <x-icon type="ios-home" size=".24rem" color="#f90"/> 自定义大小
-  </li>
-<!-- <Toast msg="这是提示框" /> -->
-    <!--   <span class="x_btn">完成</span>
-      <span class="x_btn-primary">完成</span> -->
- 
+    </ul>-->
+    <h4>按钮</h4>
+    <ul>
+      <li class="x_flex">
+        <x-btn text="Default">Default</x-btn>
+        <x-btn text="primary" type="primary">primary</x-btn>
+        <x-btn text="uccess" type="success">success</x-btn>
+      </li>
+      <li class="x_flex">
+        <x-btn text="Default" size="small">Default</x-btn>
+        <x-btn text="primary" type="primary" size="small">primary</x-btn>
+        <x-btn text="uccess" type="success" size="small">success</x-btn>
+      </li>
+      <li class="x_flex">
+        <x-btn text="Default" size="big">Default</x-btn>
+        <x-btn text="primary" type="primary" size="big">primary</x-btn>
+        <x-btn text="uccess" type="success" size="big">success</x-btn>
+      </li>
+      <li>
+        <x-btn text="Default" size="lg">Default</x-btn>
+        <x-btn text="primary" type="primary" size="lg">primary</x-btn>
+        <x-btn text="uccess" type="success" size="lg" @click="toast">success</x-btn>
+      </li>
+    </ul>
+    <h4>提示信息</h4>
+    <ul>
+      <li>
+        <XBtn text="primary" type="primary" @click="toast">提示框</XBtn>
+        <XBtn text="primary" type="primary" @click="message">全局提示框</XBtn>
+      </li>
+    </ul>
+    <h4>图标</h4>
+    <li>
+      <x-icon type="ios-home" size="small"/>small
+      <x-icon type="ios-home"/>default
+      <x-icon type="ios-home" size="big"/>big
+      <x-icon type="ios-home" size=".24rem" color="#f90"/>自定义大小
+    </li>
   </div>
 </template>
 
 <script>
-import message from './common/Message'
+import message from "./common/Message";
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
     msg: String
   },
   components: {
-    XBtn: reslove => require(['./common/XBtn.vue'],reslove),
-    XIcon: reslove => require(['./common/XIcon.vue'],reslove),
+    XBtn: reslove => require(["./common/XBtn.vue"], reslove),
+    XIcon: reslove => require(["./common/XIcon.vue"], reslove)
   },
   methods: {
-    toast () {
-      let p = document.createElement('p');
-      p.className = 'toast';
-      let span = document.createElement('span');
-      p.append(span)
-      span.innerHTML = '这是提示框'
-      document.body.append(p)
+    toast() {
+      let p = document.createElement("p");
+      p.className = "toast";
+      let span = document.createElement("span");
+      p.append(span);
+      span.innerHTML = "这是提示框";
+      document.body.append(p);
       setTimeout(() => {
-        p.remove()
+        p.remove();
       }, 1000);
     },
-    message(){
-      message.info('这是全局提示框')
+    message() {
+      message.info("这是全局提示框");
     }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus">
-.x_flex{
-        display flex
-        flex-direction row
-        flex-wrap wrap
-        align-items center
-        justify-content space-between
-    }
-.hello{
-  padding-top .4rem
-  ul, li{
-    list-style none
-    padding 2px 10px
+.x_flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hello {
+  ul, li {
+    list-style: none;
+    padding: 2px 10px;
   }
+
   h4 {
     background: #eee;
-    padding: .05rem 10px;
+    padding: 0.05rem 10px;
   }
 }
-.toast 
+
+.toast {
   position: fixed;
   bottom: 20%;
   left: 0;
   width: 100%;
-  text-align center
-  span 
-    display inline-block
-    padding .1rem .15rem
-    border-radius .05rem
-    background rgba(0,0,0,.8)
-    color #fff
+  text-align: center;
+
+  span {
+    display: inline-block;
+    padding: 0.1rem 0.15rem;
+    border-radius: 0.05rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+  }
+}
 </style>

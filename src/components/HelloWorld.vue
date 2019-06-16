@@ -70,8 +70,17 @@
 <!-- <Toast msg="这是提示框" /> -->
     <!--   <span class="x_btn">完成</span>
       <span class="x_btn-primary">完成</span> -->
- 
+    <Media class="media" v-for="item in list" :key="item.id"> 
+      <div class="media-left" slot="media-left">
+        <img :src="item.imgCrs" alt="">
+      </div>
+      <div class="media-body" slot="media-body">
+        <h3>{{item.title}}</h3>
+        <p>{{item.intro}}</p>
+      </div>
+    </Media>
   </div>
+  
 </template>
 
 <script>
@@ -80,6 +89,24 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data(){
+    return{
+      list:[
+        {
+          title: 'A太平湖休闲垂钓',
+          intro:'三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获',
+          imgCrs:'http://7xsav2.media1.z0.glb.clouddn.com/%E5%8A%9B%E5%8F%A4%E5%8A%9B.png',
+          id: '1'
+        },
+        {
+          title: 'A太平湖休闲垂钓',
+          intro:'三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获',
+          imgCrs:'http://7xsav2.media1.z0.glb.clouddn.com/%E5%8A%9B%E5%8F%A4%E5%8A%9B.png',
+          id: '2'
+        },
+      ],
+    }
   },
   components: {
     XBtn: reslove => require(['./common/XBtn.vue'],reslove),
@@ -136,4 +163,5 @@ export default {
     border-radius .05rem
     background rgba(0,0,0,.8)
     color #fff
+  
 </style>

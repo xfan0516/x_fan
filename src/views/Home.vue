@@ -1,8 +1,10 @@
 <template>
   <div class="home">
     <Header title="首页" back />
+    
+    
     <span></span>
-   <x-icon type="ios-home" size="small"/>small
+    <!-- <x-icon type="ios-home" size="small"/>small -->
     
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -15,12 +17,22 @@ import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'home',
-
+  data(){
+    return{
+      
+      msg: '这是Media组件',
+    }
+  },
   components: {
     HelloWorld,
   },
-  created(){
+  created(e){
     console.log(this)
+  },
+  methods:{
+    to(e){
+      console.log(e)
+    }
   }
 }
 </script>

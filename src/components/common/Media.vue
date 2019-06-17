@@ -40,10 +40,11 @@ export default {
       border-radius .05rem
       img 
         position absolute
-        top 0
+        top 50%
         left 0
         width 100%
         height auto
+        transform translate(0, -50%)
     .media-body
       padding-left 22%
       line-height 1.5
@@ -53,6 +54,7 @@ export default {
         font-weight 600
       p
         overflow hidden
+        color #666
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-line-clamp: 2;

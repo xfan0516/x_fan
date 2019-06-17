@@ -1,7 +1,7 @@
 <template>
   <footer class="footer flex_space-around">
     <!-- <slot></slot> -->
-    <div :class="(active === 'home' || active == '') && 'active'" @click="$router.push('/home')">
+    <div :class="(active === 'home') && 'active'" @click="$router.push('/home')">
       <x-icon type="ios-home" size="big"/>
       <p>首页</p>
     </div>
@@ -38,7 +38,8 @@ export default {
 
   },
   created() {
-      console.log(this.$route)
+    this.active = this.$route.name
+      console.log(this.$route.name)
   }
 };
 </script>

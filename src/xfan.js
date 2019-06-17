@@ -1,11 +1,13 @@
 import Header from "@/components/common/Header.vue";
 import XIcon from "@/components/common/XIcon.vue";
 import Footer from "@/components/common/Footer.vue";
+import Media from "@/components/common/Media.vue";
 
 const components = {
     Header,
     XIcon,
-    Footer
+    Footer,
+    Media
 }
 const install = function (Vue) {
     if (install.installed) return;

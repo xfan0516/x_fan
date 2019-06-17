@@ -25,45 +25,70 @@
       <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>-->
-    <h4>按钮</h4>
-    <ul>
-      <li class="x_flex">
-        <x-btn text="Default">Default</x-btn>
-        <x-btn text="primary" type="primary">primary</x-btn>
-        <x-btn text="uccess" type="success">success</x-btn>
-      </li>
-      <li class="x_flex">
-        <x-btn text="Default" size="small">Default</x-btn>
-        <x-btn text="primary" type="primary" size="small">primary</x-btn>
-        <x-btn text="uccess" type="success" size="small">success</x-btn>
-      </li>
-      <li class="x_flex">
-        <x-btn text="Default" size="big">Default</x-btn>
-        <x-btn text="primary" type="primary" size="big">primary</x-btn>
-        <x-btn text="uccess" type="success" size="big">success</x-btn>
-      </li>
-      <li>
-        <x-btn text="Default" size="lg">Default</x-btn>
-        <x-btn text="primary" type="primary" size="lg">primary</x-btn>
-        <x-btn text="uccess" type="success" size="lg" @click="toast">success</x-btn>
-      </li>
-    </ul>
-    <h4>提示信息</h4>
-    <ul>
-      <li>
-        <XBtn text="primary" type="primary" @click="toast">提示框</XBtn>
-        <XBtn text="primary" type="primary" @click="message">全局提示框</XBtn>
-      </li>
-    </ul>
-    <h4>图标</h4>
-    <li>
-      <x-icon type="ios-home" size="small"/>small
-      <x-icon type="ios-home"/>default
-      <x-icon type="ios-home" size="big"/>big
-      <x-icon type="ios-home" size=".24rem" color="#f90"/>自定义大小
-    </li>
+    </ul> -->
+<h4>按钮</h4>
+<ul>
+  <li class="x_flex">
+    <x-btn text="Default">Default</x-btn>
+    <x-btn text="primary" type="primary">primary</x-btn>
+    <x-btn text="uccess" type="success">success</x-btn>
+    
+  </li>
+  <li class="x_flex">
+    <x-btn text="Default" size="small">Default</x-btn>
+    <x-btn text="primary" type="primary" size="small">primary</x-btn>
+    <x-btn text="uccess" type="success" size="small">success</x-btn>
+    
+  </li>
+  <li class="x_flex">
+    <x-btn text="Default" size="big">Default</x-btn>
+    <x-btn text="primary" type="primary" size="big">primary</x-btn>
+    <x-btn text="uccess" type="success" size="big">success</x-btn>
+    
+  </li>
+  <li >
+    <x-btn text="Default" size="lg">Default</x-btn>
+    <x-btn text="primary" type="primary" size="lg">primary</x-btn>
+    <x-btn text="uccess" type="success" size="lg"  @click="toast">success</x-btn>
+  </li>
+</ul>
+<h4>提示信息</h4>
+<ul>
+    
+  <li>
+    <XBtn text="primary" type="primary" @click="toast" >提示框</XBtn>
+    <XBtn text="primary" type="primary" @click="message" >全局提示框</XBtn>
+  </li>
+</ul>
+<h4>图标</h4>
+ <li>
+   <x-icon type="ios-home" size="small"/>small
+   <x-icon type="ios-home" />default
+   <x-icon type="ios-home" size="big"/>big
+   <x-icon type="ios-home" size=".24rem" color="#f90"/> 自定义大小
+  </li>
+<!-- <Toast msg="这是提示框" /> -->
+    <!--   <span class="x_btn">完成</span>
+      <span class="x_btn-primary">完成</span> -->
+    <Media class="media" v-for="item in list" :key="item.id"> 
+      <div class="media-left" slot="media-left">
+        <img :src="item.imgCrs" alt="">
+      </div>
+      <div class="media-body" slot="media-body">
+        <h3>{{item.title}}</h3>
+        <p>{{item.intro}}</p>
+      </div>
+    </Media>
+    <Thumbnail v-for="item in list1" :key="item.id">
+      <div class="pic" slot="thumbnail-pic">
+        <img :src="item.imgCrs" alt>
+      </div>
+      <div class="info" slot="thumbnail-info">
+        <h3>{{item.intro}}</h3>
+      </div>
+    </Thumbnail>
   </div>
+  
 </template>
 
 <script>
@@ -72,6 +97,38 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String
+  },
+  data(){
+    return{
+      list:[
+        {
+          title: 'A太平湖休闲垂钓',
+          intro:'三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获',
+          imgCrs:'http://7xsav2.media1.z0.glb.clouddn.com/%E5%8A%9B%E5%8F%A4%E5%8A%9B.png',
+          id: '1'
+        },
+        {
+          title: 'A太平湖休闲垂钓',
+          intro:'三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获',
+          imgCrs:'http://img.ycb51.com/jf_plus/1555306843107_2538.png',
+          id: '2'
+        },
+      ],
+      list1:[
+        {
+          title: 'A太平湖休闲垂钓',
+          intro:'三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获',
+          imgCrs:'http://7xsav2.media1.z0.glb.clouddn.com/%E5%8A%9B%E5%8F%A4%E5%8A%9B.png',
+          id: '11'
+        },
+        {
+          title: 'A太平湖休闲垂钓',
+          intro:'三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获',
+          imgCrs:'http://img.ycb51.com/jf_plus/1555306843107_2538.png',
+          id: '12'
+        },
+      ],
+    }
   },
   components: {
     XBtn: reslove => require(["./common/XBtn.vue"], reslove),
@@ -118,19 +175,5 @@ export default {
   }
 }
 
-.toast {
-  position: fixed;
-  bottom: 20%;
-  left: 0;
-  width: 100%;
-  text-align: center;
 
-  span {
-    display: inline-block;
-    padding: 0.1rem 0.15rem;
-    border-radius: 0.05rem;
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-  }
-}
 </style>

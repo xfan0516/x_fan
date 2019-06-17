@@ -92,11 +92,11 @@
     </div>
     <h4>单元格</h4>
     <div>
-      <div class="x_cell">
-        <span>标签名</span>
-        <x-icon type="ios-arrow-forward" size="big"/>
-      </div>
-
+      <x-cell>
+        <div slot="cell-left">标签名</div>
+        <div slot="cell-right"><x-icon type="ios-arrow-forward" size="big"/></div>
+      </x-cell>
+     
     </div>
   </div>
 </template>

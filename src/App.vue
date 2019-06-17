@@ -19,7 +19,7 @@
   max-width 640px
   margin 0 auto
   padding-top .4rem
-  padding-bottom .5rem
+  padding-bottom .6rem
   overflow-y auto
 
 

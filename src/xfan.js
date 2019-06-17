@@ -4,6 +4,7 @@ import Footer from "@/components/common/Footer.vue";
 import Media from "@/components/common/Media.vue";
 import Thumbnail from "@/components/common/Thumbnail.vue";
 import XCol from "@/components/common/XCol.vue";
+import XCell from "@/components/common/XCell.vue";
 
 const components = {
     Header,
@@ -11,7 +12,8 @@ const components = {
     Footer,
     Media,
     Thumbnail,
-    XCol
+    XCol,
+    XCell
 }
 const install = function (Vue) {
     if (install.installed) return;

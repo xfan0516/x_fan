@@ -29,7 +29,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus">
 .thumbnail
-  width 50%
   box-sizing border-box
   padding .1rem
   background #ffffff

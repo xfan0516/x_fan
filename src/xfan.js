@@ -3,13 +3,15 @@ import XIcon from "@/components/common/XIcon.vue";
 import Footer from "@/components/common/Footer.vue";
 import Media from "@/components/common/Media.vue";
 import Thumbnail from "@/components/common/Thumbnail.vue";
+import XCol from "@/components/common/XCol.vue";
 
 const components = {
     Header,
     XIcon,
     Footer,
     Media,
-    Thumbnail
+    Thumbnail,
+    XCol
 }
 const install = function (Vue) {
     if (install.installed) return;

@@ -65,7 +65,7 @@ back：是否有返回按钮  默认：false
 </Media>
 接收两个slot： media-left和media-body
 media-left：存放图片的容器
-media-body：标题与说明
+media-body：存放标题与说明，内容可以自定义
 ```
 ### Thumbnail视图组件 Thumbnail
 ```
@@ -79,7 +79,7 @@ media-body：标题与说明
 </Thumbnail>
 接收两个slot： thumbnail-pic和mthumbnail-info
 thumbnail-pic：存放图片的容器
-thumbnail-info：标题与说明
+thumbnail-info：存放标题或说明，内容可以自定义
 ```
 ### XCol栅格化组件 XCol
 ```
@@ -95,6 +95,6 @@ span：1~24之间的数字或字符串
     <div slot="cell-right"><x-icon type="ios-arrow-forward" size="big"/></div>
 </x-cell>
 接收两个slot： cell-left和cell-right
-cell-left：包含单元格左侧的内容，内容可以
-cell-right：包含单元格右侧的内容
+cell-left：包含单元格左侧的内容，内容可以自定义
+cell-right：包含单元格右侧的内容，内容可以自定义
 ```

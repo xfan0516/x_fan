@@ -5,8 +5,7 @@
         <h1>{{title}}</h1>
       </div>
       <div class="modal-main">
-        <slot v-if="!msg" name="modal-main"></slot>
-        {{msg}}
+        <slot name="modal-main"></slot>
       </div>
       <div class="modal-footer x_flex-between">
         <span @click="cancel">{{cancelText}}</span>

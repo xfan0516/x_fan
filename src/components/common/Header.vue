@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <span class="header-l"><x-icon v-if="back" type="ios-arrow-back" size="big"/></span>
+        <span class="header-l"><x-icon @click="$router.go(-1)" v-if="back" type="ios-arrow-back" size="big"/></span>
         <h1>{{title}}</h1>
         <span class="header-r" v-if="headerR">完成</span>
     </header>
@@ -40,6 +40,7 @@ export default {
         left 0
         width 100%
         height .4rem
+        z-index 999999
         border-bottom 1px solid #eee
         background #fff
         text-align center

@@ -11,8 +11,14 @@
         <span slot="cell-right"><x-icon type="ios-arrow-down" size="big"/></span>
       </x-cell>
       <x-btn type="primary" @click="showConfirm">modal Confirm</x-btn>
+      <x-btn type="primary" @click="showPrompt">modal Prompt</x-btn>
     </div>
-    <Confirm :show="isShow" @onCancel="onCancel" @onConfirm="onConfirm"/>
+    <Confirm title="提示" :msg="msg" :show="isShow" @onCancel="onCancel" @onConfirm="onConfirm" />
+    <Prompt title="提示" :show="isShowPrompt" @onCancel="onCancel" @onConfirm="onConfirm">
+      <div slot="modal-main">
+        <input class="input-text" v-model="msg" type="text" placeholder="输入您想说的话" /> 
+      </div>
+    </Prompt>
   </div>
 </template>
 <script>
@@ -20,8 +26,9 @@ export default {
   name: "xfan",
   data() {
     return {
-      msg: "Welcome to Your xfan ",
-      isShow: false
+      msg: "",
+      isShow: false,
+      isShowPrompt:false
     };
   },
   methods: {
@@ -30,10 +37,15 @@ export default {
     },
     onCancel() {
       this.isShow = false;
+      this.isShowPrompt = false
+    },
+    showPrompt(){
+      this.isShowPrompt = true
     },
     onConfirm() {
       this.$Message.info("保存成功");
       this.isShow = false;
+      this.isShowPrompt = false
     }
   }
 };
@@ -42,5 +54,11 @@ export default {
 <style scoped>
 .xfan button {
   margin: 0.1rem;
+}
+.input-text {
+  border: 1px solid #ccc;
+  line-height: .3rem;
+  padding: 0 .08rem;
+  width: 80%;
 }
 </style>

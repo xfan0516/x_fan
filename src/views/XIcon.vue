@@ -1,5 +1,7 @@
 <template>
   <div class="icons">
+      <Header title="双击文字复制"/>
+
         <div class="icons-item"><i class="x-icon x-icon-ios-add"></i>
             <p @click="copy">ios-add</p>
         </div>
@@ -46,7 +48,7 @@
             <p @click="copy">ios-american-football</p>
         </div>
         <div class="icons-item"><i
-                class="x-icon x-icon-ios-american-football-outline" style="font-size: 32px;"></i>
+                class="x-icon x-icon-ios-american-football-outline" ></i>
             <p @click="copy">ios-american-football-outline</p>
         </div>
         <div class="icons-item"><i class="x-icon x-icon-md-american-football"></i>
@@ -149,7 +151,7 @@
             <p @click="copy">md-arrow-dropright</p>
         </div>
         <div class="icons-item"><i
-                class="x-icon x-icon-ios-arrow-dropright-circle" style="font-size: 32px;"></i>
+                class="x-icon x-icon-ios-arrow-dropright-circle" ></i>
             <p @click="copy">ios-arrow-dropright-circle</p>
         </div>
         <div class="icons-item"><i class="x-icon x-icon-md-arrow-dropright-circle"></i>
@@ -564,14 +566,14 @@
             <p @click="copy">ios-checkmark-circle</p>
         </div>
         <div class="icons-item"><i
-                class="x-icon x-icon-ios-checkmark-circle-outline" style="font-size: 32px;"></i>
+                class="x-icon x-icon-ios-checkmark-circle-outline" ></i>
             <p @click="copy">ios-checkmark-circle-outline</p>
         </div>
         <div class="icons-item"><i class="x-icon x-icon-md-checkmark-circle"></i>
             <p @click="copy">md-checkmark-circle</p>
         </div>
         <div class="icons-item"><i
-                class="x-icon x-icon-md-checkmark-circle-outline" style="font-size: 32px;"></i>
+                class="x-icon x-icon-md-checkmark-circle-outline" ></i>
             <p @click="copy">md-checkmark-circle-outline</p>
         </div>
         <div class="icons-item"><i class="x-icon x-icon-logo-chrome"></i>
@@ -614,7 +616,7 @@
             <p @click="copy">ios-closed-captioning</p>
         </div>
         <div class="icons-item"><i
-                class="x-icon x-icon-ios-closed-captioning-outline" style="font-size: 32px;"></i>
+                class="x-icon x-icon-ios-closed-captioning-outline" ></i>
             <p @click="copy">ios-closed-captioning-outline</p>
         </div>
         <div class="icons-item"><i class="x-icon x-icon-md-closed-captioning"></i>
@@ -651,7 +653,7 @@
             <p @click="copy">ios-cloud-download</p>
         </div>
         <div class="icons-item"><i
-                class="x-icon x-icon-ios-cloud-download-outline" style="font-size: 32px;"></i>
+                class="x-icon x-icon-ios-cloud-download-outline" ></i>
             <p @click="copy">ios-cloud-download-outline</p>
         </div>
         <div class="icons-item"><i class="x-icon x-icon-md-cloud-download"></i>
@@ -1087,7 +1089,7 @@
             <p @click="copy">ios-game-controller-a</p>
         </div>
         <div class="icons-item"><i
-                class="x-icon x-icon-ios-game-controller-a-outline" style="font-size: 32px;"></i>
+                class="x-icon x-icon-ios-game-controller-a-outline" ></i>
             <p @click="copy">ios-game-controller-a-outline</p>
         </div>
         <div class="icons-item"><i class="x-icon x-icon-md-game-controller-a"></i>
@@ -1097,7 +1099,7 @@
             <p @click="copy">ios-game-controller-b</p>
         </div>
         <div class="icons-item"><i
-                class="x-icon x-icon-ios-game-controller-b-outline" style="font-size: 32px;"></i>
+                class="x-icon x-icon-ios-game-controller-b-outline" ></i>
             <p @click="copy">ios-game-controller-b-outline</p>
         </div>
         <div class="icons-item"><i class="x-icon x-icon-md-game-controller-b"></i>
@@ -1308,7 +1310,7 @@
             <p @click="copy">ios-information-circle</p>
         </div>
         <div class="icons-item"><i
-                class="x-icon x-icon-ios-information-circle-outline" style="font-size: 32px;"></i>
+                class="x-icon x-icon-ios-information-circle-outline" ></i>
             <p @click="copy">ios-information-circle-outline</p>
         </div>
         <div class="icons-item"><i class="x-icon x-icon-md-information-circle"></i>
@@ -1639,7 +1641,7 @@
             <p @click="copy">ios-notifications-off</p>
         </div>
         <div class="icons-item"><i
-                class="x-icon x-icon-ios-notifications-off-outline" style="font-size: 32px;"></i>
+                class="x-icon x-icon-ios-notifications-off-outline" ></i>
             <p @click="copy">ios-notifications-off-outline</p>
         </div>
         <div class="icons-item"><i class="x-icon x-icon-md-notifications-off"></i>
@@ -1991,7 +1993,7 @@
             <p @click="copy">ios-refresh-circle</p>
         </div>
         <div class="icons-item"><i
-                class="x-icon x-icon-ios-refresh-circle-outline" style="font-size: 32px;"></i>
+                class="x-icon x-icon-ios-refresh-circle-outline" ></i>
             <p @click="copy">ios-refresh-circle-outline</p>
         </div>
         <div class="icons-item"><i class="x-icon x-icon-md-refresh-circle"></i>
@@ -2055,7 +2057,7 @@
             <p @click="copy">ios-reverse-camera</p>
         </div>
         <div class="icons-item"><i
-                class="x-icon x-icon-ios-reverse-camera-outline" style="font-size: 32px;"></i>
+                class="x-icon x-icon-ios-reverse-camera-outline" ></i>
             <p @click="copy">ios-reverse-camera-outline</p>
         </div>
         <div class="icons-item"><i class="x-icon x-icon-md-reverse-camera"></i>
@@ -2592,37 +2594,55 @@
         <div class="icons-item"><i class="x-icon x-icon-ios-loading"></i>
             <p @click="copy">ios-loading</p>
         </div>
-        <textarea cols="20" rows="10" ref="textarea" id="biao1" v-model="text"></textarea>
+
+        <!-- <p ref="textarea" id="biao1"  > {{text}}</p> -->
+
+        <input v-model="text"  ref="textarea" placeholder="edit me">
     </div>
 </template>
 <script>
-import Message from '@/components/common/Message'
 export default {
   name: 'x-icon',
   data () {
     return {
       msg: 'Welcome to Your x-icon ',
-      text:''
+      text:'',
+      num: 1
     }
   },
   methods:{
-      copy (e) {
-          console.log(e.target.innerText);
-          this.text = `<x-icon type="${e.target.innerText}" size="big"/>`
-          this.$refs.textarea.select(); // 选择对象
-          document.execCommand("Copy"); // 执行浏览器复制命令
-          Message.info(`已复制好，可贴粘。`)
+    copy (e) {
+      console.log(e.target.innerText);
+      this.text = `<x-icon type="${e.target.innerText}" size="big"/>`
+      this.$refs.textarea.select(); // 选择对象
+      document.execCommand("Copy"); // 执行浏览器复制命令
+      if(++this.num > 2){
+        this.num = 1
+      this.$Message.info(`已复制好，可贴粘。`)
       }
+      setTimeout(()=>{
+        this.num = 1
+      },500)
+    }
   }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
+h1{
+    text-align center
+}
+// input 
+//     opacity 0
+//     height 0
+//     position absolute
+//     top -10000
+//     left 0
 .icons{
     .icons-item{
         float: left;
         // margin: .1rem 0 0;
-        width: 100px;
+        width: 25%;
         text-align: center;
         list-style: none;
         cursor: pointer;

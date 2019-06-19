@@ -6,8 +6,8 @@ import Media from "@/components/common/Media.vue";
 import Thumbnail from "@/components/common/Thumbnail.vue";
 import XCol from "@/components/common/XCol.vue";
 import XCell from "@/components/common/XCell.vue";
-import Confirm from "@/components/common/modal";
 import Message from "@/components/common/Message";
+import { Confirm, Prompt} from "@/components/common/modal";
 
 const components = {
     Header,
@@ -18,7 +18,8 @@ const components = {
     Thumbnail,
     XCol,
     XCell,
-    Confirm
+    Confirm,
+    Prompt
 }
 const install = function (Vue) {
     if (install.installed) return;

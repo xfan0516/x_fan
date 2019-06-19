@@ -1,3 +1,7 @@
 import Confirm from './Confirm.vue'
+import Prompt from './Prompt.vue'
 
-export default Confirm
+export { 
+    Confirm, 
+    Prompt
+}

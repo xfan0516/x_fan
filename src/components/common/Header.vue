@@ -39,22 +39,21 @@ export default {
         top 0
         left 0
         width 100%
-        height .4rem
+        height .44rem
+        line-height .44rem
         z-index 999999
         border-bottom 1px solid #eee
         background #fff
         text-align center
         h1{
           width 100%
-          height .4rem
-          line-height .4rem
+          height inherit
         }
         span{
             position absolute
             top 0
-            width .4rem
-            height .4rem
-            line-height .4rem
+            width .44rem
+            height inherit
         }
         .header-l{
           left 0

@@ -50,7 +50,7 @@ export default {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 0.45rem;
+  height: 0.49rem;
   border-top: 1px solid #eee;
   background: #fff;
   text-align: center;

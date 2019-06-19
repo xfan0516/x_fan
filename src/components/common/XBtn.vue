@@ -1,5 +1,5 @@
 <template>
-  <button :class="className" @click="handleClick">
+  <button :class="className" @click="handleClick" :style="style">
     <slot></slot>
     <!-- {{text}} -->
   </button>
@@ -19,32 +19,36 @@ export default {
     }
   },
   data(){
-	  return{
-
-	  }
+    return{
+      msg: ''
+    }
   },
   computed:{
     className(){
-      var type = 'x_btn',
+      var type = 'x_btn ',
           size = '';
 
       if(this.type){
-        type += '-'+this.type
+        type += 'x_btn-'+this.type
       }
       if(this.size){
         size = 'x_btn-'+this.size
        
       }
-      return type + ' ' +size
+      return type + ' ' + size;
     },
-    style(){
-      
+    style () {
+      var style = {};
+      if(this.size){
+        style.height = this.size
+      }
+      return style
     }
   },
-  methods:{
-	  handleClick(){
-		  this.$emit('click')
-	  }
+  methods: {
+    handleClick () {
+      this.$emit('click')
+    }
   }
 };
 </script>
@@ -60,10 +64,10 @@ btn(num) {
   border-radius: ($btn-default + num) * 0.1;
 }
 
-[class^='x_btn'] {
+.x_btn {
   display: inline-block;
   btn(0);
-  padding: 0 .75em;
+  padding: 0 .1rem;
   background: #e6e6e6;
   color: #333;
 }

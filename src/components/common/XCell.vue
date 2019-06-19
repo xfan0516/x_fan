@@ -24,10 +24,11 @@ export default {
   .x-cell
     display: flex
     justify-content space-between 
-    height .4rem
-    line-height: .2rem
+    height .44rem
+    line-height: .24rem
     box-sizing border-box
     padding .1rem
     border-bottom 1px solid #eee
     background #fff
+    font-size .14rem
 </style>

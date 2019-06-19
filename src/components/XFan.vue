@@ -28,7 +28,7 @@
           <p>big</p>
         </div>
         <div>
-           <x-icon type="ios-home" size=".24rem" color="#f90"/>
+           <x-icon type="ios-home" size=".34rem" color="#f90"/>
           <p>自定义大小</p>
         </div>
        
@@ -51,7 +51,7 @@
           <x-btn text="Default" size="small">small</x-btn>
           <x-btn text="primary" >Default</x-btn>
           <x-btn size="big">big</x-btn>
-          <x-btn size="big">自定义大小</x-btn>
+          <x-btn size=".44rem">自定义大小</x-btn>
         </div>
 
       </div>

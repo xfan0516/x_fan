@@ -14,27 +14,42 @@ export default new Router({
     {
       path: '/home',
       name: 'home',
-      component: () => import('@/views/Home.vue')
+      component: () => import('@/views/Home.vue'),
+      meta:{
+        footer: true
+      }
     },
     {
       path: '/xfan',
       name: 'xfan',
-      component: () => import(/* webpackChunkName: "Search" */ './components/XFan.vue')
+      component: () => import(/* webpackChunkName: "Search" */ './components/XFan.vue'),
+      meta:{
+        footer: true
+      }
     },
     {
       path: '/search',
       name: 'search',
-      component: () => import(/* webpackChunkName: "Search" */ './views/Search.vue')
+      component: () => import(/* webpackChunkName: "Search" */ './views/Search.vue'),
+      meta:{
+        footer: true
+      }
     },
     {
       path: '/user',
       name: 'user',
-      component: () => import(/* webpackChunkName: "Search" */ './views/User.vue')
+      component: () => import(/* webpackChunkName: "Search" */ './views/User.vue'),
+      meta:{
+        footer: true
+      }
     },
     {
       path: '/cart',
       name: 'cart',
-      component: () => import(/* webpackChunkName: "Search" */ './views/Cart.vue')
+      component: () => import(/* webpackChunkName: "Search" */ './views/Cart.vue'),
+      meta:{
+        footer: true
+      }
     },
     { //查看字体图标
       path: '/xicon',
@@ -42,7 +57,10 @@ export default new Router({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('./views/XIcon.vue')
+      component: () => import('./views/XIcon.vue'),
+      meta:{
+        footer: true
+      }
     }
   ]
 })

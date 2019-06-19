@@ -1,10 +1,36 @@
 <template>
-  <div id="app">
-    
+  <div id="app" :style="style">
     <router-view/>
-    <Footer/>
+    <Footer v-if="footer"/>
   </div>
 </template>
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      msg: '这是App组件',
+      footer: false
+    };
+  },
+  watch:{
+    $route(newValue){
+      this.footer = newValue.meta.footer;
+      console.log(newValue.meta)
+    }
+  },
+  computed:{
+    style(){
+      var style = {};
+      if(!this.footer){
+        style.paddingBottom = '10px'
+      }
+      return style
+    }
+  }
+};
+</script>
+
 <style lang="stylus">
 @import './assets/css/reset.css'
 @import './assets/css/x_fan.styl'
@@ -20,8 +46,8 @@
   min-height 100%
   box-sizing border-box
   margin 0 auto
-  padding-top .41rem
-  padding-bottom .46rem
+  padding-top .46rem
+  padding-bottom .5rem
   overflow-y auto
   background #fafafa
 

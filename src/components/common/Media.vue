@@ -48,10 +48,12 @@ export default {
     .media-body
       padding-left 22%
       line-height 1.5
+      font-size .12rem
       h3
         padding-bottom .05rem
         line-height 2
         font-weight 600
+        font-size .15rem
         
       p
         overflow hidden

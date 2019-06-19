@@ -30,17 +30,20 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### 按钮组件 XBtn
 ```
-    <x-btn type="success" size="small">success</x-btn>
+<x-btn type="success" size="small">success</x-btn>
+
+XIcon 接收两个props: type, size
     type：按钮类型 Default, primary, success 默认：Default
     size：按钮大小 small, Default, big, lg 默认：Default
 ```
 ### 提示信息 Message
 ```
-Message.info(msg) //msg:字符串
+this.$Message.info(msg) //msg:字符串
 ```
 ### 图标组件 XIcon
 ```
 <x-icon type="ios-home" size=".24rem" color="#f90"/>
+
 XIcon 接收三个props: type, size, color
     type：图标名称 *必填项
     size：图标大小 small, Default, big,自定义大小 默认：Default
@@ -49,6 +52,7 @@ XIcon 接收三个props: type, size, color
 ### header组件 Header
 ```
 <x-header title="首页" back />
+
 Header 接收三个props : title, back, headerR
     title：标题
     back：是否有返回按钮  默认：false
@@ -65,6 +69,7 @@ Header 接收三个props : title, back, headerR
         <p>简介说明</p>
     </div>
 </Media>
+
 Media 接收两个slot： media-left和media-body
     media-left：存放图片的容器
     media-body：存放标题与说明，内容可以自定义
@@ -79,6 +84,7 @@ Media 接收两个slot： media-left和media-body
         <h3>{{item.intro}}</h3>
     </div>
 </Thumbnail>
+
 接收两个slot： thumbnail-pic和mthumbnail-info
     thumbnail-pic：存放图片的容器
     thumbnail-info：存放标题或说明，内容可以自定义
@@ -86,6 +92,7 @@ Media 接收两个slot： media-left和media-body
 ### XCol栅格化组件 XCol
 ```
 <XCol span="12"></XCol>
+
 XCol 接收一个props： span
     span：1~24之间的数字或字符串
     栅格化平均分成24份每份是4.16666667%
@@ -96,6 +103,7 @@ XCol 接收一个props： span
     <div slot="cell-left">标签名</div>
     <div slot="cell-right"><x-icon type="ios-arrow-forward" size="big"/></div>
 </x-cell>
+
 XCell 接收两个slot： cell-left和cell-right
     cell-left：包含单元格左侧的内容，内容可以自定义
     cell-right：包含单元格右侧的内容，内容可以自定义
@@ -112,12 +120,14 @@ XCell 接收两个slot： cell-left和cell-right
     @onCancel="onCancel" 
     @onConfirm="onConfirm" 
 />
+
 Confirm 接受5个props： title, msg, isShow, cancelText, confirmText
     title: 标题
     msg： 提示信息
     isShow：是否显示, 默认是false
     cancelText: 取消按钮文字，默认是取消
     confirmText: 确认按钮文字，默认是确认
+
 事件: onCancel,onConfirm
     onCancel: 用户取消
     onConfirm: 用户确认
@@ -137,6 +147,7 @@ Confirm 接受5个props： title, msg, isShow, cancelText, confirmText
         <input class="input-text" v-model="msgPrompt" type="text" placeholder="输入您想说的话" /> 
     </div>
 </Prompt>
+
 Prompt 接受5个props,一个slot;
 props: title, msg, isShow, cancelText, confirmText;
     title: 标题
@@ -144,8 +155,10 @@ props: title, msg, isShow, cancelText, confirmText;
     isShow：是否显示, 默认是false
     cancelText: 取消按钮文字，默认是取消
     confirmText: 确认按钮文字，默认是确认
+
 slot: modal-main
     modal-main: Prompt的主体内容
+
 事件: onCancel,onConfirm
     onCancel: 用户取消
     onConfirm: 用户确认

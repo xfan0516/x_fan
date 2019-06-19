@@ -1,5 +1,5 @@
 <template>
-  <button :class="'x_btn-'+type +' '+ 'x_btn-'+size" @click="handleClick">
+  <button :class="className" @click="handleClick">
     <slot></slot>
     <!-- {{text}} -->
   </button>
@@ -23,6 +23,24 @@ export default {
 
 	  }
   },
+  computed:{
+    className(){
+      var type = 'x_btn',
+          size = '';
+
+      if(this.type){
+        type += '-'+this.type
+      }
+      if(this.size){
+        size = 'x_btn-'+this.size
+       
+      }
+      return type + ' ' +size
+    },
+    style(){
+      
+    }
+  },
   methods:{
 	  handleClick(){
 		  this.$emit('click')
@@ -39,24 +57,29 @@ $btn-default = 0.3rem;
 btn(num) {
   height: $btn-default + num;
   line-height: $btn-default + num;
-  border-radius: ($btn-default + num) * 0.15;
+  border-radius: ($btn-default + num) * 0.1;
 }
 
 [class^='x_btn'] {
   display: inline-block;
   btn(0);
-  padding: 0 0.1rem;
-  background: #ccc;
+  padding: 0 .75em;
+  background: #e6e6e6;
   color: #333;
 }
 
 .x_btn-primary {
-  background: #09f;
+  background: #0e90d2;
   color: #fff;
 }
 
 .x_btn-success {
-  background: #19be6b;
+  background: #5eb95e;
+  color: #fff;
+}
+
+.x_btn-alert {
+  background: #dd514c;
   color: #fff;
 }
 
@@ -64,7 +87,7 @@ btn(num) {
   btn(-0.08rem);
 }
 
-.x_btn-pig {
+.x_btn-big {
   btn(0.08rem);
 }
 

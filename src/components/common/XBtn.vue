@@ -64,7 +64,7 @@ btn(num) {
   btn(-0.08rem);
 }
 
-.x_btn-pig {
+.x_btn-big {
   btn(0.08rem);
 }
 

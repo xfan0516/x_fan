@@ -2,7 +2,6 @@
   <div class="thumbnail" @click="handleClick">
     <slot class="pic" name="thumbnail-pic"></slot>
     <slot class="info" name="thumbnail-info"></slot>
-  
   </div>
 </template>
 <script>
@@ -34,12 +33,22 @@ export default {
   background #ffffff
   border-radius .05rem
   .pic
+    position relative
     width 100%
     height 0
     padding 50% 0
     overflow hidden
     img 
       transform translate(0, -50%)
+    p 
+      position absolute
+      bottom 0
+      left 0
+      width 95%
+      padding 0 2.5%
+      line-height .32rem
+      color: #fff
+      background rgba(0,0,0,.5)
   .info
     padding-top .05rem
     line-height 1.2

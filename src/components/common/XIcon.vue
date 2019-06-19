@@ -1,5 +1,5 @@
 <template>
-  <i @click="hadleClick" :class="'x-icon x-icon-'+ type" :style="style"></i>
+  <i @click="hadleClick" :class="'x-icon x-icon-'+ type" :style="style"><slot></slot></i>
 </template>
 <script>
 export default {
@@ -67,6 +67,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" >
   .x-icon
+    position relative
     display inline-block
     width .2rem
     height .2rem

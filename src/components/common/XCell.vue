@@ -1,6 +1,6 @@
 <template>
   <div class="x-cell" @click="handleClick">
-    <slot name="cell-left"></slot>
+    <slot class="cell-left" name="cell-left"></slot>
     <slot name="cell-right"></slot>
   </div>
 </template>
@@ -22,6 +22,7 @@ export default {
 
 <style lang="stylus" scoped>
   .x-cell
+    position relative
     display: flex
     justify-content space-between 
     height .44rem
@@ -31,4 +32,6 @@ export default {
     border-bottom 1px solid #eee
     background #fff
     font-size .14rem
+    .cell-left
+      position relative
 </style>

@@ -10,7 +10,7 @@
       <p>搜索</p>
     </div>
     <div :class="active === 'cart' && 'active'" @click="$router.push('/cart')">
-      <x-icon type="ios-cart" size="big"/>
+      <x-icon type="ios-cart" size="big"><Badge num="19"/></x-icon>
       <p>购物车</p>
     </div>
     <div :class="active === 'user' && 'active'" @click="$router.push('/user')">

@@ -7,6 +7,8 @@ import Thumbnail from "@/components/common/Thumbnail.vue";
 import XCol from "@/components/common/XCol.vue";
 import XCell from "@/components/common/XCell.vue";
 import Message from "@/components/common/Message";
+import Loading from "@/components/common/Loading";
+import Badge from "@/components/common/Badge";
 import { Confirm, Prompt} from "@/components/common/modal";
 
 const components = {
@@ -19,7 +21,9 @@ const components = {
     XCol,
     XCell,
     Confirm,
-    Prompt
+    Prompt,
+    Badge,
+    Loading
 }
 const install = function (Vue) {
     if (install.installed) return;

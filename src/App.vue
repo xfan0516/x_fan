@@ -2,6 +2,7 @@
   <div id="app" :style="style">
     <router-view/>
     <Footer v-if="footer"/>
+    <!-- <Loading /> -->
   </div>
 </template>
 <script>

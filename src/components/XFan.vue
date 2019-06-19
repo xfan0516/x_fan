@@ -34,6 +34,15 @@
        
       </div>
       <x-cell>
+        <span class="cell-left" slot="cell-left">Badge组件 <Badge num="12" /></span>
+        <span slot="cell-right">
+          
+          <x-icon type="ios-arrow-down" size="big"/>
+        </span>
+      </x-cell>
+      <div>
+      </div>
+      <x-cell>
         <span slot="cell-left">按钮组件</span>
         <span slot="cell-right">
           <x-icon type="ios-arrow-down" size="big"/>

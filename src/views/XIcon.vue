@@ -2597,7 +2597,7 @@
 
         <!-- <p ref="textarea" id="biao1"  > {{text}}</p> -->
 
-        <input v-model="text"  ref="textarea" placeholder="edit me">
+        <input v-model="text" ref="textarea" placeholder="edit me">
     </div>
 </template>
 <script>
@@ -2632,12 +2632,12 @@ export default {
 h1{
     text-align center
 }
-// input 
-//     opacity 0
-//     height 0
-//     position absolute
-//     top -10000
-//     left 0
+input 
+    opacity 0
+    height 0
+    position absolute
+    top -10000
+    left 0
 .icons{
     .icons-item{
         float: left;

@@ -1,5 +1,5 @@
 <template>
-  <div class="modal" v-if="show" @click="close">
+  <div class="modal" v-if="isShow" @click="close">
     <div class="modal-body" @click.stop>
       <div class="modal-header">
         <h1>{{title}}</h1>
@@ -20,7 +20,7 @@
 export default {
   name: 'confirm',
   props:{
-    show:{
+    isShow:{
       type: Boolean,
       default: false
     },

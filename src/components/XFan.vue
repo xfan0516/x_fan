@@ -13,10 +13,10 @@
       <x-btn type="primary" @click="showConfirm">modal Confirm</x-btn>
       <x-btn type="primary" @click="showPrompt">modal Prompt</x-btn>
     </div>
-    <Confirm title="提示" :msg="msg" :show="isShow" @onCancel="onCancel" @onConfirm="onConfirm" />
-    <Prompt title="提示" :show="isShowPrompt" @onCancel="onCancel" @onConfirm="onConfirm">
+    <Confirm title="提示" :msg="msg" :isShow="isShow" @onCancel="onCancel" @onConfirm="onConfirm" />
+    <Prompt title="提示" :isShow="isShowPrompt" @onCancel="onCancel" @onConfirm="onConfirm">
       <div slot="modal-main">
-        <input class="input-text" v-model="msg" type="text" placeholder="输入您想说的话" /> 
+        <input class="input-text" v-model="msgPrompt" type="text" placeholder="输入您想说的话" /> 
       </div>
     </Prompt>
   </div>
@@ -26,7 +26,8 @@ export default {
   name: "xfan",
   data() {
     return {
-      msg: "",
+      msg: "这一个 Confirm 窗口",
+      msgPrompt:'',
       isShow: false,
       isShowPrompt:false
     };

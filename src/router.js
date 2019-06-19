@@ -17,6 +17,11 @@ export default new Router({
       component: () => import('@/views/Home.vue')
     },
     {
+      path: '/xfan',
+      name: 'xfan',
+      component: () => import(/* webpackChunkName: "Search" */ './components/XFan.vue')
+    },
+    {
       path: '/search',
       name: 'search',
       component: () => import(/* webpackChunkName: "Search" */ './views/Search.vue')

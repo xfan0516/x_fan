@@ -29,4 +29,5 @@ export default {
     box-sizing border-box
     padding .1rem
     border-bottom 1px solid #eee
+    background #fff
 </style>

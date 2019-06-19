@@ -1,22 +1,26 @@
 <template>
   <div class="modal" v-if="isShow" @click="close">
-    <div class="modal-body" @click.stop>
-      <div class="modal-header">
-        <h1>{{title}}</h1>
-      </div>
-      <div class="modal-main">
-        <slot v-if="!msg" name="modal-main"></slot>
-        {{msg}}
-      </div>
-      <div class="modal-footer x_flex-between">
-        <span @click="cancel">{{cancelText}}</span>
-        <span @click="confirm">{{confirmText}}</span>
+    <transition name="fade">
+      <div class="modal-body" v-if="showBody" @click.stop>
+        <div class="modal-header">
+          <h1>{{title}}</h1>
+        </div>
+        <div class="modal-main">
+          <slot v-if="!msg" name="modal-main"></slot>
+          {{msg}}
+        </div>
+        <div class="modal-footer x_flex-between">
+          <span @click="cancel">{{cancelText}}</span>
+          <span @click="confirm">{{confirmText}}</span>
+        </div>
+
       </div>
 
-    </div>
+    </transition>
   </div>
 </template>
 <script>
+import { setTimeout } from 'timers';
 export default {
   name: 'confirm',
   props:{
@@ -36,9 +40,20 @@ export default {
     },
   },
   data () {
-    return {}
+    return {
+      showBody: false
+    }
+  },
+  created(){
+
   },
   computed:{
+  },
+  watch:{
+    isShow(){
+      this.showBody = this.isShow
+
+    }
 
   },
   methods:{
@@ -46,7 +61,11 @@ export default {
       this.$emit('onClose', e)
     },
     cancel (e) {
-      this.$emit('onCancel', e)
+      this.showBody = false
+      setTimeout(()=>{
+
+        this.$emit('onCancel', e)
+      },200)
     },
     confirm (e) {
       this.$emit('onConfirm', e)

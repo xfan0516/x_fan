@@ -164,7 +164,10 @@
 
 
     <!-- 模态框 -->
+    <transition name="bounce">
+
     <Confirm title="提示" :msg="msg" :isShow="isShow" @onCancel="onCancel" @onConfirm="onConfirm"/>
+    </transition>
     <Prompt title="提示" :isShow="isShowPrompt" @onCancel="onCancel" @onConfirm="onConfirm">
       <div slot="modal-main">
         <input class="input-text" v-model="msgPrompt" type="text" placeholder="输入您想说的话">
@@ -278,4 +281,6 @@ export default {
   background: rgba(0,229,153,.5)
 .col-12
   background: rgba(229,0,153,.5)
+
+
 </style>

@@ -17,10 +17,13 @@
   color #2c3e50
   width 100%
   max-width 640px
+  min-height 100%
+  box-sizing border-box
   margin 0 auto
-  padding-top .4rem
-  padding-bottom .6rem
+  padding-top .41rem
+  padding-bottom .46rem
   overflow-y auto
+  background #fafafa
 
 
 </style>

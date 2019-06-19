@@ -52,6 +52,7 @@ export default {
         padding-bottom .05rem
         line-height 2
         font-weight 600
+        
       p
         overflow hidden
         color #666

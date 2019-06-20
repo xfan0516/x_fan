@@ -28,20 +28,20 @@
           <p>big</p>
         </div>
         <div>
-           <x-icon type="ios-home" size=".34rem" color="#f90"/>
+          <x-icon type="ios-home" size=".34rem" color="#f90"/>
           <p>自定义大小</p>
         </div>
-       
       </div>
       <x-cell>
-        <span class="cell-left" slot="cell-left">Badge组件 <Badge num="12" /></span>
+        <span class="cell-left" slot="cell-left">
+          Badge组件
+          <Badge num="12"/>
+        </span>
         <span slot="cell-right">
-          
           <x-icon type="ios-arrow-down" size="big"/>
         </span>
       </x-cell>
-      <div>
-      </div>
+      <div></div>
       <x-cell>
         <span slot="cell-left">按钮组件</span>
         <span slot="cell-right">
@@ -52,17 +52,16 @@
         <div>
           <x-btn text="Default">Default</x-btn>
           <x-btn text="primary" type="primary">primary</x-btn>
-          <x-btn text="" type="success">success</x-btn>
-          <x-btn text="" type="alert">alert</x-btn>
+          <x-btn text type="success">success</x-btn>
+          <x-btn text type="alert">alert</x-btn>
         </div>
-        
+
         <div class="x_flex col-xbtn">
           <x-btn text="Default" size="small">small</x-btn>
-          <x-btn text="primary" >Default</x-btn>
+          <x-btn text="primary">Default</x-btn>
           <x-btn size="big">big</x-btn>
           <x-btn size=".44rem">自定义大小</x-btn>
         </div>
-
       </div>
       <x-cell>
         <span slot="cell-left">栅格化</span>
@@ -96,12 +95,11 @@
         <x-col span="1">23</x-col>
         <x-col span="1">24</x-col>
       </div>
-       <div class="clearfix col-xcol">
+      <div class="clearfix col-xcol">
         <x-col class="col-6" span="6">6</x-col>
         <x-col class="col-12" span="12">12</x-col>
         <x-col class="col-6" span="6">6</x-col>
-
-       </div>
+      </div>
       <x-cell>
         <span slot="cell-left">模态框</span>
         <span slot="cell-right">
@@ -130,7 +128,10 @@
           <img :src="item.imgCrs" alt>
         </div>
         <div class="media-body" slot="media-body">
-          <h3 class="x_flex-between">{{item.title}} <span class="text-9">{{item.date}}</span></h3>
+          <h3 class="x_flex-between">
+            {{item.title}}
+            <span class="text-9">{{item.date}}</span>
+          </h3>
           <p>{{item.intro}}</p>
         </div>
       </Media>
@@ -142,32 +143,29 @@
       </x-cell>
       <div class="thumbnail-list">
         <x-col class="col-thumbnail" span="12" v-for="item in list1" :key="item.id">
-        <Thumbnail>
-          <div class="pic" slot="thumbnail-pic">
-            <img :src="item.imgCrs" alt>
-            <p>{{item.date}}</p>
-
-          </div>
-          <div class="info" slot="thumbnail-info">
-            <h3>{{item.intro}}</h3>
-          </div>
-        </Thumbnail>
-
+          <Thumbnail>
+            <div class="pic" slot="thumbnail-pic">
+              <img :src="item.imgCrs" alt>
+              <p>{{item.date}}</p>
+            </div>
+            <div class="info" slot="thumbnail-info">
+              <h3>{{item.intro}}</h3>
+            </div>
+          </Thumbnail>
         </x-col>
       </div>
 
-      
-      <div>
-     
     </div>
-    </div>
-
 
     <!-- 模态框 -->
-    <transition name="bounce">
-
-    <Confirm title="提示" :msg="msg" :isShow="isShow" @onCancel="onCancel" @onConfirm="onConfirm"/>
-    </transition>
+    <Confirm
+      title="提示"
+      :msg="msg"
+      :isShow="isShow"
+      @onClose="onClose"
+      @onCancel="onCancel"
+      @onConfirm="onConfirm"
+    />
     <Prompt title="提示" :isShow="isShowPrompt" @onCancel="onCancel" @onConfirm="onConfirm">
       <div slot="modal-main">
         <input class="input-text" v-model="msgPrompt" type="text" placeholder="输入您想说的话">
@@ -228,6 +226,10 @@ export default {
     showConfirm() {
       this.isShow = true;
     },
+    onClose() {
+      this.isShow = false;
+      this.isShowPrompt = false;
+    },
     onCancel() {
       this.isShow = false;
       this.isShowPrompt = false;
@@ -240,8 +242,8 @@ export default {
       this.isShow = false;
       this.isShowPrompt = false;
     },
-    message(){
-      this.$Message.info('这是提示信息')
+    message() {
+      this.$Message.info("这是提示信息");
     }
   }
 };
@@ -251,36 +253,46 @@ export default {
 .xfan button {
   margin: 0.1rem;
 }
+
 .input-text {
   border: 1px solid #ccc;
   line-height: 0.3rem;
   padding: 0 0.08rem;
   width: 80%;
 }
+
 .col-xicon {
-  padding: .1rem 0;
+  padding: 0.1rem 0;
   align-items: flex-end;
-  text-align: center
+  text-align: center;
 }
+
 .col-xbtn {
   align-items: flex-end;
-
 }
-.thumbnail-list
-  padding .05rem
-  background #eee
-  overflow hidden
-.col-thumbnail
-  padding 0 .05rem
-.col-xcol
-  height: .6rem
-  line-height .6rem
-  text-align center
-  background: rgba(0,153,229,.5) linear-gradient(90deg,#f5f5f5 4.16666667%,transparent 0,transparent 8.33333333%,#f5f5f5 0,#f5f5f5 12.5%,transparent 0,transparent 16.66666667%,#f5f5f5 0,#f5f5f5 20.83333333%,transparent 0,transparent 25%,#f5f5f5 0,#f5f5f5 29.16666667%,transparent 0,transparent 33.33333333%,#f5f5f5 0,#f5f5f5 37.5%,transparent 0,transparent 41.66666667%,#f5f5f5 0,#f5f5f5 45.83333333%,transparent 0,transparent 50%,#f5f5f5 0,#f5f5f5 54.16666667%,transparent 0,transparent 58.33333333%,#f5f5f5 0,#f5f5f5 62.5%,transparent 0,transparent 66.66666667%,#f5f5f5 0,#f5f5f5 70.83333333%,transparent 0,transparent 75%,#f5f5f5 0,#f5f5f5 79.16666667%,transparent 0,transparent 83.33333333%,#f5f5f5 0,#f5f5f5 87.5%,transparent 0,transparent 91.66666667%,#f5f5f5 0,#f5f5f5 95.83333333%,transparent 0);
-.col-6
-  background: rgba(0,229,153,.5)
-.col-12
-  background: rgba(229,0,153,.5)
 
+.thumbnail-list {
+  padding: 0.05rem;
+  background: #eee;
+  overflow: hidden;
+}
 
+.col-thumbnail {
+  padding: 0 0.05rem;
+}
+
+.col-xcol {
+  height: 0.6rem;
+  line-height: 0.6rem;
+  text-align: center;
+  background: rgba(0, 153, 229, 0.5) linear-gradient(90deg, #f5f5f5 4.16666667%, transparent 0, transparent 8.33333333%, #f5f5f5 0, #f5f5f5 12.5%, transparent 0, transparent 16.66666667%, #f5f5f5 0, #f5f5f5 20.83333333%, transparent 0, transparent 25%, #f5f5f5 0, #f5f5f5 29.16666667%, transparent 0, transparent 33.33333333%, #f5f5f5 0, #f5f5f5 37.5%, transparent 0, transparent 41.66666667%, #f5f5f5 0, #f5f5f5 45.83333333%, transparent 0, transparent 50%, #f5f5f5 0, #f5f5f5 54.16666667%, transparent 0, transparent 58.33333333%, #f5f5f5 0, #f5f5f5 62.5%, transparent 0, transparent 66.66666667%, #f5f5f5 0, #f5f5f5 70.83333333%, transparent 0, transparent 75%, #f5f5f5 0, #f5f5f5 79.16666667%, transparent 0, transparent 83.33333333%, #f5f5f5 0, #f5f5f5 87.5%, transparent 0, transparent 91.66666667%, #f5f5f5 0, #f5f5f5 95.83333333%, transparent 0);
+}
+
+.col-6 {
+  background: rgba(0, 229, 153, 0.5);
+}
+
+.col-12 {
+  background: rgba(229, 0, 153, 0.5);
+}
 </style>

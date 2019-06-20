@@ -1,7 +1,10 @@
 <template>
-  <div class="modal" v-if="isShow" @click="close">
+  <div class="modal" v-if="isShow">
     <transition name="fade">
-      <div class="modal-body" v-if="showBody" @click.stop>
+      <div class="mask" v-if="showBody" @click="close"></div>
+    </transition>
+    <transition name="bounce">
+      <div class="modal-body" v-if="showBody">
         <div class="modal-header">
           <h1>{{title}}</h1>
         </div>
@@ -13,18 +16,16 @@
           <span @click="cancel">{{cancelText}}</span>
           <span @click="confirm">{{confirmText}}</span>
         </div>
-
       </div>
-
     </transition>
   </div>
 </template>
 <script>
-import { setTimeout } from 'timers';
+import { setTimeout } from "timers";
 export default {
-  name: 'confirm',
-  props:{
-    isShow:{
+  name: "confirm",
+  props: {
+    isShow: {
       type: Boolean,
       default: false
     },
@@ -32,80 +33,102 @@ export default {
     msg: String,
     cancelText: {
       type: String,
-      default: '取消'
+      default: "取消"
     },
     confirmText: {
       type: String,
-      default: '确定'
-    },
+      default: "确定"
+    }
   },
-  data () {
+  data() {
     return {
       showBody: false
+    };
+  },
+  created() {},
+  mounted() {},
+  computed: {},
+  watch: {
+    isShow() {
+      this.$nextTick(() => {
+        this.showBody = this.isShow;
+      });
     }
   },
-  created(){
-
-  },
-  computed:{
-  },
-  watch:{
-    isShow(){
-      this.showBody = this.isShow
-
-    }
-
-  },
-  methods:{
-    close (e) {
-      this.$emit('onClose', e)
+  methods: {
+    close(e) {
+      this.showBody = false;
+      setTimeout(() => {
+        this.$emit("onClose", e);
+      }, 300);
     },
-    cancel (e) {
-      this.showBody = false
-      setTimeout(()=>{
-
-        this.$emit('onCancel', e)
-      },200)
+    cancel(e) {
+      this.showBody = false;
+      setTimeout(() => {
+        this.$emit("onCancel", e);
+      }, 300);
     },
-    confirm (e) {
-      this.$emit('onConfirm', e)
+    confirm(e) {
+      this.showBody = false;
+      setTimeout(() => {
+        this.$emit("onConfirm", e);
+      }, 300);
     }
   }
-}
+};
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
-  .modal
-    position fixed
-    top 0
-    left 0
-    z-index 90000
-    width 100%
-    height 100%
-    background rgba(0,0,0,.2)
-    .modal-body
-      position absolute
-      top 50%
-      left 50%
-      transform translate(-50%, -50%)
-      width 80%
-      text-align center
-      background #ffffff
-      border-radius .05rem
-    .modal-header
-      height .4rem
-      line-height .4rem
-      border-bottom .5px solid #fafafa
-    .modal-main
-      line-height .4rem
-      padding .05rem 0
-    .modal-footer
-      line-height .45rem
-      border-top .5px solid #eee
-      span 
-        width 50%
-        line-height inherit
-        font-size .14rem
-        color: #09f
-        border-right .5px solid #eee
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90000;
+  width: 100%;
+  height: 100%;
+
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-body {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    // transform translate( 0, -50%)
+    width: 80%;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 0.05rem;
+  }
+
+  .modal-header {
+    height: 0.4rem;
+    line-height: 0.4rem;
+    border-bottom: 0.5px solid #fafafa;
+  }
+
+  .modal-main {
+    line-height: 0.4rem;
+    padding: 0.05rem 0;
+  }
+
+  .modal-footer {
+    line-height: 0.45rem;
+    border-top: 0.5px solid #eee;
+
+    span {
+      width: 50%;
+      line-height: inherit;
+      font-size: 0.14rem;
+      color: #09f;
+      border-right: 0.5px solid #eee;
+    }
+  }
+}
 </style>

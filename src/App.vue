@@ -17,7 +17,6 @@ export default {
   watch:{
     $route(newValue){
       this.footer = newValue.meta.footer;
-      console.log(newValue.meta)
     }
   },
   computed:{

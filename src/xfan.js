@@ -31,7 +31,7 @@ const install = function (Vue) {
     if (install.installed) return;
 
     for (var k in components){
-        console.log(k)
+        // console.log(k)
         Vue.component(k, components[k]);
     }
 

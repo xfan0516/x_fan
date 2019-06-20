@@ -61,6 +61,7 @@ export default {
         }
         .header-r{
           right 0
+          transition all .3s
         }
 
     }

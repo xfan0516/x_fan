@@ -1,7 +1,11 @@
 <template>
   <div class="xfan">
     <Header title="xfan组件展示">
-      <span class="header-r" slot="header-right" @click="showSidebar"><x-icon type="ios-menu" size="big"/></span>
+      <span class="header-r" slot="header-right" @click="showSidebar">
+      <transition name="rotate">
+        <x-icon type="ios-menu" v-show="sideShow" size="big"/>
+      </transition>
+      </span>
     </Header>
     <div>
       <x-cell>
@@ -193,6 +197,7 @@ export default {
       isShow: false,
       isShowPrompt: false,
       sideShow: false,
+      headerDeg: 0,
       list: [
         {
           title: "A太平湖休闲垂钓",
@@ -241,11 +246,13 @@ export default {
       this.isShow = false;
       this.isShowPrompt = false;
       this.sideShow = false;
+      this.headerDeg = 0
     },
     onCancel() {
       this.isShow = false;
       this.isShowPrompt = false;
       this.sideShow = false;
+      this.headerDeg = 0
     },
     showPrompt() {
       this.isShowPrompt = true;
@@ -255,9 +262,12 @@ export default {
       this.isShow = false;
       this.isShowPrompt = false;
       this.sideShow = false;
+      this.headerDeg = 0
     },
     showSidebar(){
-      this.sideShow = true
+      this.sideShow = true;
+      // trigger
+      this.headerDeg =  90
     },
     message() {
       this.$Message.info("这是提示信息");

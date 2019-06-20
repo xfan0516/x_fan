@@ -1,7 +1,7 @@
 <template>
   <div class="xfan">
     <Header title="xfan组件展示">
-      <span class="header-r" slot="header-right" :style="{transform: 'rotateZ('+ headerDeg + 'deg)'}" @click="showSidebar">
+      <span class="header-r" slot="header-right" :style="{transform: 'rotate('+ headerDeg + 'deg)'}" @click="showSidebar">
       <transition name="rotate">
         <x-icon type="ios-menu" size="big"/>
       </transition>
@@ -48,6 +48,12 @@
         </span>
       </x-cell>
       <div></div>
+      <x-cell @click="showLoading">
+        <span slot="cell-left">Loading组件</span>
+        <span slot="cell-right">
+          <x-icon type="ios-arrow-down" size="big"/>
+        </span>
+      </x-cell>
       <x-cell>
         <span slot="cell-left">按钮组件</span>
         <span slot="cell-right">
@@ -188,6 +194,8 @@
   </div>
 </template>
 <script>
+   import {mapMutations} from 'vuex'
+
 export default {
   name: "xfan",
   data() {
@@ -243,6 +251,8 @@ export default {
       this.headerDeg =   newValue ? 90 : 0;
     }
   },
+  computed:{
+  },
   methods: {
     showConfirm() {
       this.isShow = true;
@@ -271,7 +281,13 @@ export default {
     },
     message() {
       this.$Message.info("这是提示信息");
-    }
+    },
+    showLoading(){
+      this.set_loading(true)
+    },
+    ...mapMutations({
+      set_loading: 'set_loading'
+    })
   }
 };
 </script>

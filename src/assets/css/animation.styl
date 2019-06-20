@@ -53,11 +53,22 @@
 
 // 旋转动画
 .rotate-enter-active {
-  transition: all .3s ease;
+  transition: all 30s ease;
 }
 .rotate-leave-active {
-  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all 30s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 .rotate-enter, .rotate-leave-to {
-  transform: rotateZ(90deg);
+  transform:rotate(180deg);
+
 }
+
+/*无限旋转动画*/
+		@keyframes changDeg{
+			0%{
+				transform: rotate(0deg);
+			}
+			100%{
+				transform: rotate(360deg);
+			}
+		}

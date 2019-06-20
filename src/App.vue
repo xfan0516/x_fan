@@ -2,55 +2,60 @@
   <div id="app" :style="style">
     <router-view/>
     <Footer v-if="footer"/>
-    <!-- <Loading /> -->
+    <Loading/>
   </div>
 </template>
 <script>
+import { mapGetters } from "vuex";
+
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
-      msg: '这是App组件',
+      msg: "这是App组件",
       footer: false
     };
   },
-  watch:{
-    $route(newValue){
+  created() {},
+  watch: {
+    $route(newValue) {
       this.footer = newValue.meta.footer;
     }
   },
-  computed:{
-    style(){
+  computed: {
+    style() {
       var style = {};
-      if(!this.footer){
-        style.paddingBottom = '10px'
+      if (!this.footer) {
+        style.paddingBottom = "10px";
       }
-      return style
-    }
-  }
+      return style;
+    },
+    ...mapGetters(["loading"])
+  },
+  methods: {}
 };
 </script>
 
 <style lang="stylus">
-@import './assets/css/reset.css'
-@import './assets/css/animation.styl'
-@import './assets/css/x_fan.styl'
-@import './assets/x-font/iconfont/ionicons.css'
-@import './assets/css/pulic.styl'
-#app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  color #2c3e50
-  width 100%
-  max-width 640px
-  min-height 100%
-  box-sizing border-box
-  margin 0 auto
-  padding-top .46rem
-  padding-bottom .5rem
-  overflow-y auto
-  background #fafafa
+@import './assets/css/reset.css';
+@import './assets/css/animation.styl';
+@import './assets/css/x_fan.styl';
+@import './assets/x-font/iconfont/ionicons.css';
+@import './assets/css/pulic.styl';
 
-
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  width: 100%;
+  max-width: 640px;
+  min-height: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-top: 0.46rem;
+  padding-bottom: 0.5rem;
+  overflow-y: auto;
+  background: #fafafa;
+}
 </style>

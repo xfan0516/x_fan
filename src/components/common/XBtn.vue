@@ -18,36 +18,35 @@ export default {
       default: ""
     }
   },
-  data(){
-    return{
-      msg: ''
-    }
+  data() {
+    return {
+      msg: ""
+    };
   },
-  computed:{
-    className(){
-      var type = 'x_btn ',
-          size = '';
+  computed: {
+    className() {
+      var type = "x_btn ",
+        size = "";
 
-      if(this.type){
-        type += 'x_btn-'+this.type
+      if (this.type) {
+        type += "x_btn-" + this.type;
       }
-      if(this.size){
-        size = 'x_btn-'+this.size
-       
+      if (this.size) {
+        size = "x_btn-" + this.size;
       }
-      return type + ' ' + size;
+      return type + " " + size;
     },
-    style () {
+    style() {
       var style = {};
-      if(this.size){
-        style.height = this.size
+      if (this.size) {
+        style.height = this.size;
       }
-      return style
+      return style;
     }
   },
   methods: {
-    handleClick () {
-      this.$emit('click')
+    handleClick() {
+      this.$emit("click");
     }
   }
 };
@@ -65,9 +64,10 @@ btn(num) {
 }
 
 .x_btn {
+  position: relative;
   display: inline-block;
   btn(0);
-  padding: 0 .1rem;
+  padding: 0 0.1rem;
   background: #e6e6e6;
   color: #333;
 }

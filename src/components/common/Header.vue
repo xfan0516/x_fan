@@ -3,6 +3,7 @@
         <span class="header-l"><x-icon @click="$router.go(-1)" v-if="back" type="ios-arrow-back" size="big"/></span>
         <h1>{{title}}</h1>
         <span class="header-r" v-if="headerR">完成</span>
+        <slot class="header-r" name="header-right"></slot>
     </header>
 </template>
 <script>
@@ -33,7 +34,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
     .header{
         position fixed
         top 0

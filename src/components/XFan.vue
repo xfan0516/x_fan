@@ -1,6 +1,8 @@
 <template>
   <div class="xfan">
-    <Header title="xfan组件展示"/>
+    <Header title="xfan组件展示">
+      <span class="header-r" slot="header-right" @click="showSidebar"><x-icon type="ios-menu" size="big"/></span>
+    </Header>
     <div>
       <x-cell>
         <span slot="cell-left">单元格列表</span>
@@ -171,6 +173,14 @@
         <input class="input-text" v-model="msgPrompt" type="text" placeholder="输入您想说的话">
       </div>
     </Prompt>
+
+    <!-- 侧边栏 -->
+    <Sidebar 
+      :sideShow="sideShow"
+      @onClose="onClose"
+      @onCancel="onCancel"
+      @onConfirm="onConfirm"
+    />
   </div>
 </template>
 <script>
@@ -182,6 +192,7 @@ export default {
       msgPrompt: "",
       isShow: false,
       isShowPrompt: false,
+      sideShow: false,
       list: [
         {
           title: "A太平湖休闲垂钓",
@@ -229,10 +240,12 @@ export default {
     onClose() {
       this.isShow = false;
       this.isShowPrompt = false;
+      this.sideShow = false;
     },
     onCancel() {
       this.isShow = false;
       this.isShowPrompt = false;
+      this.sideShow = false;
     },
     showPrompt() {
       this.isShowPrompt = true;
@@ -241,6 +254,10 @@ export default {
       this.$Message.info("保存成功");
       this.isShow = false;
       this.isShowPrompt = false;
+      this.sideShow = false;
+    },
+    showSidebar(){
+      this.sideShow = true
     },
     message() {
       this.$Message.info("这是提示信息");

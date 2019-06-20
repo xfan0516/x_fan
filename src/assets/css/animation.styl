@@ -25,16 +25,30 @@
   }
 }
 
-/* 可以设置不同的进入和离开动画 */
+/* 可以设置不同的进入和离开动画 右进右出*/
 /* 设置持续时间和动画函数 */
-.slide-fade-enter-active {
-  transition: all .8s ease;
+.slide-fade-right-enter-active {
+  transition: all .3s ease;
 }
-.slide-fade-leave-active {
-  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+.slide-fade-right-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-.slide-fade-enter, .slide-fade-leave-to {
-  transform: translateY(20px);
+.slide-fade-right-enter, .slide-fade-right-leave-to {
+  transform: translateX(80%);
   opacity: 1;
 }
+
+/* 可以设置不同的进入和离开动画 左进左出*/
+/* 设置持续时间和动画函数 */
+.slide-fade-left-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-left-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-left-enter, .slide-fade-left-leave-to {
+  transform: translateX(-80%);
+  opacity: 1;
+}
+
 

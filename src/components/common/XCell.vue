@@ -31,7 +31,9 @@ export default {
     padding .1rem
     border-bottom 1px solid #eee
     background #fff
-    font-size .14rem
+    font-size .16rem
     .cell-left
       position relative
+      .date
+        font-weight 500
 </style>

@@ -18,11 +18,11 @@
     </div> -->
     
     <div :class="active === 'xfan' && 'active'" @click="$router.push('/xfan')">
-      <x-icon type="ios-cart" size="big"><Badge num="13"/></x-icon>
+      <x-icon type="ios-cart" size=".25rem"><Badge num="13"/></x-icon>
       <p>组件</p>
     </div>
     <div :class="active === 'user' && 'active'" @click="$router.push('/user')">
-      <x-icon type="ios-contact" size="big"/>
+      <x-icon type="ios-contact" size=".25rem"/>
       <p>关于</p>
     </div>
   </footer>
@@ -63,7 +63,7 @@ export default {
   text-align: center;
 
   p {
-    padding-top: 0.05rem;
+    padding-top: 0.02rem;
   }
   .active{
       color: #f55

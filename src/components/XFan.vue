@@ -41,7 +41,7 @@
       <x-cell>
         <span class="cell-left" slot="cell-left">
           Badge组件
-          <Badge num="12"/>
+          <Badge :num="badge"/>
         </span>
         <span slot="cell-right">
           <x-icon type="ios-arrow-down" size="big"/>
@@ -142,9 +142,9 @@
         <div class="media-body" slot="media-body">
           <h3 class="x_flex-between">
             {{item.title}}
-            <span class="text-9">{{item.date}}</span>
+            <span class="text-9 h5 date">{{item.date}}</span>
           </h3>
-          <p>{{item.intro}}</p>
+          <p class="h3">{{item.intro}}</p>
         </div>
       </Media>
       <x-cell>
@@ -194,7 +194,6 @@
   </div>
 </template>
 <script>
-   import {mapMutations} from 'vuex'
 
 export default {
   name: "xfan",
@@ -206,6 +205,7 @@ export default {
       isShowPrompt: false,
       sideShow: false,
       headerDeg: 0,
+      badge: 12,
       list: [
         {
           title: "A太平湖休闲垂钓",
@@ -243,8 +243,20 @@ export default {
           imgCrs: "http://img.ycb51.com/jf_plus/1555306843107_2538.png",
           id: "12"
         }
-      ]
+      ],
     };
+  },
+  inject: ['app'],
+  created(){
+    this.$set(this.list1,2,{
+          title: "A太平湖休闲垂钓",
+          date: "2019-06-18",
+          intro:
+            "三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获",
+          imgCrs: "http://img.ycb51.com/jf_plus/1555306843107_2538.png",
+          id: "13"
+        })
+
   },
   watch:{
     sideShow(newValue){
@@ -283,11 +295,8 @@ export default {
       this.$Message.info("这是提示信息");
     },
     showLoading(){
-      this.set_loading(true)
-    },
-    ...mapMutations({
-      set_loading: 'set_loading'
-    })
+      this.app.changeLoading(true)
+    }
   }
 };
 </script>

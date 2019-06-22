@@ -1,5 +1,6 @@
 <template>
-  <div class="loading" v-if="loading" @click="hideLoading">
+  <div class="loading" v-if="app.loading">
+    <x-icon class="icon-close" type="ios-close-circle-outline" size=".36rem"  @click="changeLoading"/>
     <transition name="rotate">
       <x-icon v-if="animte" class="icon-loading" type="ios-loading" size=".5rem"/>
     </transition>
@@ -9,17 +10,15 @@
 import { mapMutations, mapGetters } from "vuex";
 export default {
   name: "loading",
+  inject:['app'],
   data() {
     return {
       msg: "这是loading组件",
       animte: false
     };
   },
-  computed: {
-    ...mapGetters(["loading"])
-  },
   watch: {
-    loading(newValue) {
+    'app.loading'(newValue) {
       this.$nextTick(() => {
         console.log(newValue);
         this.animte = newValue;
@@ -27,13 +26,9 @@ export default {
     }
   },
   methods: {
-    hideLoading() {
-      this.set_loading(false);
-    },
-
-    ...mapMutations({
-      set_loading: "set_loading"
-    })
+    changeLoading() {
+      this.app.changeLoading(false)
+    }
   }
 };
 </script>
@@ -55,6 +50,12 @@ export default {
     margin: -0.25rem;
     color: #999;
     animation: changDeg 2s linear 0.2s infinite;
+  }
+  .icon-close{
+    position: absolute;
+    top: .5rem;
+    right: .1rem;
+    color: #f5f5f5
   }
 }
 </style>

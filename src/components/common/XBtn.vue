@@ -67,7 +67,7 @@ btn(num) {
   position: relative;
   display: inline-block;
   btn(0);
-  padding: 0 0.1rem;
+  padding: 0 0.15rem;
   background: #e6e6e6;
   color: #333;
 }

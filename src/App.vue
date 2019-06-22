@@ -2,19 +2,24 @@
   <div id="app" :style="style">
     <router-view/>
     <Footer v-if="footer"/>
-    <Loading/>
+    <Loading />
   </div>
 </template>
 <script>
-import { mapGetters } from "vuex";
 
 export default {
   name: "App",
   data() {
     return {
       msg: "这是App组件",
-      footer: false
+      footer: false,
+      loading: false
     };
+  },
+  provide(){
+    return{
+      app: this
+    }
   },
   created() {},
   watch: {
@@ -29,10 +34,13 @@ export default {
         style.paddingBottom = "10px";
       }
       return style;
-    },
-    ...mapGetters(["loading"])
+    }
   },
-  methods: {}
+  methods: {
+    changeLoading (loading) {
+      this.loading = loading
+    }
+  }
 };
 </script>
 

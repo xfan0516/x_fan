@@ -11,6 +11,7 @@ import Loading from "@/components/common/Loading";
 import Badge from "@/components/common/Badge";
 import Sidebar from "@/components/common/Sidebar";
 import { Confirm, Prompt} from "@/components/common/modal";
+import { InputText, InputCheckbox } from "@/components/common/form";
 
 const components = {
     Header,
@@ -25,7 +26,9 @@ const components = {
     Prompt,
     Badge,
     Sidebar,
-    Loading
+    Loading,
+    InputText,
+    InputCheckbox
 }
 const install = function (Vue) {
     if (install.installed) return;

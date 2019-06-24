@@ -10,6 +10,7 @@ import Message from "@/components/common/Message";
 import Loading from "@/components/common/Loading";
 import Badge from "@/components/common/Badge";
 import Sidebar from "@/components/common/Sidebar";
+import Swiper from "@/components/common/swiper/Swiper";
 import { Confirm, Prompt} from "@/components/common/modal";
 
 const components = {
@@ -25,7 +26,8 @@ const components = {
     Prompt,
     Badge,
     Sidebar,
-    Loading
+    Loading,
+    Swiper
 }
 const install = function (Vue) {
     if (install.installed) return;

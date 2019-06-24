@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-   <Swiper></Swiper>
+   <Swiper :autoPlay="3000" :currIndex="2"></Swiper>
   </div>
 </template>
 
@@ -24,20 +24,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus">
-.x_flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-
-.thumbnail-list
-  padding 0 .05rem
-  background #eee
-  overflow hidden
-.col-thumbnail
-  padding 0 .05rem
- 
 </style>

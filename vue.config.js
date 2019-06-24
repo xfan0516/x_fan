@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2019/4/10.
  */
-const CompressionPlugin = require('compression-webpack-plugin')
+// const CompressionPlugin = require('compression-webpack-plugin')
 module.exports = {
     publicPath: './',
     lintOnSave: false,
@@ -30,7 +30,7 @@ module.exports = {
             // etc...
         }
     },
-    configureWebpack: () => {
+    /* configureWebpack: () => {
         if (process.env.NODE_ENV === 'production') {
             return {
                 plugins: [
@@ -42,5 +42,5 @@ module.exports = {
                 ]
             }
         }
-    }
+    } */
 }

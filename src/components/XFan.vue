@@ -8,6 +8,26 @@
       </span>
     </Header>
     <div>
+       <x-cell>
+        <span slot="cell-left">Swiper组件</span>
+        <span slot="cell-right">
+          <x-icon type="ios-arrow-down" size="big"/>
+        </span>
+      </x-cell>
+      <Swiper :autoPlay="5000" :currIndex="currIndex" :list="swiperList" @change="swiperChange">
+        <li v-for="(item,index) in swiperList" v-show="index === currIndex" :key="item.id">
+          <img :src="item.src" alt>
+          <p>{{item.text}}</p>
+        </li>
+        <template slot="swiper-page">
+          <span
+            v-for="(item,index) in swiperList"
+            :key="index"
+            @click="swiperChange(index)"
+            :class="index === currIndex && 'active'"
+          ></span>
+        </template>
+      </Swiper>
       <x-cell>
         <span slot="cell-left">单元格列表</span>
         <span slot="cell-right">
@@ -129,6 +149,7 @@
       </x-cell>
       <XBtn text="primary" type="primary" @click="message">信息提示框</XBtn>
 
+     
       <x-cell>
         <span slot="cell-left">图文列表</span>
         <span slot="cell-right">
@@ -244,6 +265,24 @@ export default {
           id: "12"
         }
       ],
+      swiperList: [
+        {
+          src: require("@/assets/images/1.jpg"),
+          id: 1,
+          text:'这是表述文字'
+        },
+        {
+          src: require("@/assets/images/2.jpg"),
+          id: 3,
+          text:'这是表述文字'
+        },
+        {
+          src: require("@/assets/images/3.jpg"),
+          id: 2,
+          text:'这是表述文字'
+        }
+      ],
+      currIndex: 0
     };
   },
   inject: ['app'],
@@ -296,6 +335,9 @@ export default {
     },
     showLoading(){
       this.app.changeLoading(true)
+    },
+    swiperChange(e) {
+      this.currIndex = e;
     }
   }
 };

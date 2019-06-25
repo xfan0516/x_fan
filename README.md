@@ -163,5 +163,37 @@ slot: modal-main
     onCancel: 用户取消
     onConfirm: 用户确认
 ```
+#### Swiper组件
+```
+<Swiper :autoPlay="5000" :currIndex="currIndex" :list="list" @change="swiperChange">
+    <li v-for="(item,index) in list" v-show="index === currIndex" :key="item.id">
+    <img :src="item.src" alt>
+    <p>{{item.text}}</p>
+    </li>
+    <template slot="swiper-page">
+    <span
+        v-for="(item,index) in list"
+        :key="index"
+        @click="swiperChange(index)"
+        :class="index === currIndex && 'active'"
+    ></span>
+    </template>
+</Swiper>
+
+Prompt 接受3个props,两个slot;
+props: autoPlay, currIndex, list;
+    autoPlay:轮播停留时长,默认是3000
+    currIndex:当前显示第一个的索引
+    list: 数组类型
+
+slot: default(slot) swiper-page
+    default(slot): 显示图片类容
+    swiper-page: 自定义分页器，非必选
+
+
+
+
+```
+
 
 

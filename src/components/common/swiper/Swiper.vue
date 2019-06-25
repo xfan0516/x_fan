@@ -1,28 +1,21 @@
 <template>
   <div class="swiper">
-    <ul>
-      <transition
-        :name="animate.name"
-        v-enter-active-class="animate.curr"
-        v-leave-active-class="animate.next"
-      >
-        <li v-for="(item,index) in list" v-if="index === cIndex" :key="item.id">
-          <img :src="item.src" alt>
-          <p>这是表述文字</p>
-        </li>
-      </transition>
-    </ul>
+    <transition-group tag="ul" :name="animate.name">
+      <slot></slot>
+    </transition-group>
     <div class="swiper-btn swiper-btn-left" @click="prev">
       <x-icon type="ios-arrow-dropleft" size=".32rem"/>
     </div>
     <div class="swiper-btn swiper-btn-right" @click="next">
       <x-icon type="ios-arrow-dropright" size=".32rem"/>
     </div>
-    <div class="dice dice-right">
+    <div class="swiper-page">
+      <slot name="swiper-page"></slot>
       <span
+        v-if="isPage"
         v-for="(item,index) in list"
         :key="index"
-        @click="dice(index)"
+        @click="pageChange(index)"
         :class="index === cIndex && 'active'"
       ></span>
     </div>
@@ -40,6 +33,10 @@ export default {
     currIndex: {
       type: Number,
       default: 0
+    },
+    list: {
+      type: Array,
+      default:[]
     }
   },
   watch: {
@@ -51,73 +48,60 @@ export default {
     return {
       msg: "Welcome to Your swiper ",
       animate: {
-        curr: "slide-right",
-        next: "slide-left",
         name: "slide-right"
       },
       cIndex: this.currIndex,
-      list: [
-        {
-          src: require("./images/0.jpg"),
-          id: 1
-        },
-        {
-          src: require("./images/0.jpg"),
-          id: 3
-        },
-        {
-          src: require("./images/0.jpg"),
-          id: 2
-        }
-      ],
+      isPage: true,
       timer: null
     };
   },
   created() {
-    if (this.autoPlay) {
-      this.timer = setInterval(() => {
-        this.next();
-      }, this.autoPlay);
+    this.$nextTick(() => {
+      if (this.autoPlay) {
+        this.timer = setInterval(() => {
+          this.next();
+        }, this.autoPlay);
+      }
+    });
+    if(this.$slots['swiper-page']){
+      this.isPage = false
+
     }
+
+    console.log(this.$slots['swiper-page'])
   },
   methods: {
-
     // 上一个
     prev() {
       this.animate = {
-        curr: "slide-right",
-        next: "slide-left",
         name: "slide-right"
       };
       this.cIndex = --this.cIndex >= 0 ? this.cIndex : this.list.length - 1;
+      this.$emit("change", this.cIndex);
     },
     // 下一个
     next() {
       this.animate = {
-        curr: "slide-right",
-        next: "slide-left",
         name: "slide-left"
       };
 
       this.cIndex = ++this.cIndex < this.list.length ? this.cIndex : 0;
+      this.$emit("change", this.cIndex);
     },
 
     // 点击小方框
-    dice(index) {
-      if (index > this.currIndex) {
+    pageChange(index) {
+      if (index > this.cIndex) {
         this.animate = {
-          curr: "slide-right",
-          next: "slide-left",
           name: "slide-left"
         };
       } else {
         this.animate = {
-          curr: "slide-right",
-          next: "slide-left",
           name: "slide-right"
         };
       }
       this.cIndex = index;
+      this.$emit("change", this.cIndex);
     }
   },
   beforeDestroy() {
@@ -126,12 +110,14 @@ export default {
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus" scoped>
+<style lang="stylus" >
 .swiper {
   position: relative;
   width: 100%;
   height: 1.7rem;
   background: #eee;
+  overflow: hidden;
+
 
   li {
     position: absolute;
@@ -156,7 +142,7 @@ export default {
     width: 100%;
   }
 
-  .dice {
+  .swiper-page {
     position: absolute;
     bottom: 0.08rem;
     width: 100%;
@@ -213,11 +199,11 @@ export default {
 /* 可以设置不同的进入和离开动画 左进左出 */
 /* 设置持续时间和动画函数 */
 .slide-left-enter-active {
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .slide-left-leave-active {
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
 .slide-left-enter, .slide-right-leave-to {
@@ -225,11 +211,11 @@ export default {
 }
 
 .slide-right-enter-active {
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .slide-right-leave-active {
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .slide-right-enter, .slide-left-leave-to {

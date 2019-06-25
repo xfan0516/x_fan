@@ -54,6 +54,11 @@ export default {
         line-height 2
         font-weight 600
         font-size .15rem
+      .media-title
+        width 74%
+        overflow: hidden;
+        text-overflow:ellipsis; 
+        white-space: nowrap; 
         
       p
         overflow hidden

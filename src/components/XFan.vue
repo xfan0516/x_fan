@@ -1,14 +1,19 @@
 <template>
   <div class="xfan">
     <Header title="xfan组件展示">
-      <span class="header-r" slot="header-right" :style="{transform: 'rotate('+ headerDeg + 'deg)'}" @click="showSidebar">
-      <transition name="rotate">
-        <x-icon type="ios-menu" size="big"/>
-      </transition>
+      <span
+        class="header-r"
+        slot="header-right"
+        :style="{transform: 'rotate('+ headerDeg + 'deg)'}"
+        @click="showSidebar"
+      >
+        <transition name="rotate">
+          <x-icon type="ios-menu" size="big"/>
+        </transition>
       </span>
     </Header>
     <div>
-       <x-cell>
+      <x-cell>
         <span slot="cell-left">Swiper组件</span>
         <span slot="cell-right">
           <x-icon type="ios-arrow-down" size="big"/>
@@ -149,7 +154,6 @@
       </x-cell>
       <XBtn text="primary" type="primary" @click="message">信息提示框</XBtn>
 
-     
       <x-cell>
         <span slot="cell-left">图文列表</span>
         <span slot="cell-right">
@@ -162,7 +166,7 @@
         </div>
         <div class="media-body" slot="media-body">
           <h3 class="x_flex-between">
-            {{item.title}}
+            <span class="media-title">{{item.title}}</span>
             <span class="text-9 h5 date">{{item.date}}</span>
           </h3>
           <p class="h3">{{item.intro}}</p>
@@ -187,7 +191,6 @@
           </Thumbnail>
         </x-col>
       </div>
-
     </div>
 
     <!-- 模态框 -->
@@ -206,16 +209,10 @@
     </Prompt>
 
     <!-- 侧边栏 -->
-    <Sidebar 
-      :sideShow="sideShow"
-      @onClose="onClose"
-      @onCancel="onCancel"
-      @onConfirm="onConfirm"
-    />
+    <Sidebar :sideShow="sideShow" @onClose="onClose" @onCancel="onCancel" @onConfirm="onConfirm"/>
   </div>
 </template>
 <script>
-
 export default {
   name: "xfan",
   data() {
@@ -229,39 +226,41 @@ export default {
       badge: 12,
       list: [
         {
-          title: "A太平湖休闲垂钓",
+          title: `迈克尔·杰克逊 | 怀念你的第一个十年`,
           date: "2019-06-19",
-          intro:
-            "三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获",
+          intro: ` [Michael Jackson1958年8月29日－2009年6月25日]
+被尊称为“流行乐之王”（King of Pop），杰克逊对音乐、舞蹈和时尚的贡献，以及备受关注的个人生活，使他成为全球流行文化的代表人物超过四十年，并且活跃超过半世纪的歌手。`,
           imgCrs:
-            "http://7xsav2.media1.z0.glb.clouddn.com/%E5%8A%9B%E5%8F%A4%E5%8A%9B.png",
+            "http://p2.music.126.net/fSC3dcJU2YaL1XogI6PWoA==/109951164163538572.jpg?param=140y140",
           id: "1"
         },
         {
-          title: "A太平湖休闲垂钓",
+          title: `迈克尔·杰克逊 | 怀念你的第一个十年`,
           date: "2019-06-17",
-          intro:
-            "三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获",
-          imgCrs: "http://img.ycb51.com/jf_plus/1555306843107_2538.png",
+          intro: ` [Michael Jackson1958年8月29日－2009年6月25日]
+被尊称为“流行乐之王”（King of Pop），杰克逊对音乐、舞蹈和时尚的贡献，以及备受关注的个人生活，使他成为全球流行文化的代表人物超过四十年，并且活跃超过半世纪的歌手。`,
+          imgCrs:
+            "http://p2.music.126.net/fSC3dcJU2YaL1XogI6PWoA==/109951164163538572.jpg?param=140y140",
           id: "2"
         }
       ],
       list1: [
         {
-          title: "A太平湖休闲垂钓",
+          title: `迈克尔·杰克逊 | 怀念你的第一个十年`,
           date: "2019-06-19",
-          intro:
-            "三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获",
+          intro: ` [Michael Jackson1958年8月29日－2009年6月25日]
+被尊称为“流行乐之王”（King of Pop），杰克逊对音乐、舞蹈和时尚的贡献，以及备受关注的个人生活，使他成为全球流行文化的代表人物超过四十年，并且活跃超过半世纪的歌手。`,
           imgCrs:
-            "http://7xsav2.media1.z0.glb.clouddn.com/%E5%8A%9B%E5%8F%A4%E5%8A%9B.png",
+            "http://p2.music.126.net/fSC3dcJU2YaL1XogI6PWoA==/109951164163538572.jpg?param=140y140",
           id: "11"
         },
         {
-          title: "A太平湖休闲垂钓",
+          title: `迈克尔·杰克逊 | 怀念你的第一个十年`,
           date: "2019-06-17",
-          intro:
-            "三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获",
-          imgCrs: "http://img.ycb51.com/jf_plus/1555306843107_2538.png",
+          intro: ` [Michael Jackson1958年8月29日－2009年6月25日]
+被尊称为“流行乐之王”（King of Pop），杰克逊对音乐、舞蹈和时尚的贡献，以及备受关注的个人生活，使他成为全球流行文化的代表人物超过四十年，并且活跃超过半世纪的歌手。`,
+          imgCrs:
+            "http://p2.music.126.net/fSC3dcJU2YaL1XogI6PWoA==/109951164163538572.jpg?param=140y140",
           id: "12"
         }
       ],
@@ -269,41 +268,46 @@ export default {
         {
           src: require("@/assets/images/1.jpg"),
           id: 1,
-          text:'这是表述文字'
+          text: "这是表述文字"
         },
         {
           src: require("@/assets/images/2.jpg"),
           id: 3,
-          text:'这是表述文字'
+          text: "这是表述文字"
         },
         {
           src: require("@/assets/images/3.jpg"),
           id: 2,
-          text:'这是表述文字'
+          text: "这是表述文字"
         }
       ],
       currIndex: 0
     };
   },
-  inject: ['app'],
-  created(){
-    this.$set(this.list1,2,{
-          title: "A太平湖休闲垂钓",
-          date: "2019-06-18",
-          intro:
-            "三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获",
-          imgCrs: "http://img.ycb51.com/jf_plus/1555306843107_2538.png",
-          id: "13"
-        })
+  inject: ["app"],
+  created() {
+    this.$set(this.list1, 2, {
+      title: "网易云音乐评论或单评点赞超过十万",
+      date: "2019-06-18",
+      intro: `本歌单所收藏歌曲
+            语种不限，曲风不限，形式不限
+            皆为评论过十万
+            或单评点赞过十万
+            及部分评论即将过十万
+            或单评点赞即将过十万
 
+            謹以此歌单送给我一生最爱的人`,
+      imgCrs:
+        "http://p3.music.126.net/IXvcNIY4pDSx_HhlPDRxBA==/109951164031716633.jpg?param=200y200",
+      id: "13"
+    });
   },
-  watch:{
-    sideShow(newValue){
-      this.headerDeg =   newValue ? 90 : 0;
+  watch: {
+    sideShow(newValue) {
+      this.headerDeg = newValue ? 90 : 0;
     }
   },
-  computed:{
-  },
+  computed: {},
   methods: {
     showConfirm() {
       this.isShow = true;
@@ -327,14 +331,14 @@ export default {
       this.isShowPrompt = false;
       this.sideShow = false;
     },
-    showSidebar(){
+    showSidebar() {
       this.sideShow = true;
     },
     message() {
       this.$Message.info("这是提示信息");
     },
-    showLoading(){
-      this.app.changeLoading(true)
+    showLoading() {
+      this.app.changeLoading(true);
     },
     swiperChange(e) {
       this.currIndex = e;

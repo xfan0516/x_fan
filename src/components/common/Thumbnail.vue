@@ -11,9 +11,9 @@ export default {
     return {
       msg: "Welcome to Your Thumbnail ",
       list: {
-          title: 'A太平湖休闲垂钓',
-          intro:'三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获三个月没去钓鱼，今天终于可以出海止止瘾，还好有少少收获',
-          imgCrs:'http://img.ycb51.com/jf_plus/1555306843107_2538.png',
+          title: '破十万评论歌曲[百万评论歌曲]',
+          intro:' 做一件事没有放弃的就是喜欢音乐！',
+          imgCrs:'http://p4.music.126.net/3hmJhssO32ex_NBb3XhUtw==/1384285150120466.jpg?param=200y200',
           id: '2'
         }
     };

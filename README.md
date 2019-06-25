@@ -62,11 +62,14 @@ Header 接收三个props : title, back, headerR
 ```
 <Media class="media" v-for="item in list" :key="item.id">
     <div class="media-left" slot="media-left">
-        <img src="logo.png" alt>
+        <img :src="item.imgCrs" alt>
     </div>
     <div class="media-body" slot="media-body">
-        <h3>这是标题</h3>
-        <p>简介说明</p>
+        <h3 class="x_flex-between">
+        <span class="media-title">{{item.title}}</span>
+        <span class="text-9 h5 date">{{item.date}}</span>
+        </h3>
+        <p class="h3">{{item.intro}}</p>
     </div>
 </Media>
 

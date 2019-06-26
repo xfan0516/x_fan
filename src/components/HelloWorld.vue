@@ -14,6 +14,12 @@
         ></span>
       </template>
     </Swiper>
+    <div class="pad10">
+
+    <input-text type="text">
+    
+    </input-text>
+    </div>
   </div>
 </template>
 
@@ -55,4 +61,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus"></style>
+<style lang="stylus">
+.pad10{
+  padding .1rem
+}
+</style>

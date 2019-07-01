@@ -16,9 +16,12 @@
     </Swiper>
     <div class="pad10">
 
-    <input-text type="text">
-    
-    </input-text>
+    <input-text type="text" :value="text" :block="true" @change="InputChange" />
+    <input-text type="text" :value="text" @change="InputChange"/>
+    </div>
+    <div class="pad10">
+    <x-checkbox :options="item" v-for="item in checkboxs" :key="item.id" :value="value" @change="change" />
+
     </div>
   </div>
 </template>
@@ -32,6 +35,22 @@ export default {
   },
   data() {
     return {
+      text: 'rwerwe',
+      value:[1],
+      checkboxs:[
+        {
+          id: 1,
+          text: '初中'
+        },
+        {
+          id: 2,
+          text: '高中'
+        },
+        {
+          id: 3,
+          text: '本科'
+        },
+      ],
       list: [
         {
           src: require("@/assets/images/1.jpg"),
@@ -55,6 +74,18 @@ export default {
   methods: {
     swiperChange(e) {
       this.currIndex = e;
+    },
+    change(value){
+      let item = this.value.filter(item=>item === value.id)[0];
+      if(item){
+        this.value = this.value.filter(item=>item !== value.id)
+      }else{
+        this.value.push(value.id)
+      }
+    },
+    InputChange(val){
+      console.log(val)
+      this.text = val
     }
   }
 };

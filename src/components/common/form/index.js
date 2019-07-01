@@ -1,8 +1,8 @@
 import InputText from './InputText.vue';
-import InputCheckbox from './InputCheckbox.vue';
+import XCheckbox from './XCheckbox.vue';
 
 
 export {
     InputText,
-    InputCheckbox
+    XCheckbox
 }

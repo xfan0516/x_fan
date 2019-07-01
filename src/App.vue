@@ -59,6 +59,7 @@ export default {
   width: 100%;
   max-width: 640px;
   min-height: 100%;
+  min-width: 320px;
   box-sizing: border-box;
   margin: 0 auto;
   padding-top: 0.46rem;

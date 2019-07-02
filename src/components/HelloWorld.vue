@@ -21,6 +21,8 @@
     </div>
     <div class="pad10">
     <x-checkbox :options="item" v-for="item in checkboxs" :key="item.id" :value="value" @change="change" />
+    <br>
+    <x-radio :options="item" v-for="item in radios" :key="item.id" :value="radiosValue" @change="radioChange" />
 
     </div>
   </div>
@@ -36,6 +38,21 @@ export default {
   data() {
     return {
       text: 'rwerwe',
+      radiosValue:[20],
+      radios:[
+        {
+          id: 10,
+          text: '初中'
+        },
+        {
+          id: 20,
+          text: '高中'
+        },
+        {
+          id: 30,
+          text: '本科'
+        },
+      ],
       value:[1],
       checkboxs:[
         {
@@ -86,6 +103,11 @@ export default {
     InputChange(val){
       console.log(val)
       this.text = val
+    },
+    radioChange(val) {
+      this.radiosValue[0] = val.id
+      this.radiosValue = this.radiosValue
+      console.log(this.radiosValue)
     }
   }
 };

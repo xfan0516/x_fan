@@ -12,7 +12,7 @@ import Badge from "@/components/common/Badge";
 import Sidebar from "@/components/common/Sidebar";
 import Swiper from "@/components/common/swiper/Swiper";
 import { Confirm, Prompt} from "@/components/common/modal";
-import { InputText, XCheckbox } from "@/components/common/form";
+import { InputText, XCheckbox, XRadio } from "@/components/common/form";
 
 const components = {
     Header,
@@ -30,7 +30,8 @@ const components = {
     Loading,
     InputText,
     XCheckbox,
-    Swiper
+    Swiper,
+    XRadio
 }
 const install = function (Vue) {
     if (install.installed) return;

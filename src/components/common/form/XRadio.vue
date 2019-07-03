@@ -1,9 +1,9 @@
 <template>
-  <label  class="x-radio">
-      <x-icon type="md-radio-button-on" v-if="className" size="big"/>
-      <x-icon type="md-radio-button-off" v-else size="big"/>
+  <label  class="x-radio" @click="handlerChange">
+      <x-icon type="md-radio-button-on" v-if="className" size="big" color="#0e90d2"/>
+      <x-icon type="md-radio-button-off" v-else size="big" color="#0e90d2"/>
     <!-- <x-icon :class="{native:className}" type="md-radio" size="big"  color="#999"/> -->
-    <input class="input-radio" type="radio" :value="options.id" :name="name" @change="handlerChange">
+    <input class="input-radio" type="radio" :value="options.id" :name="name">
     <span class="text">{{options.text}}</span>
   </label>
 </template>
@@ -15,27 +15,28 @@ export default {
       type: Object
     },
     value:{
-      type:Array
+      type:[String,Number]
     },
     name:{
       type: String
     }
   },
-  watch:{
-    value(){
-      let item = this.value.filter(item => item === this.options.id)[0]
-      this.value =  item
+  created(){
+    // console.log(this.$attrs)
+  },
+  computed:{
+    className(){
+      return this.value == this.options.id;
     }
   },
   data() {
     return {
       msg: '这是inputtext组件',
-      className: ''
+      // className: ''
     };
   },
   methods:{
     handlerChange(e){
-        console.log(this.value)
 
       this.$emit('change',this.options)
     }

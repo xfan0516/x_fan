@@ -1,7 +1,7 @@
 <template>
   <label for="" class="label-text" :class="{block:block}">
-    <p class="label">姓名姓名姓名</p>
-    <input class="input-text" type="text" :value="value" placeholder="请输入关键字" @input="change">
+    <p class="label">{{label}}</p>
+    <input class="input-text" :type="type" :value="value" placeholder="请输入关键字" @input="change">
   </label>
 </template>
 <script>
@@ -16,13 +16,11 @@ export default {
     },
     value:{
       type: [String, Boolean]
-    }
-  },
-  computed:{
-    className(){
-      this.block
     },
-
+    type:{
+      type: String,
+      default: 'text'
+    }
   },
   data() {
     return {
@@ -30,7 +28,7 @@ export default {
     };
   },
   created(){
-    console.log(this.$props)
+    // console.log(this.$props)
   },
   methods:{
     change(e){
@@ -61,7 +59,7 @@ export default {
     line-height .37rem
 .input-text
   height .37rem
-  // width 100%
+  width 100%
   box-sizing border-box
   border 1px solid #eee
   padding 0 .1rem

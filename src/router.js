@@ -22,7 +22,15 @@ export default new Router({
     {
       path: '/xfan',
       name: 'xfan',
-      component: () => import(/* webpackChunkName: "Search" */ './components/XFan.vue'),
+      component: () => import('@/components/XFan.vue'),
+      meta:{
+        footer: true
+      }
+    },
+    {
+      path: '/xform',
+      name: 'xform',
+      component: () => import('@/views/XForm.vue'),
       meta:{
         footer: true
       }
@@ -30,7 +38,7 @@ export default new Router({
     {
       path: '/search',
       name: 'search',
-      component: () => import(/* webpackChunkName: "Search" */ './views/Search.vue'),
+      component: () => import('@/views/Search.vue'),
       meta:{
         footer: true
       }
@@ -38,7 +46,7 @@ export default new Router({
     {
       path: '/user',
       name: 'user',
-      component: () => import(/* webpackChunkName: "Search" */ './views/User.vue'),
+      component: () => import('@/views/User.vue'),
       meta:{
         footer: true
       }
@@ -46,7 +54,7 @@ export default new Router({
     {
       path: '/cart',
       name: 'cart',
-      component: () => import(/* webpackChunkName: "Search" */ './views/Cart.vue'),
+      component: () => import('@/views/Cart.vue'),
       meta:{
         footer: true
       }
@@ -54,10 +62,7 @@ export default new Router({
     { //查看字体图标
       path: '/xicon',
       name: 'x-icon',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('./views/XIcon.vue'),
+      component: () => import('@/views/XIcon.vue'),
       meta:{
         footer: true
       }

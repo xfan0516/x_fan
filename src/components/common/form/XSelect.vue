@@ -1,8 +1,8 @@
 <template>
   <label for="" class="x-select" :class="{'select-block':block}">
-    <p class="label">{{label}}</p>
+    <p class="label" v-if="label">{{label}}</p>
     <div class="select">
-      <input class="input-text" :type="type" :value="val" placeholder="请输入关键字" />
+      <input class="input-text" type="text" :value="item.text" placeholder="请输入关键字" />
       <select name="" id="" @change="handlerChange">
         <slot></slot>
       </select>
@@ -27,23 +27,29 @@ export default {
     value:{
       type: [String, Number]
     },
-    type:{
-      type: String,
-      default: 'text'
+    defaultValue:{
+      type: [String,Number],
+      default: ''
     }
   },
   data() {
     return {
-      msg: '这是inputtext组件'
+      msg: '这是inputtext组件',
+      item:{}
     };
   },
-  computed:{
-    val(){
-      return this.options.filter(item => item.value === this.value )[0].text
+  
+  watch:{
+    value(){
+      console.log(this.value,this.options)
+      this.item =  this.options.filter(item => item.value == this.value )[0]
     }
   },
   created(){
-    // console.log(this.$attrs)
+      console.log(this.value,this.options)
+      this.item =  this.options.filter(item => item.value == this.value )[0]
+
+    if(this.defaultValue) this.$emit('change',this.defaultValue)
   },
   methods:{
     handlerChange(e){

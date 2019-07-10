@@ -1,9 +1,8 @@
 <template>
-  <label  class="x-radio" @click="handlerChange">
+  <label  class="x-radio" >
       <x-icon type="md-radio-button-on" v-if="className" size="big" color="#0e90d2"/>
       <x-icon type="md-radio-button-off" v-else size="big" color="#0e90d2"/>
-    <!-- <x-icon :class="{native:className}" type="md-radio" size="big"  color="#999"/> -->
-    <input class="input-radio" type="radio" :value="options.id" :name="name">
+    <input class="input-radio" type="radio" :value="options.id" :name="name" @click="handlerChange">
     <span class="text">{{options.text}}</span>
   </label>
 </template>

@@ -19,13 +19,7 @@
       <input-text label="密码" type="text" :value="text" @change="InputChange" />
     </div>
     <div class="pad10">
-      <x-checkbox
-        :options="item"
-        v-for="item in checkboxs"
-        :key="item.id"
-        :value="value"
-        @change="change"
-      />
+     
       <br />
       <x-radio
         v-model="radiosValue"
@@ -99,21 +93,7 @@ export default {
           text: "本科"
         }
       ],
-      value: [1],
-      checkboxs: [
-        {
-          id: 1,
-          text: "初中"
-        },
-        {
-          id: 2,
-          text: "高中"
-        },
-        {
-          id: 3,
-          text: "本科"
-        }
-      ],
+    
       list: [
         {
           src: require("@/assets/images/1.jpg"),

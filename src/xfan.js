@@ -12,7 +12,7 @@ import Badge from "@/components/common/Badge";
 import Sidebar from "@/components/common/Sidebar";
 import Swiper from "@/components/common/swiper/Swiper";
 import { Confirm, Prompt} from "@/components/common/modal";
-import { InputText, XCheckbox, XRadio, XSelect } from "@/components/common/form";
+import { InputText, XCheckboxGroup, XCheckbox, XRadioGroup, XRadio, XSelect } from "@/components/common/form";
 
 const components = {
     Header,
@@ -29,8 +29,10 @@ const components = {
     Sidebar,
     Loading,
     InputText,
+    XCheckboxGroup,
     XCheckbox,
     Swiper,
+    XRadioGroup,
     XRadio,
     XSelect
 }

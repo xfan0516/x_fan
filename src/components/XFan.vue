@@ -45,6 +45,12 @@
           <x-icon type="ios-arrow-forward" size="big"/>
         </span>
       </x-cell>
+      <x-cell @click="$router.push('xform')">
+        <span slot="cell-left">表单组件</span>
+        <span slot="cell-right">
+          <x-icon type="ios-arrow-forward" size="big"/>
+        </span>
+      </x-cell>
       <div class="x_flex-around col-xicon">
         <div>
           <x-icon type="ios-home" size="small"/>

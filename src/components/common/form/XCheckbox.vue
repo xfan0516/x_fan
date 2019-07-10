@@ -1,11 +1,12 @@
 <template>
-  <label  class="x-checkbox">
+<label  class="x-checkbox">
     <x-icon :class="{native:className}" type="md-checkbox" size="big"  color="#999"/>
     <input class="input-checkbox" type="checkbox" :value="options.id" :name="name" @change="handlerChange">
     <span class="text">{{options.text}}</span>
   </label>
 </template>
 <script>
+
 export default {
   name: 'inputtext',
   props:{

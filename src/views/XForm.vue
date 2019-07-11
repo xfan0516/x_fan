@@ -1,63 +1,66 @@
 <template>
   <div class="home">
     <Header title="表单组件"></Header>
-    <div class="main">
-      <div>
-        <x-cell>
-          <span slot="cell-left">复选框</span>
-          <span slot="cell-right">
-            <x-icon type="ios-arrow-down" size="big" />
-          </span>
-        </x-cell>
-        <x-checkbox-group v-model="checkboxValue" style="padding: .1rem">
-          <x-checkbox
-            v-for="(item,index) in checkboxs"
-            :key="index"
-            :value="checkboxValue"
-            :options="item"
-            @change="checkboxChange"
-          />
-        </x-checkbox-group>
-      </div>
+    <x-scroll>
+      <div class="main">
+        <div>
+          <x-cell>
+            <span slot="cell-left">复选框</span>
+            <span slot="cell-right">
+              <x-icon type="ios-arrow-down" size="big" />
+            </span>
+          </x-cell>
+          <x-checkbox-group v-model="checkboxValue" style="padding: .1rem">
+            <x-checkbox
+              v-for="(item,index) in checkboxs"
+              :key="index"
+              :value="checkboxValue"
+              :options="item"
+              @change="checkboxChange"
+            />
+          </x-checkbox-group>
+        </div>
 
-      <div>
-        <x-cell>
-          <span slot="cell-left">单选框</span>
-          <span slot="cell-right">
-            <x-icon type="ios-arrow-down" size="big" />
-          </span>
-        </x-cell>
-        <x-radio-group v-model="radiosValue" style="padding: .1rem">
-          <x-radio
-            v-model="radiosValue"
-            :options="item"
-            v-for="item in radios"
-            :key="item.id"
-            :value="radiosValue"
-            @change="radioChange"
-          />
-        </x-radio-group>
-      </div>
-      <div>
-        <x-cell>
-          <span slot="cell-left">选择器</span>
-          <span slot="cell-right">
-            <x-icon type="ios-arrow-down" size="big" />
-          </span>
-        </x-cell>
-        <div style="padding: .1rem">
-          <x-select
-            :value="selectValue"
-            :options="selects"
-            :block="true"
-            @change="selectChange"
-          >
-            <option :value="item.value" v-for="item in selects" :key="item.value">{{item.text}}</option>
-          </x-select>
+        <div>
+          <x-cell>
+            <span slot="cell-left">单选框</span>
+            <span slot="cell-right">
+              <x-icon type="ios-arrow-down" size="big" />
+            </span>
+          </x-cell>
+          <x-radio-group v-model="radiosValue" style="padding: .1rem">
+            <x-radio
+              v-model="radiosValue"
+              :options="item"
+              v-for="item in radios"
+              :key="item.id"
+              :value="radiosValue"
+              @change="radioChange"
+            />
+          </x-radio-group>
+        </div>
+        <div>
+          <x-cell>
+            <span slot="cell-left">选择器</span>
+            <span slot="cell-right">
+              <x-icon type="ios-arrow-down" size="big" />
+            </span>
+          </x-cell>
+          <div style="padding: .1rem">
+            <x-select
+              :value="selectValue"
+              :options="selects"
+              :block="true"
+              @change="selectChange"
+            >
+              <option :value="item.value" v-for="item in selects" :key="item.value">{{item.text}}</option>
+            </x-select>
 
+          </div>
         </div>
       </div>
-    </div>
+
+    </x-scroll>
   </div>
 </template>
 <script>

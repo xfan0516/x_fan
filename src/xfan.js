@@ -8,6 +8,7 @@ import XCol from "@/components/common/XCol.vue";
 import XCell from "@/components/common/XCell.vue";
 import Message from "@/components/common/Message";
 import Loading from "@/components/common/Loading";
+import XScroll from "@/components/common/XScroll";
 import Badge from "@/components/common/Badge";
 import Sidebar from "@/components/common/Sidebar";
 import Swiper from "@/components/common/swiper/Swiper";
@@ -28,6 +29,7 @@ const components = {
     Badge,
     Sidebar,
     Loading,
+    XScroll,
     InputText,
     XCheckboxGroup,
     XCheckbox,

@@ -17,7 +17,7 @@
   </div>
 </template>
 <script>
-import { clearTimeout } from "timers";
+import { clearTimeout } from 'timers';
 export default {
   name: "scroll",
   props: {
@@ -25,7 +25,7 @@ export default {
       type: Boolean,
       default: false
     },
-    bottomLoading: {
+    bottomLoading:{
       type: Boolean,
       default: false
     },
@@ -59,7 +59,7 @@ export default {
       bottomHeight: 0,
       scrollLoading: false,
       flag: true,
-      refreshText: "下拉即可刷新",
+      refreshText: '下拉即可刷新',
       slotElm: null
     };
   },
@@ -70,8 +70,9 @@ export default {
     loadingHeight(newV) {
       if (newV <= 0) {
         this.loadingHeight = 0;
+
       }
-      this.slotElm.style.transform = `translateY(${this.loadingHeight}px)`;
+        this.slotElm.style.transform = `translateY(${this.loadingHeight}px)`
     }
   },
   computed: {
@@ -86,25 +87,23 @@ export default {
     console.log(this.$slots.default[0].elm);
 
     const scroll = this.$el;
-    scroll.addEventListener(
-      "scroll",
-      e => {
-        this.srcElement = e.srcElement || e.terget;
-        const { scrollTop, scrollHeight, clientHeight } = e.srcElement;
-        let bottomNum = scrollHeight - scrollTop - clientHeight; //距离底部间距
-        // 滚动距离底部小于50px，加载事件
-        if (bottomNum < 50 && this.flag) {
-          this.flag = false;
+    scroll.addEventListener("scroll", (e) => {
+      e.preventDefault()
+      this.srcElement = e.srcElement || e.terget;
+      const { scrollTop, scrollHeight, clientHeight } = e.srcElement;
+      let bottomNum = scrollHeight - scrollTop - clientHeight; //距离底部间距
+      // 滚动距离底部小于50px，加载事件
+        if(bottomNum < 50 && this.flag){
+          this.flag = false
           setTimeout(() => {
-            this.onScrollLoading();
+            this.onScrollLoading()
           }, 1000);
         }
-        // console.log("---",bottomNum, scrollTop, clientHeight, scrollHeight, e);
-      },
-      true
-    );
+      console.log("---",bottomNum, scrollTop, clientHeight, scrollHeight, e);
+    },true);
   },
   methods: {
+
     /**
      * 按下时
      */
@@ -112,14 +111,16 @@ export default {
       if (!this.downUpdate) return;
       this.startY = e.changedTouches[0].clientY;
       this.slotElm = this.$slots.default[0].elm;
-      this.refreshText = "下拉即可刷新";
+      this.refreshText = '下拉即可刷新'
+
+
     },
 
     /**
      * 移动时
      */
     touchmove(e) {
-      e.preventDefault();
+      e.preventDefault()
       if (!this.downUpdate) return;
       this.moveY = e.changedTouches[0].clientY;
 
@@ -129,11 +130,12 @@ export default {
        */
       if (this.moveY > this.startY) {
         let moveTar = (this.moveY - this.startY) / 2.5;
-        this.loadingHeight = moveTar; //moveTar >= 48 ? 48 : moveTar;
-        if (moveTar >= 48) {
-          this.refreshText = "释放即可刷新";
-        } else {
-          this.refreshText = "下拉即可刷新";
+        this.loadingHeight = moveTar; 
+        if(moveTar >= 48){
+          this.refreshText = '释放即可刷新'
+        }else{
+          this.refreshText = '下拉即可刷新'
+
         }
       }
     },
@@ -151,18 +153,15 @@ export default {
        * 如果离开时Y坐标小于按下时Y坐标，并且距离顶部小于10px 显示下拉更新
        * 否则是loadingHeight，bottomHeight都清0
        */
-      if (
-        (this.endY - this.startY) / 2.5 >= 48 &&
-        (scrollTop <= 10 || isNaN(scrollTop))
-      ) {
+      if ((this.endY - this.startY) / 2.5 >= 48 && (scrollTop <= 10 || isNaN(scrollTop))) {
         if (!this.downUpdate) return;
         this.loadingHeight = 48;
         this.scrollLoading = true;
-        this.refreshText = "加载中";
+        this.refreshText = '加载中'
 
         this.initloading();
-        this.$emit("downUpdate");
-      } else {
+        this.$emit('downUpdate')
+      } else  {
         this.loadingHeight = 0;
       }
     },
@@ -173,9 +172,10 @@ export default {
         this.scrollLoading = false;
       }, 3000);
     },
-    onScrollLoading() {
-      this.flag = true;
-      this.$emit("onScroll");
+    onScrollLoading(){
+      this.flag = true
+      this.$emit('onScroll')
+      
     }
   }
 };
@@ -193,10 +193,10 @@ export default {
 }
 
 .down-update {
-  /* position absolute
+  position absolute
   top 0
-  left 0 */
-  width: 100%;
+  left 0
+  width 100%
   text-align: center;
   // background: #eee;
   transition: all 0.2s;

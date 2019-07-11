@@ -1,7 +1,7 @@
 <template>
   <div id="app" :style="style">
     <router-view/>
-    <Footer v-if="footer"/>
+    <Footer v-if="showFooter"/>
     <Loading />
   </div>
 </template>
@@ -12,7 +12,7 @@ export default {
   data() {
     return {
       msg: "这是App组件",
-      footer: false,
+      showFooter: false,
       loading: false
     };
   },
@@ -24,13 +24,13 @@ export default {
   created() {},
   watch: {
     $route(newValue) {
-      this.footer = newValue.meta.footer;
+      this.showFooter = newValue.meta.footer;
     }
   },
   computed: {
     style() {
       var style = {};
-      if (!this.footer) {
+      if (!this.showFooter) {
         style.paddingBottom = "10px";
       }
       return style;

@@ -30,6 +30,7 @@ const components = {
     Sidebar,
     XScroll,
     Loading,
+    XScroll,
     InputText,
     XCheckboxGroup,
     XCheckbox,

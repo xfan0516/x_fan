@@ -8,21 +8,21 @@
         @click="showSidebar"
       >
         <transition name="rotate">
-          <x-icon type="ios-menu" size="big"/>
+          <x-icon type="ios-menu" size="big" />
         </transition>
       </span>
     </Header>
-    <x-scroll :downUpdate="true">
+    <x-scroll :downUpdate="true" :bottomLoading="true" top=".44rem" bottom=".49rem" @onScroll="onScroll">
       <div class="main">
         <x-cell>
           <span slot="cell-left">Swiper组件</span>
           <span slot="cell-right">
-            <x-icon type="ios-arrow-down" size="big"/>
+            <x-icon type="ios-arrow-down" size="big" />
           </span>
         </x-cell>
         <Swiper :autoPlay="5000" :currIndex="currIndex" :list="swiperList" @change="swiperChange">
           <li v-for="(item,index) in swiperList" v-show="index === currIndex" :key="item.id">
-            <img :src="item.src" alt>
+            <img :src="item.src" alt />
             <p>{{item.text}}</p>
           </li>
           <template slot="swiper-page">
@@ -43,53 +43,53 @@
         <x-cell @click="$router.push('xicon')">
           <span slot="cell-left">图标组件</span>
           <span slot="cell-right">
-            <x-icon type="ios-arrow-forward" size="big"/>
+            <x-icon type="ios-arrow-forward" size="big" />
           </span>
         </x-cell>
         <x-cell @click="$router.push('xform')">
           <span slot="cell-left">表单组件</span>
           <span slot="cell-right">
-            <x-icon type="ios-arrow-forward" size="big"/>
+            <x-icon type="ios-arrow-forward" size="big" />
           </span>
         </x-cell>
         <div class="x_flex-around col-xicon">
           <div>
-            <x-icon type="ios-home" size="small"/>
+            <x-icon type="ios-home" size="small" />
             <p>small</p>
           </div>
           <div>
-            <x-icon type="ios-home"/>
+            <x-icon type="ios-home" />
             <p>default</p>
           </div>
           <div>
-            <x-icon type="ios-home" size="big"/>
+            <x-icon type="ios-home" size="big" />
             <p>big</p>
           </div>
           <div>
-            <x-icon type="ios-home" size=".34rem" color="#f90"/>
+            <x-icon type="ios-home" size=".34rem" color="#f90" />
             <p>自定义大小</p>
           </div>
         </div>
         <x-cell>
           <span class="cell-left" slot="cell-left">
             Badge组件
-            <Badge :num="badge"/>
+            <Badge :num="badge" />
           </span>
           <span slot="cell-right">
-            <x-icon type="ios-arrow-down" size="big"/>
+            <x-icon type="ios-arrow-down" size="big" />
           </span>
         </x-cell>
         <div></div>
         <x-cell @click="showLoading">
           <span slot="cell-left">Loading组件</span>
           <span slot="cell-right">
-            <x-icon type="ios-arrow-down" size="big"/>
+            <x-icon type="ios-arrow-down" size="big" />
           </span>
         </x-cell>
         <x-cell>
           <span slot="cell-left">按钮组件</span>
           <span slot="cell-right">
-            <x-icon type="ios-arrow-down" size="big"/>
+            <x-icon type="ios-arrow-down" size="big" />
           </span>
         </x-cell>
         <div>
@@ -110,7 +110,7 @@
         <x-cell>
           <span slot="cell-left">栅格化</span>
           <span slot="cell-right">
-            <x-icon type="ios-arrow-down" size="big"/>
+            <x-icon type="ios-arrow-down" size="big" />
           </span>
         </x-cell>
         <div class="clearfix col-xcol">
@@ -147,7 +147,7 @@
         <x-cell>
           <span slot="cell-left">模态框</span>
           <span slot="cell-right">
-            <x-icon type="ios-arrow-down" size="big"/>
+            <x-icon type="ios-arrow-down" size="big" />
           </span>
         </x-cell>
         <x-btn type="primary" @click="showConfirm">modal Confirm</x-btn>
@@ -156,7 +156,7 @@
         <x-cell>
           <span slot="cell-left">信息提示框</span>
           <span slot="cell-right">
-            <x-icon type="ios-arrow-down" size="big"/>
+            <x-icon type="ios-arrow-down" size="big" />
           </span>
         </x-cell>
         <XBtn text="primary" type="primary" @click="message">信息提示框</XBtn>
@@ -164,12 +164,12 @@
         <x-cell>
           <span slot="cell-left">图文列表</span>
           <span slot="cell-right">
-            <x-icon type="ios-arrow-down" size="big"/>
+            <x-icon type="ios-arrow-down" size="big" />
           </span>
         </x-cell>
         <Media class="media" v-for="item in list" :key="item.id">
           <div class="media-left" slot="media-left">
-            <img :src="item.imgCrs" alt>
+            <img :src="item.imgCrs" alt />
           </div>
           <div class="media-body" slot="media-body">
             <h3 class="x_flex-between">
@@ -182,14 +182,14 @@
         <x-cell>
           <span slot="cell-left">上图下文列表</span>
           <span slot="cell-right">
-            <x-icon type="ios-arrow-down" size="big"/>
+            <x-icon type="ios-arrow-down" size="big" />
           </span>
         </x-cell>
         <div class="thumbnail-list">
           <x-col class="col-thumbnail" span="12" v-for="item in list1" :key="item.id">
             <Thumbnail>
               <div class="pic" slot="thumbnail-pic">
-                <img :src="item.imgCrs" alt>
+                <img :src="item.imgCrs" alt />
                 <p>{{item.date}}</p>
               </div>
               <div class="info" slot="thumbnail-info">
@@ -199,7 +199,6 @@
           </x-col>
         </div>
       </div>
-
     </x-scroll>
 
     <!-- 模态框 -->
@@ -213,12 +212,12 @@
     />
     <Prompt title="提示" :isShow="isShowPrompt" @onCancel="onCancel" @onConfirm="onConfirm">
       <div slot="modal-main">
-        <input class="input-text" v-model="msgPrompt" type="text" placeholder="输入您想说的话">
+        <input class="input-text" v-model="msgPrompt" type="text" placeholder="输入您想说的话" />
       </div>
     </Prompt>
 
     <!-- 侧边栏 -->
-    <Sidebar :sideShow="sideShow" @onClose="onClose" @onCancel="onCancel" @onConfirm="onConfirm"/>
+    <Sidebar :sideShow="sideShow" @onClose="onClose" @onCancel="onCancel" @onConfirm="onConfirm" />
   </div>
 </template>
 <script>
@@ -351,6 +350,9 @@ export default {
     },
     swiperChange(e) {
       this.currIndex = e;
+    },
+    onScroll(){
+      this.$Message.info('数据加载中。。。')
     }
   }
 };

@@ -95,9 +95,8 @@ export default {
         // 滚动距离底部小于50px，加载事件
         if (bottomNum < 50 && this.flag) {
           this.flag = false;
-          setTimeout(() => {
-            this.onScrollLoading();
-          }, 1000);
+          this.onScrollLoading();
+          
         }
         // console.log("---",bottomNum, scrollTop, clientHeight, scrollHeight, e);
       },
@@ -174,7 +173,9 @@ export default {
       }, 3000);
     },
     onScrollLoading() {
-      this.flag = true;
+      setTimeout(() => {
+        this.flag = true;
+      }, 1000);
       this.$emit("onScroll");
     }
   }

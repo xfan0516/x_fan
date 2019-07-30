@@ -28,6 +28,7 @@ const components = {
     Prompt,
     Badge,
     Sidebar,
+    XScroll,
     Loading,
     XScroll,
     InputText,

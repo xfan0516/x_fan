@@ -5,6 +5,8 @@
 module.exports = {
     publicPath: './',
     lintOnSave: false,
+    // 配置js、css等文件夹的二级目录位置，不设置则会在dist下生成4个文件夹
+	assetsDir: "static",
     devServer: {
         port: 8088, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
         proxy: {

@@ -2,7 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import '@/assets/js/flexible.js'
+// import '@/assets/js/flexible.js'
+import 'lib-flexible/flexible.js' //淘宝适配
+
 import xfan from './xfan'
 // import 'lib-flexible/flexible.js'
 Vue.config.productionTip = false;

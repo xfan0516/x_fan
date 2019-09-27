@@ -1,4 +1,4 @@
-# x_fan
+# x_fan-ui
 
 ## Project setup
 ```

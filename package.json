@@ -1,7 +1,7 @@
 {
   "name": "x_fan-ui",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.0.23",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -24,5 +24,20 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "description": "```\r npm install\r ```",
+  "main": "src/xfan.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xfan0516/x_fan.git"
+  },
+  "keywords": [
+    "vue-ui"
+  ],
+  "author": "xfan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xfan0516/x_fan/issues"
+  },
+  "homepage": "https://github.com/xfan0516/x_fan#readme"
 }

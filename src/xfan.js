@@ -1,19 +1,21 @@
-import Header from "@/components/common/Header.vue";
-import XIcon from "@/components/common/XIcon.vue";
-import XBtn from "@/components/common/XBtn.vue";
-import Footer from "@/components/common/Footer.vue";
-import Media from "@/components/common/Media.vue";
-import Thumbnail from "@/components/common/Thumbnail.vue";
-import XCol from "@/components/common/XCol.vue";
-import XCell from "@/components/common/XCell.vue";
-import Message from "@/components/common/Message";
-import Loading from "@/components/common/Loading";
-import XScroll from "@/components/common/XScroll";
-import Badge from "@/components/common/Badge";
-import Sidebar from "@/components/common/Sidebar";
-import Swiper from "@/components/common/swiper/Swiper";
-import { Confirm, Prompt} from "@/components/common/modal";
-import { InputText, XCheckboxGroup, XCheckbox, XRadioGroup, XRadio, XSelect } from "@/components/common/form";
+import './assets/js/flexible.js';
+import './assets/css/reset.css';
+import Header from "./components/common/Header.vue";
+import XIcon from "./components/common/XIcon.vue";
+import XBtn from "./components/common/XBtn.vue";
+import Footer from "./components/common/Footer.vue";
+import Media from "./components/common/Media.vue";
+import Thumbnail from "./components/common/Thumbnail.vue";
+import XCol from "./components/common/XCol.vue";
+import XCell from "./components/common/XCell.vue";
+import Message from "./components/common/Message";
+import Loading from "./components/common/Loading";
+import XScroll from "./components/common/XScroll";
+import Badge from "./components/common/Badge";
+import Sidebar from "./components/common/Sidebar";
+import Swiper from "./components/common/swiper/Swiper";
+import { Confirm, Prompt} from "./components/common/modal";
+import { InputText, XCheckboxGroup, XCheckbox, XRadioGroup, XRadio, XSelect } from "./components/common/form";
 
 const components = {
     Header,

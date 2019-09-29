@@ -50,12 +50,12 @@ export default {
 };
 </script>
 
-<style lang="stylus" >
+<style lang="scss" >
 .footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index 999999
+  z-index: 999999;
   width: 100%;
   height: 0.49rem;
   border-top: 1px solid #eee;

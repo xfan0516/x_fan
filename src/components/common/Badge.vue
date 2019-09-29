@@ -15,18 +15,20 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
-.badge
-  position absolute
-  top -.1rem
-  right -.1rem
-  width .2rem
-  height .2rem
-  line-height .2rem
-  text-align center
-  background #dd514c
-  font-size .12rem
-  color #ffffff
-  border-radius 1rem
+<style lang="scss">
+.badge {
+  position: absolute;
+  top: -.1rem;
+  right: -.1rem;
+  width: .2rem;
+  height: .2rem;
+  line-height: .2rem;
+  text-align: center;
+  background: #dd514c;
+  font-size: .12rem;
+  color: #ffffff;
+  border-radius: 1rem;
+
+}
 
 </style>

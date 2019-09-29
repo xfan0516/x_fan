@@ -182,24 +182,19 @@ export default {
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus" scoped>
+<style lang="scss">
 .scroll {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  /* overflow:hidden; */
   overflow-y: auto;
 }
 
 .down-update {
-  /* position absolute
-  top 0
-  left 0 */
   width: 100%;
   text-align: center;
-  // background: #eee;
   transition: all 0.2s;
 }
 
@@ -214,14 +209,4 @@ export default {
   padding-top: 80%;
   text-align: center;
 }
-
-/* .bottom-loading {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  background: #eee;
-  transition: all 0.2s;
-} */
 </style>

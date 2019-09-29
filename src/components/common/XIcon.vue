@@ -65,14 +65,16 @@ export default {
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus" >
-  .x-icon
-    position relative
-    display inline-block
-    width .2rem
-    height .2rem
-    line-height 1em
-    font-size .2rem
-    vertical-align middle
+<style lang="scss" >
+  .x-icon {
+    position: relative;
+    display: inline-block;
+    width: .2rem;
+    height: .2rem;
+    line-height: 1em;
+    font-size: .2rem;
+    vertical-align: middle;
+
+  }
 
 </style>

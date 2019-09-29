@@ -52,21 +52,21 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="scss">
 /* @import '@/assets/css/pulic.styl' */
 /* 默认大小 */
-$btn-default = 0.3rem;
+$btn-default: 0.3rem;
 
-btn(num) {
-  height: $btn-default + num;
-  line-height: $btn-default + num;
-  border-radius: ($btn-default + num) * 0.1;
+@mixin btn($num) {
+  height: $btn-default + $num;
+  line-height: $btn-default + $num;
+  border-radius: ($btn-default + $num) * 0.1;
 }
 
 .x_btn {
   position: relative;
   display: inline-block;
-  btn(0);
+  @include btn(0);
   padding: 0 0.15rem;
   background: #e6e6e6;
   color: #333;
@@ -88,11 +88,11 @@ btn(num) {
 }
 
 .x_btn-small {
-  btn(-0.08rem);
+  @include btn(-0.08rem);
 }
 
 .x_btn-big {
-  btn(0.08rem);
+  @include btn(0.08rem);
 }
 
 .x_btn-lg {

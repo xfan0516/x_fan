@@ -1,8 +1,12 @@
 # x_fan-ui
 
-## Project setup
+## 快速使用
 ```
-npm install
+npm install x_fan-ui --save
+
+import xFanUi from 'x_fan-ui'
+Vue.use(xFanUi)
+
 ```
 
 ### Compiles and hot-reloads for development

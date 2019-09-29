@@ -78,7 +78,7 @@ export default {
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus" scoped>
+<style lang="scss">
 .modal {
   position: fixed;
   top: 0;
@@ -100,7 +100,6 @@ export default {
     position: absolute;
     top: 30%;
     left: 10%;
-    // transform translate( 0, -50%)
     width: 80%;
     text-align: center;
     background: #ffffff;

@@ -91,7 +91,7 @@ export default {
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus" scoped>
+<style lang="scss">
 .sidebar {
   position: fixed;
   top: 0;
@@ -99,11 +99,9 @@ export default {
   right: 0;
   width: 100%;
   z-index: 900000;
-
   .mask {
     position: absolute;
     top: 0;
-    // left 0
     bottom: 0;
     right: 0;
     width: 100%;
@@ -116,26 +114,26 @@ export default {
     top: 0.45rem;
     bottom: 0.5rem;
     right: 0;
-    width 80%;
+    width: 80%;
     background: #fff;
     .side-body-bottom {
       position: absolute;
       bottom: 0;
-      left 0
-      width 100%
-      height .3rem
-      padding .1rem 0
-      border-top .5px solid #eee  
+      left: 0;
+      width: 100%;
+      height: .3rem;
+      padding: .1rem 0;
+      border-top: .5px solid #eee;
     }
       
   }
 }
 .bg-e{
-  padding .1rem  
-  background #eee
+  padding: .1rem;
+  background: #eee;
 
   .x_btn {
-    margin 0 .1rem .1rem 0
+    margin: 0 .1rem .1rem 0;
   }
 }
 </style>

@@ -44,12 +44,9 @@ export default {
 };
 </script>
 
-<style lang="stylus">
-@import './assets/css/reset.css';
-@import './assets/css/animation.styl';
-@import './assets/css/x_fan.styl';
-@import './assets/x-font/iconfont/ionicons.css';
-@import './assets/css/pulic.styl';
+<style lang="scss">
+@import './assets/css/index.scss';
+
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

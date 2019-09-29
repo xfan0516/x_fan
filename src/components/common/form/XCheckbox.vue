@@ -39,26 +39,26 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="scss">
 .x-checkbox{
-  position relative
-  line-height 1.5em
-  padding .1rem .05rem
+  position: relative;
+  line-height: 1.5em;
+  padding: .1rem .05rem;
 
-  .native{
-    color: #0e90d2 !important
-    vertical-align middle
+  .native {
+    color: #0e90d2 !important;
+    vertical-align: middle;
   }
   .text{
-    vertical-align middle
-    display inline-block
-    line-height 1.5em
-    padding-left .05rem
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 1.5em;
+    padding-left: .05rem;
 
   }
   .input-checkbox{
-    position absolute
-    left -2000
+    position: absolute;
+    left: -2000;
   }
 
 }

@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="scss">
 .loading {
   position: fixed;
   top: 0;

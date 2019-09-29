@@ -2628,17 +2628,15 @@ export default {
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus" scoped>
-h1{
-    text-align center
-}
-input 
-    opacity 0
-    height 0
-    position absolute
-    top -10000
-    left 0
+<style lang="scss">
 .icons{
+    input {
+        opacity: 0;
+        height: 0;
+        position: absolute;
+        top: -10000;
+        left: 0;
+    }
     .icons-item{
         float: left;
         // margin: .1rem 0 0;
@@ -2651,14 +2649,14 @@ input
         transition: all .2s ease;
         position: relative;
         padding-top: 10px;
-        font-size .20rem
+        font-size: .20rem;
 
     }
     p{
         font-size: .1rem;
         margin-top: .05rem;
         color: #5c6b77;
-        height .42rem
+        height: .42rem;
         &:hover{
             
             color: #09f

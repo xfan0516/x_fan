@@ -1,5 +1,5 @@
 # x_fan-ui
-这是用于vue的组件库
+一个用于Vue.js的组件库
 
 ## 快速使用
 ```
@@ -9,25 +9,14 @@ Vue.use(xFanUi)
 
 ```
 
-### Compiles and hot-reloads for development
+### Development
 ```
+git clone https://github.com/xfan0516/x_fan.git
+cd x_fan
+npm install
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+打开浏览器并访问http://127.0.0.1:8088
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

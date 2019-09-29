@@ -1,9 +1,9 @@
 # x_fan-ui
+这是用于vue的组件库
 
 ## 快速使用
 ```
 npm install x_fan-ui --save
-
 import xFanUi from 'x_fan-ui'
 Vue.use(xFanUi)
 

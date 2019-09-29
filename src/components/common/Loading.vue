@@ -31,30 +31,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.loading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 900000;
-  background: rgba(255, 255, 255, 0.5);
-
-  .icon-loading {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -0.25rem;
-    color: #999;
-    animation: changDeg 2s linear 0.2s infinite;
-  }
-  .icon-close{
-    position: absolute;
-    top: .5rem;
-    right: .1rem;
-    color: #f5f5f5
-  }
-}
-</style>

@@ -39,8 +39,4 @@ export default {
   }
 };
 </script>
-</script>
 
-<style scoped>
-
-</style>

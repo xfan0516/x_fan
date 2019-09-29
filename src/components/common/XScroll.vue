@@ -181,32 +181,3 @@ export default {
   }
 };
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss">
-.scroll {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow-y: auto;
-}
-
-.down-update {
-  width: 100%;
-  text-align: center;
-  transition: all 0.2s;
-}
-
-.scroll-loading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10000;
-  background: rgba(255, 255, 255, 0.5);
-  padding-top: 80%;
-  text-align: center;
-}
-</style>

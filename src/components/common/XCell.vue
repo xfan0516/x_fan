@@ -19,24 +19,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-  .x-cell {
-    position: relative;
-    display: flex;
-    justify-content: space-between ;
-    height: .44rem;
-    line-height: .24rem;
-    box-sizing: border-box;
-    padding: .1rem;
-    border-bottom: 1px solid #eee;
-    background: #fff;
-    font-size: .16rem;
-    .cell-left {
-      position: relative;
-      .date{
-        font-weight: 500;
-      }
-    }
-  }
-</style>

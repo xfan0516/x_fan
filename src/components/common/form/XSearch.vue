@@ -14,7 +14,3 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
-.x-search
-    
-</style>

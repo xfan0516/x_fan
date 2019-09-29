@@ -58,6 +58,19 @@
 
           </div>
         </div>
+        <div>
+          <x-cell>
+            <span slot="cell-left">inputText</span>
+            <span slot="cell-right">
+              <x-icon type="ios-arrow-down" size="big" />
+            </span>
+          </x-cell>
+          <div style="padding: .1rem">
+            <InputText :block="true" label="姓名" value="张三"/>
+            <InputText label="身高" value="1.8m"/>
+
+          </div>
+        </div>
       </div>
 
     </x-scroll>

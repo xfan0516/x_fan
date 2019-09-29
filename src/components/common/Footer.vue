@@ -50,33 +50,3 @@ export default {
 };
 </script>
 
-<style lang="scss" >
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 999999;
-  width: 100%;
-  height: 0.49rem;
-  border-top: 1px solid #eee;
-  background: #fff;
-  text-align: center;
-
-  p {
-    padding-top: 0.02rem;
-  }
-  .active{
-      color: #f55
-  }
-}
-
-
-
-.flex_space-around {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-}
-</style>

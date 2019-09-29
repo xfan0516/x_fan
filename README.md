@@ -18,8 +18,7 @@ npm run serve
 ```
 打开浏览器并访问http://127.0.0.1:8088
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## component
 
 ### 按钮组件 XBtn
 ```

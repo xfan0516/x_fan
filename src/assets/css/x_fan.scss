@@ -310,23 +310,23 @@
       justify-content: flex-end;
     }
 
-    .swiper-btn {
-      position: absolute;
-      top: 50%;
-      width: 0.32rem;
-      height: 0.32rem;
-      color: #fff;
-      opacity: 0.5;
-      margin-top: -0.16rem;
-    }
+    
+  }
+  .swiper-btn {
+    position: absolute;
+    top: 50%;
+    width: 0.32rem;
+    height: 0.32rem;
+    color: #fff;
+    opacity: 0.5;
+    margin-top: -0.16rem;
+  }
+  .swiper-btn-left {
+    left: 0.1rem;
+  }
 
-    .swiper-btn-left {
-      left: 0.1rem;
-    }
-
-    .swiper-btn-right {
-      right: 0.1rem;
-    }
+  .swiper-btn-right {
+    right: 0.1rem;
   }
   /* 可以设置不同的进入和离开动画 左进左出 */
   /* 设置持续时间和动画函数 */

@@ -2616,9 +2616,9 @@ export default {
       this.text = `<x-icon type="${e.target.innerText}" size="big"/>`
       this.$refs.textarea.select(); // 选择对象
       document.execCommand("Copy"); // 执行浏览器复制命令
-      if(++this.num > 2){
+      if (++this.num > 2) {
         this.num = 1
-      this.$Message.info(`已复制好，可贴粘。`)
+        this.$Message.info(`已复制好，可贴粘。`)
       }
       setTimeout(()=>{
         this.num = 1

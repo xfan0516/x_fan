@@ -1,6 +1,6 @@
 {
   "name": "x_fan-ui",
-  "version": "1.0.24",
+  "version": "1.0.31",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",

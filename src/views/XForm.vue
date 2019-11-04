@@ -50,7 +50,7 @@
             <x-select
               :value="selectValue"
               :options="selects"
-              :block="true"
+              label="语言"
               @change="selectChange"
             >
               <option :value="item.value" v-for="item in selects" :key="item.value">{{item.text}}</option>

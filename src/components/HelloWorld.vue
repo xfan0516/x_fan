@@ -143,7 +143,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus">
+<style lang="scss">
 .pad10 {
   padding: 0.1rem;
 }

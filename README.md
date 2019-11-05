@@ -1,6 +1,6 @@
 # x_fan-ui
 一个用于Vue.js的组件库
-
+<!-- npm publish -->
 ## 快速使用
 ```
 npm install x_fan-ui --save

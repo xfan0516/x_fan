@@ -52,6 +52,14 @@ export default new Router({
       }
     },
     {
+      path: '/demoRow',
+      name: 'demoRow',
+      component: () => import('@/demo/demoRow.vue'),
+      meta:{
+        footer: true
+      }
+    },
+    {
       path: '/xfan',
       name: 'xfan',
       component: () => import('@/components/XFan.vue'),

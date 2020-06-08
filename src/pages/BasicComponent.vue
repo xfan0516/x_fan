@@ -39,7 +39,7 @@ export default {
         {
           id: '7',
           typeName: '布局组件',
-          pushRoute: '/xrow',
+          pushRoute: '/demoRow',
           icon: 'ios-arrow-forward'
         }
       ]

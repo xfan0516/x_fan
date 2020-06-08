@@ -12,7 +12,10 @@ export default {
       type: String,
       default: "按钮"
     },
-    type: String,
+    type: {
+      type: String,
+      default: ''
+    },
     size: {
       type: String,
       default: ""
@@ -26,16 +29,19 @@ export default {
   },
   computed: {
     className() {
-      var type = "x_btn ",
-        size = "";
-
+      var className = [],
+          baseClass = "x_btn",
+          plain = this.plain ? '-plain' : '';
+      className.push(baseClass)   
       if (this.type) {
-        type += "x_btn-" + this.type;
+        className.push(baseClass + '-' + this.type + plain)
+      } else {
+        className.push(baseClass + plain)
       }
       if (this.size) {
-        size = "x_btn-" + this.size;
+        className.push(baseClass + '-' + this.size)
       }
-      return type + " " + size;
+      return className.join(' ');
     },
     style() {
       var style = {};
@@ -46,8 +52,8 @@ export default {
     }
   },
   methods: {
-    handleClick() {
-      this.$emit("click");
+    handleClick(e) {
+      this.$emit("click", e);
     }
   }
 };

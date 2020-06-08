@@ -13,6 +13,15 @@
         <x-btn text type="danger">danger</x-btn>
       </x-row>
       <x-row>
+        <h5>边框按钮</h5>
+      </x-row>
+      <x-row>
+        <x-btn text="primary" type="primary" plain>primary</x-btn>
+        <x-btn text type="success" plain>success</x-btn>
+        <x-btn text type="alert" plain>alert</x-btn>
+        <x-btn text type="danger" plain>danger</x-btn>
+      </x-row>
+      <x-row>
         <h5>按钮尺寸</h5>
       </x-row>
       <x-row>
@@ -46,7 +55,7 @@ export default {
     padding-top: 10px;
   }
 
-  .x_btn {
+  button[class^="x_btn"] {
     margin: 0 10px 10px 0;
   }
 }

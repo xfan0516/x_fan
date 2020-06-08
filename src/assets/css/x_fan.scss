@@ -621,17 +621,20 @@ $btn-default: 0.32rem;
   border-color: $color;
   color: $color;
 }
-
-// x_btn
-.x_btn {
+%x_btn {
   position: relative;
   display: inline-block;
-  @include btn(0);
   padding: 0 0.15rem;
+  @include btn(0);
   background: #fff;
   color: #333;
   border: 1px solid #ddd;
-
+}
+// x_btn
+[class^="x_btn"] {
+  @extend %x_btn;
+}
+.x_btn {
   &-primary {
     @include btnTheme($color-primary)
   }
@@ -645,19 +648,19 @@ $btn-default: 0.32rem;
     @include btnTheme($color-danger)
   }
 
-  &-plain, &-primary {
+  &-primary-plain {
     @include btnTheme($color-primary);
     @include btnPlainTheme($color-primary)
   }
-  &-plain, &-success {
+  &-success-plain {
     @include btnTheme($color-success);
     @include btnPlainTheme($color-success)
   }
-  &-plain, &-alert {
+  &-alert-plain {
     @include btnTheme($color-alert);
     @include btnPlainTheme($color-alert)
   }
-  &-plain, &-danger {
+  &-danger-plain {
     @include btnTheme($color-danger);
     @include btnPlainTheme($color-danger)
   }

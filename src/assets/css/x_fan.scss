@@ -1,3 +1,5 @@
+@import './theme.scss';
+
 .x_flex {
   display: flex;
 }
@@ -66,7 +68,7 @@
   padding: .1rem .05rem;
 
   .native {
-    color: #0e90d2 !important;
+    color: $color-primary !important;
     vertical-align: middle;
   }
   .text{
@@ -89,7 +91,7 @@
   padding: .1rem .05rem;
 
   .native{
-    color: #0e90d2 !important;
+    color: $color-primary !important;
     vertical-align: middle;
   }
   .text{
@@ -363,7 +365,7 @@
   height: .2rem;
   line-height: .2rem;
   text-align: center;
-  background: #dd514c;
+  background: $color-alert;
   font-size: .12rem;
   color: #ffffff;
   border-radius: 1rem;
@@ -600,12 +602,24 @@
   }
 }
 
-$btn-default: 0.3rem;
+$btn-default: 0.32rem;
 
 @mixin btn($num) {
   height: $btn-default + $num;
   line-height: $btn-default + $num;
   border-radius: ($btn-default + $num) * 0.1;
+}
+
+@mixin btnTheme($color) {
+  background: $color;
+  border-color: $color;
+  color: #fff;
+}
+
+@mixin btnPlainTheme($color) {
+  background: #fff;
+  border-color: $color;
+  color: $color;
 }
 
 // x_btn
@@ -614,22 +628,38 @@ $btn-default: 0.3rem;
   display: inline-block;
   @include btn(0);
   padding: 0 0.15rem;
-  background: #e6e6e6;
+  background: #fff;
   color: #333;
+  border: 1px solid #ddd;
 
   &-primary {
-    background: #0e90d2;
-    color: #fff;
+    @include btnTheme($color-primary)
   }
-  
   &-success {
-    background: #5eb95e;
-    color: #fff;
+    @include btnTheme($color-success)
   }
-  
   &-alert {
-    background: #dd514c;
-    color: #fff;
+    @include btnTheme($color-alert)
+  }
+  &-danger {
+    @include btnTheme($color-danger)
+  }
+
+  &-plain, &-primary {
+    @include btnTheme($color-primary);
+    @include btnPlainTheme($color-primary)
+  }
+  &-plain, &-success {
+    @include btnTheme($color-success);
+    @include btnPlainTheme($color-success)
+  }
+  &-plain, &-alert {
+    @include btnTheme($color-alert);
+    @include btnPlainTheme($color-alert)
+  }
+  &-plain, &-danger {
+    @include btnTheme($color-danger);
+    @include btnPlainTheme($color-danger)
   }
   
   &-small {

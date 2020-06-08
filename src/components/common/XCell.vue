@@ -12,6 +12,13 @@ export default {
       msg: '这是XCell组件'
     };
   },
+  created () {
+    console.log(22)
+  },
+  
+  mounted () {
+    console.log(33)
+  },
   methods: {
     handleClick (e) {
       this.$emit('click',e)

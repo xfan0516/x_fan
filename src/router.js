@@ -20,6 +20,38 @@ export default new Router({
       }
     },
     {
+      path: '/basicComponent',
+      name: 'basicComponent',
+      component: () => import('@/pages/BasicComponent.vue'),
+      meta:{
+        footer: true
+      }
+    },
+    {
+      path: '/demoButton',
+      name: 'demoButton',
+      component: () => import('@/demo/demoButton.vue'),
+      meta:{
+        footer: true
+      }
+    },
+    {
+      path: '/demoCell',
+      name: 'demoCell',
+      component: () => import('@/demo/demoCell.vue'),
+      meta:{
+        footer: true
+      }
+    },
+    {
+      path: '/demoIcon',
+      name: 'demoIcon',
+      component: () => import('@/demo/demoIcon.vue'),
+      meta:{
+        footer: true
+      }
+    },
+    {
       path: '/xfan',
       name: 'xfan',
       component: () => import('@/components/XFan.vue'),

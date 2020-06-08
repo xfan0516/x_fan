@@ -1,11 +1,11 @@
 <template>
-  <div :class="className">
+  <div class="x-row">
     <slot></slot>
   </div>
 </template>
 <script>
 export default {
-  name: "Col",
+  name: "XRow",
   props:{
     span: [Number, String]
   },
@@ -16,9 +16,8 @@ export default {
   },
   computed: {
     className() {
-      let className = [],
-          basicName = 'col-md-';
-      className.push(basicName + this.span);
+      let className = 'col-md-';
+      className +=this.span;
       return className
     }
   }

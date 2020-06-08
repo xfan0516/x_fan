@@ -6,6 +6,7 @@ import XBtn from "./components/common/XBtn.vue";
 import Footer from "./components/common/Footer.vue";
 import Media from "./components/common/Media.vue";
 import Thumbnail from "./components/common/Thumbnail.vue";
+import XRow from "./components/common/XRow.vue";
 import XCol from "./components/common/XCol.vue";
 import XCell from "./components/common/XCell.vue";
 import Message from "./components/common/Message";
@@ -24,6 +25,7 @@ const components = {
     Footer,
     Media,
     Thumbnail,
+    XRow,
     XCol,
     XCell,
     Confirm,

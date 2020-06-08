@@ -16,7 +16,8 @@ export default {
     size: {
       type: String,
       default: ""
-    }
+    },
+    plain: Boolean
   },
   data() {
     return {

@@ -1,6 +1,6 @@
 {
   "name": "x_fan-ui",
-  "version": "1.0.32",
+  "version": "1.0.33",
   "private": false,
   "scripts": {
     "start": "npm run serve",

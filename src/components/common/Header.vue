@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <span class="header-l">
-            <x-icon @click="$router.go(-1)" v-if="back" type="ios-arrow-back" size="big"/>
+            <x-icon @click="$router.back(-1)" v-if="back" type="ios-arrow-back" size="big"/>
         </span>
         <h1>{{title}}</h1>
         <span class="header-r" v-if="headerR">完成</span>

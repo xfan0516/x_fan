@@ -2,15 +2,15 @@
   <div class="demo-cell">
     <Header title="单元格" back/>
     <div class="main">
-      <x-row>
+      <x-row class="text-l">
         基本用法
       </x-row>
-      <x-row>
+      <x-row class="text-c">
         <x-col span="8">8</x-col>
         <x-col span="8">8</x-col>
         <x-col span="8">8</x-col>
       </x-row>
-      <x-row>
+      <x-row class="text-c">
         <x-col span="6">6</x-col>
         <x-col span="6">6</x-col>
         <x-col span="6">6</x-col>
@@ -39,7 +39,6 @@ export default {
 
   .x-row {
     padding-top: 10px;
-    text-align: center;
   }
   
   .col-md-8:nth-child(2n) {

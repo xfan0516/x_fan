@@ -15,8 +15,8 @@ export default {
   name: 'inputtext',
   props:{
     options: {
-      type:Array,
-      default:[]
+      type: Array,
+      default: () => []
     },
     block:{
       type: Boolean
@@ -41,21 +41,25 @@ export default {
   
   watch:{
     value(){
-      console.log(this.value,this.options)
-      this.item =  this.options.filter(item => item.value == this.value )[0]
+      this.$nextTick(() => {
+
+        this.item =  this.options.filter(item => item.value == this.value )[0]
+      })
     }
   },
   created(){
-      console.log(this.value,this.options)
-      this.item =  this.options.filter(item => item.value == this.value )[0]
+      this.item =  this.options.filter(item => item.value == this.value )[0] || {}
 
-    if(this.defaultValue) this.$emit('change',this.defaultValue)
+    if (this.defaultValue) this.$emit('change', this.defaultValue)
   },
   methods:{
     handlerChange(e){
       
-      this.$emit('change',e.target.value)
+      this.$emit('change', this.options)
     }
+  },
+  model: {
+    event: 'change'
   }
 };
 </script>

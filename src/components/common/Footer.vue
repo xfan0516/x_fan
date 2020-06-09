@@ -17,7 +17,7 @@
       <p>我的</p>
     </div> -->
     
-    <div :class="active === 'xfan' && 'active'" @click="$router.push('/xfan')">
+    <div :class="active === 'home' && 'active'" @click="$router.push('/home')">
       <x-icon type="ios-cart" size=".25rem"><Badge num="13"/></x-icon>
       <p>组件</p>
     </div>

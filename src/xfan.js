@@ -1,6 +1,7 @@
 import './assets/js/flexible.js';
 import './assets/css/reset.css';
 import Header from "./components/common/Header.vue";
+import XMain from "./components/common/XMain.vue";
 import XIcon from "./components/common/XIcon.vue";
 import XBtn from "./components/common/XBtn.vue";
 import Footer from "./components/common/Footer.vue";
@@ -20,6 +21,7 @@ import { InputText, XCheckboxGroup, XCheckbox, XRadioGroup, XRadio, XSelect } fr
 
 const components = {
     Header,
+    XMain,
     XIcon,
     XBtn,
     Footer,

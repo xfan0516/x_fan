@@ -35,9 +35,11 @@
   line-height: .37rem;
   margin-bottom: .1rem;
   justify-content: flex-start;
+  background: #fff;
   .label {
     width: 25%;
     height: .37rem;
+    padding-left: 10px;
     line-height: .37rem;
   }
   .input-text {
@@ -45,7 +47,7 @@
     height: .37rem;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid #eee;
+    // border: 1px solid #eee;
     padding: 0 .1rem;
     border-radius: .05rem;
     font-size: .14rem;

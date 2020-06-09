@@ -30,7 +30,7 @@ export default new Router({
     {
       path: '/demoButton',
       name: 'demoButton',
-      component: () => import('@/demo/demoButton.vue'),
+      component: () => import('@/demo/basic/demoButton.vue'),
       meta:{
         footer: true
       }
@@ -38,7 +38,7 @@ export default new Router({
     {
       path: '/demoCell',
       name: 'demoCell',
-      component: () => import('@/demo/demoCell.vue'),
+      component: () => import('@/demo/basic/demoCell.vue'),
       meta:{
         footer: true
       }
@@ -46,7 +46,7 @@ export default new Router({
     {
       path: '/demoIcon',
       name: 'demoIcon',
-      component: () => import('@/demo/demoIcon.vue'),
+      component: () => import('@/demo/basic/demoIcon.vue'),
       meta:{
         footer: true
       }
@@ -54,11 +54,29 @@ export default new Router({
     {
       path: '/demoRow',
       name: 'demoRow',
-      component: () => import('@/demo/demoRow.vue'),
+      component: () => import('@/demo/basic/demoRow.vue'),
       meta:{
         footer: true
       }
     },
+    {
+      path: '/formComponent',
+      name: 'FormComponent',
+      component: () => import(/* webpackChunkName: "formComponent" */ '@/pages/FormComponent.vue'),
+      meta:{
+        footer: true
+      }
+    },
+    {
+      path: '/demoInput',
+      name: 'demoInput',
+      component: () => import('@/demo/form/demoInput.vue'),
+      meta:{
+        footer: true
+      }
+    },
+
+    
     {
       path: '/xfan',
       name: 'xfan',

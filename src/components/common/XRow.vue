@@ -1,5 +1,6 @@
 <template>
   <div :class="className">
+    <h3 v-if="title" class="x-row-title"> {{ title }}</h3>
     <slot></slot>
   </div>
 </template>
@@ -10,7 +11,8 @@ export default {
     align: {
       type: String,
       default: ''
-    }
+    },
+    title: String
   },
   data() {
     return {
@@ -39,6 +41,9 @@ export default {
     font-size: 0;
     visibility: hidden;
     overflow: hidden;
+  }
+  &-title {
+    margin: .1rem 0 .08rem;
   }
   &-left {
     text-align: left;

@@ -7,18 +7,15 @@ module.exports = {
     lintOnSave: false,
     // 配置js、css等文件夹的二级目录位置，不设置则会在dist下生成4个文件夹
     assetsDir: "static",
+    productionSourceMap: false,
+    filenameHashing: false,
     devServer: {
         port: 8007, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
         proxy: {
             '/api': {
-                // target: 'http://flsc.ycb51.cn',
-                target: 'http://qy-test.ycb51.cn/',
+                target: 'http://test.cn/',
                 changeOrigin: true
             },
-            '/statistics': {
-                target: 'http://flsc.ycb51.cn',
-                changeOrigin: true
-            }
 
         }
     },

@@ -16,7 +16,7 @@ cd x_fan
 npm install
 npm run serve
 ```
-打开浏览器并访问http://127.0.0.1:8088
+打开浏览器并访问http://127.0.0.1:8007
 
 ## component
 

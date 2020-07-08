@@ -10,6 +10,7 @@
             v-for="item in radios"
             :key="item.id"
             :value="radiosValue"
+            name="area"
           />
         </x-radio-group>
       </x-row>

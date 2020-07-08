@@ -26,25 +26,25 @@ export default {
           id: '1',
           typeName: '基础组件',
           pushRoute: '/basicComponent',
-          icon: 'ios-construct-outline'
+          icon: 'ios-cube-outline'
         },
         {
           id: '3',
           typeName: '表单组件',
           pushRoute: '/formComponent',
-          icon: 'ios-grid'
+          icon: 'ios-paper-outline'
         },
         {
           id: '5',
           typeName: '弹框组件',
           pushRoute: '/formComponent',
-          icon: 'ios-grid'
+          icon: 'md-copy'
         },
         {
           id: '7',
           typeName: '业务组件',
           pushRoute: '/formComponent',
-          icon: 'ios-grid'
+          icon: 'ios-construct-outline'
         }
       ]
     };

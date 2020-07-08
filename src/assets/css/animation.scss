@@ -64,14 +64,37 @@
 }
 
 /*无限旋转动画*/
-		@keyframes changDeg{
-			0%{
-				transform: rotate(0deg);
-			}
-			100%{
-				transform: rotate(360deg);
-			}
-		}
+@keyframes changDeg{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+// 右进左出
 
+.side-right-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.side-right-to {
+  opacity: 0;
+  transform: translateX(-100%);
+  position:absolute;
+}
+.side-right-enter-active, .side-right-leave-active {
+  transition: all 0.3s ease;
+}
 
-
+.side-left-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.side-left-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.side-left-enter-active, .side-left-leave-active {
+  transition: all 0.5s ease;
+}

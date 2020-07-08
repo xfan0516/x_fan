@@ -118,10 +118,13 @@
   margin-bottom: .1rem;
   justify-content: flex-start;
   width: 100%;
+  background: #fff;
+
   .label {
     width: 25%;
     height: .37rem;
     line-height: .37rem;
+    padding-left: 10px;
   }
   .select{
     position: relative;
@@ -146,10 +149,11 @@
     width: 100%;
     height: .37rem;
     box-sizing: border-box;
-    border: 1px solid #eee;
+    // border: 1px solid #eee;
     padding: 0 .1rem;
     border-radius: .05rem;
     font-size: .14rem;
+    background: transparent;
   }
 }
 .select-block {

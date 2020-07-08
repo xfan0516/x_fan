@@ -1,6 +1,8 @@
 <template>
   <div id="app" :style="style">
-    <router-view/>
+    <transition :name="transitionName"  mode="out-in">
+      <router-view/>
+    </transition>
     <Footer v-if="showFooter"/>
     <Loading />
   </div>
@@ -13,8 +15,20 @@ export default {
     return {
       msg: "这是App组件",
       showFooter: false,
-      loading: false
+      loading: false,
+      transitionName: 'side-right'
     };
+  },
+  watch: {
+    '$route' (to, from) {
+      console.log(this.$route)
+      let isBack = this.$router.isBack // 监听路由变化时的状态为前进还是后退
+      if(isBack) {
+        this.transitionName = 'side-right'
+      } else {
+        this.transitionName = 'side-left'
+      }
+    }
   },
   provide(){
     return{

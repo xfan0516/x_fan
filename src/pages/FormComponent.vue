@@ -26,20 +26,20 @@ export default {
         },
         {
           id: '3',
-          typeName: '选择器组件',
-          pushRoute: '/demoCell',
+          typeName: '复选框组件',
+          pushRoute: '/demoCheckboxGroup',
           icon: 'ios-arrow-forward'
         },
         {
           id: '5',
-          typeName: 'radio组件',
-          pushRoute: '/demoIcon',
+          typeName: '单选组件组件',
+          pushRoute: '/demoRadioGroup',
           icon: 'ios-arrow-forward'
         },
         {
           id: '7',
-          typeName: 'check组件',
-          pushRoute: '/demoRow',
+          typeName: '选择器组件',
+          pushRoute: '/demoSelect',
           icon: 'ios-arrow-forward'
         }
       ]

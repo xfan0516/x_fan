@@ -9,10 +9,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/xfan',
+      redirect: '/Home',
     },
     {
-      path: '/home',
+      path: '/Home',
       name: 'home',
       component: () => import('@/views/Home.vue'),
       meta:{
@@ -71,6 +71,30 @@ export default new Router({
       path: '/demoInput',
       name: 'demoInput',
       component: () => import('@/demo/form/demoInput.vue'),
+      meta:{
+        footer: true
+      }
+    },
+    {
+      path: '/demoCheckboxGroup',
+      name: 'demoCheckboxGroup',
+      component: () => import('@/demo/form/demoCheckboxGroup.vue'),
+      meta:{
+        footer: true
+      }
+    },
+    {
+      path: '/demoRadioGroup',
+      name: 'demoRadioGroup',
+      component: () => import('@/demo/form/demoRadioGroup.vue'),
+      meta:{
+        footer: true
+      }
+    },
+    {
+      path: '/demoSelect',
+      name: 'demoSelect',
+      component: () => import('@/demo/form/demoSelect.vue'),
       meta:{
         footer: true
       }

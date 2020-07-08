@@ -32,9 +32,12 @@ export default {
     };
   },
   methods:{
-    handlerChange(e){
-      this.$emit('change',this.options)
+    handlerChange () {
+      this.$emit('change', this.options)
     }
+  },
+  model: {
+    event: 'change'
   }
 };
 </script>

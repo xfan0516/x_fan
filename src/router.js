@@ -16,7 +16,8 @@ export default new Router({
       name: 'home',
       component: () => import('@/views/Home.vue'),
       meta:{
-        footer: true
+        footer: true,
+        title: '首页'
       }
     },
     {
@@ -24,7 +25,8 @@ export default new Router({
       name: 'basicComponent',
       component: () => import('@/pages/BasicComponent.vue'),
       meta:{
-        footer: true
+        footer: true,
+        title: '基础组件'
       }
     },
     {
@@ -32,7 +34,8 @@ export default new Router({
       name: 'demoButton',
       component: () => import('@/demo/basic/demoButton.vue'),
       meta:{
-        footer: true
+        footer: true,
+        title: '按钮组件'
       }
     },
     {
@@ -40,7 +43,8 @@ export default new Router({
       name: 'demoCell',
       component: () => import('@/demo/basic/demoCell.vue'),
       meta:{
-        footer: true
+        footer: true,
+        title: '单元格'
       }
     },
     {
@@ -48,7 +52,8 @@ export default new Router({
       name: 'demoIcon',
       component: () => import('@/demo/basic/demoIcon.vue'),
       meta:{
-        footer: true
+        footer: true,
+        title: '图标组件(双击复制)'
       }
     },
     {
@@ -56,7 +61,8 @@ export default new Router({
       name: 'demoRow',
       component: () => import('@/demo/basic/demoRow.vue'),
       meta:{
-        footer: true
+        footer: true,
+        title: '布局组件'
       }
     },
     {
@@ -64,7 +70,8 @@ export default new Router({
       name: 'FormComponent',
       component: () => import(/* webpackChunkName: "formComponent" */ '@/pages/FormComponent.vue'),
       meta:{
-        footer: true
+        footer: true,
+        title: '表单组件'
       }
     },
     {
@@ -72,7 +79,8 @@ export default new Router({
       name: 'demoInput',
       component: () => import('@/demo/form/demoInput.vue'),
       meta:{
-        footer: true
+        footer: true,
+        title: '输入框'
       }
     },
     {
@@ -80,7 +88,8 @@ export default new Router({
       name: 'demoCheckboxGroup',
       component: () => import('@/demo/form/demoCheckboxGroup.vue'),
       meta:{
-        footer: true
+        footer: true,
+        title: '复选框组件'
       }
     },
     {
@@ -88,7 +97,8 @@ export default new Router({
       name: 'demoRadioGroup',
       component: () => import('@/demo/form/demoRadioGroup.vue'),
       meta:{
-        footer: true
+        footer: true,
+        title: '单选框组件'
       }
     },
     {
@@ -96,7 +106,8 @@ export default new Router({
       name: 'demoSelect',
       component: () => import('@/demo/form/demoSelect.vue'),
       meta:{
-        footer: true
+        footer: true,
+        title: '选择器组件'
       }
     },
 
@@ -130,7 +141,8 @@ export default new Router({
       name: 'user',
       component: () => import('@/views/User.vue'),
       meta:{
-        footer: true
+        footer: true,
+        title: '我的'
       }
     },
     {

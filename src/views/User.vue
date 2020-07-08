@@ -1,7 +1,7 @@
 <template>
   <div class="user">
+    <!-- <Header title="我的"></Header> -->
     <div><img src="./../assets/images/userpic.jpg" alt=""></div>
-    <Header title="我的"></Header>
     <x-cell @click="handleClick">
       <span slot="cell-left">xfan组件</span>
       <span slot="cell-right"><x-icon type="ios-arrow-forward" size="big"/></span>

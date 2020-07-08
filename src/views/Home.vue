@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Header title="首页" back/>
+    <!-- <Header title="首页" back/> -->
     
     <x-cell v-for="item in list" :key="item.id" @click="push(item)">
       <span slot="cell-left">{{ item.typeName}}</span>

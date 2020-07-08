@@ -1,5 +1,6 @@
 <template>
   <div id="app" :style="style">
+    <Header :title="title" back/>
     <transition :name="transitionName"  mode="out-in">
       <router-view/>
     </transition>
@@ -16,20 +17,21 @@ export default {
       msg: "这是App组件",
       showFooter: false,
       loading: false,
-      transitionName: 'side-right'
+      transitionName: 'side-right',
+      title: ''
     };
   },
-  watch: {
-    '$route' (to, from) {
-      console.log(this.$route)
-      let isBack = this.$router.isBack // 监听路由变化时的状态为前进还是后退
-      if(isBack) {
-        this.transitionName = 'side-right'
-      } else {
-        this.transitionName = 'side-left'
-      }
-    }
-  },
+  // watch: {
+  //   '$route' (to, from) {
+  //     console.log(this.$route)
+  //     let isBack = this.$router.isBack // 监听路由变化时的状态为前进还是后退
+  //     if(isBack) {
+  //       this.transitionName = 'side-right'
+  //     } else {
+  //       this.transitionName = 'side-left'
+  //     }
+  //   }
+  // },
   provide(){
     return{
       app: this
@@ -38,6 +40,8 @@ export default {
   created() {},
   watch: {
     $route(newValue) {
+      this.title = this.$route.meta.title
+      // console.log(this.$route.meta.title)
       this.showFooter = newValue.meta.footer;
     }
   },

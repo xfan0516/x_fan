@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Header title="表单组件"></Header>
+    <!-- <Header title="表单组件"></Header> -->
     <x-scroll>
       <div class="main">
         <div>

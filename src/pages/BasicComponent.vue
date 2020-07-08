@@ -1,6 +1,6 @@
 <template>
   <div class="basicComponent">
-    <Header title="基础组件" back/>
+    <!-- <Header title="基础组件" back/> -->
     <div class="main">
       <x-cell v-for="item in list" :key="item.id" @click="$router.push(item.pushRoute)">
         <span slot="cell-left">{{ item.typeName}}</span>

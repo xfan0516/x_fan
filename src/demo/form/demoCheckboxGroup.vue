@@ -1,6 +1,6 @@
 <template>
   <div class="demo-checkbox-group">
-    <Header title="复选框组件" back/>
+    <!-- <Header title="复选框组件" back/> -->
     <x-main>
       <x-row title="基本用法">
         <x-checkbox-group v-model="checkboxValue" style="padding: .1rem">

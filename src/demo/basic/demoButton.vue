@@ -1,6 +1,6 @@
 <template>
   <div class="demo-button">
-    <Header title="按钮组件" back/>
+    <!-- <Header title="按钮组件" back/> -->
     <div class="main">
       <x-row>
         <h5>按钮类型</h5>

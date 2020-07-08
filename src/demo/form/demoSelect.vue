@@ -1,6 +1,6 @@
 <template>
   <div class="demo-checkbox-group">
-    <Header title="选择器组件" back/>
+    <!-- <Header title="选择器组件" back/> -->
     <x-main>
       <x-row title="基本用法">
         <x-select

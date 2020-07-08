@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-      <Header title="双击复制"/>
+      <!-- <Header title="双击复制"/> -->
 
          <div class="icons-item" @click="copy"><i class="x-icon x-icon-ios-add"></i>
             <p>ios-add</p>

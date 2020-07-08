@@ -1,6 +1,6 @@
 {
   "name": "x_fan-ui",
-  "version": "1.0.33",
+  "version": "1.0.35",
   "private": false,
   "mian": "dist/js/app.js",
   "scripts": {

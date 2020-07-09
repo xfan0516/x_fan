@@ -1,5 +1,7 @@
 import './assets/js/flexible.js';
 import './assets/css/reset.css';
+import './assets/css/index.scss'
+import './assets/x-font/iconfont/ionicons.css';
 import Header from "./components/common/Header.vue";
 import XMain from "./components/common/XMain.vue";
 import XIcon from "./components/common/XIcon.vue";

@@ -1,8 +1,8 @@
 {
   "name": "x_fan-ui",
-  "version": "1.0.35",
+  "version": "1.0.44",
   "private": false,
-  "mian": "dist/js/app.js",
+  "mian": "src/xfan.js",
   "scripts": {
     "start": "npm run serve",
     "serve": "vue-cli-service serve",

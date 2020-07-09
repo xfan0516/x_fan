@@ -1,4 +1,11 @@
 @import './theme.scss';
+@function vw($num) {
+  @if unitless($num) {
+    @return $num / 3.75 + vw
+  } @else {
+    @return $num / 3.75
+  }
+}
 
 .x_flex {
   display: flex;
@@ -21,8 +28,8 @@
   transition: all .3s;
   span {
     display: inline-block;
-    padding: .1rem .15rem;
-    border-radius: .05rem;
+    padding: vw(10vw) vw(15vw);
+    border-radius: vw(5vw);
     background: rgba(0,0,0,.8);
     color: #fff;
   }
@@ -32,33 +39,33 @@
   width: 100%;
   display: flex;
   align-items: center;
-  line-height: .37rem;
-  margin-bottom: .1rem;
+  line-height: vw(37vw);
+  margin-bottom: vw(10vw);
   justify-content: flex-start;
   background: #fff;
   .label {
     width: 25%;
-    height: .37rem;
+    height: vw(37vw);
     padding-left: 10px;
-    line-height: .37rem;
+    line-height: vw(37vw);
   }
   .input-text {
 
-    height: .37rem;
+    height: vw(37vw);
     width: 100%;
     box-sizing: border-box;
     // border: 1px solid #eee;
-    padding: 0 .1rem;
-    border-radius: .05rem;
-    font-size: .14rem;
+    padding: 0 vw(10vw);
+    border-radius: vw(5vw);
+    font-size: vw(14vw);
   }
   &.label-block {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     .label {
-      height: .37rem;
-      line-height: .37rem;
+      height: vw(37vw);
+      line-height: vw(37vw);
     }
   }
 }
@@ -67,7 +74,7 @@
 .x-checkbox{
   position: relative;
   line-height: 1.5em;
-  padding: .1rem .05rem;
+  padding: vw(170vw) vw(5vw);
 
   .native {
     color: $color-primary !important;
@@ -77,7 +84,7 @@
     vertical-align: middle;
     display: inline-block;
     line-height: 1.5em;
-    padding-left: .05rem;
+    padding-left: vw(5vw);
 
   }
   .input-checkbox{
@@ -90,7 +97,7 @@
 .x-radio{
   position: relative;
   line-height: 1.5em;
-  padding: .1rem .05rem;
+  padding: vw(170vw) vw(5vw);
 
   .native{
     color: $color-primary !important;
@@ -100,7 +107,7 @@
     vertical-align: middle;
     display: inline-block;
     line-height: 1.5em;
-    padding-left: .05rem;
+    padding-left: vw(5vw);
 
   }
   .input-radio{
@@ -114,21 +121,21 @@
 .x-select {
   display: flex;
   align-items: center;
-  line-height: .37rem;
-  margin-bottom: .1rem;
+  line-height: vw(37vw);
+  margin-bottom: vw(10vw);
   justify-content: flex-start;
   width: 100%;
   background: #fff;
 
   .label {
     width: 25%;
-    height: .37rem;
-    line-height: .37rem;
+    height: vw(37vw);
+    line-height: vw(37vw);
     padding-left: 10px;
   }
   .select{
     position: relative;
-    width: 100%;
+    width: 75%;
     select{
       position: absolute;
       top: 0;
@@ -142,17 +149,17 @@
   }
   .icon-select {
     position: absolute;
-    top: .08rem;
-    right: .1rem;
+    top: vw(8vw);
+    right: vw(10vw);
   }
   .input-text {
     width: 100%;
-    height: .37rem;
+    height: vw(37vw);
     box-sizing: border-box;
     // border: 1px solid #eee;
-    padding: 0 .1rem;
-    border-radius: .05rem;
-    font-size: .14rem;
+    padding: 0 vw(170vw);
+    border-radius: vw(5vw);
+    font-size: vw(14vw);
     background: transparent;
   }
 }
@@ -161,8 +168,8 @@
   flex-direction: column;
   align-items: flex-start;
   .label {
-    height: .37rem;
-    line-height: .37rem;
+    height: vw(37vw);
+    line-height: vw(37vw);
   }
 }
 
@@ -189,24 +196,24 @@
     width: 80%;
     text-align: center;
     background: #ffffff;
-    border-radius: 0.05rem;
+    border-radius: vw(5vw);
   }
   .modal-header {
-    height: 0.4rem;
-    line-height: 0.4rem;
+    height: vw(40vw);
+    line-height: vw(40vw);
     border-bottom: 0.5px solid #fafafa;
   }
   .modal-main {
-    line-height: 0.4rem;
-    padding: 0.05rem 0;
+    line-height: vw(40vw);
+    padding: vw(5vw) 0;
   }
   .modal-footer {
-    line-height: 0.45rem;
+    line-height: vw(45vw);
     border-top: 0.5px solid #eee;
     span {
       width: 50%;
       line-height: inherit;
-      font-size: 0.14rem;
+      font-size: 0vw(14vw);
       color: #09f;
       border-right: 0.5px solid #eee;
     }
@@ -236,24 +243,24 @@
     width: 80%;
     text-align: center;
     background: #ffffff;
-    border-radius: 0.05rem;
+    border-radius: vw(5vw);
   }
   .modal-header {
-    height: 0.4rem;
-    line-height: 0.4rem;
+    height: vw(40vw);
+    line-height: vw(40vw);
     border-bottom: 0.5px solid #fafafa;
   }
   .modal-main {
-    line-height: 0.4rem;
-    padding: 0.05rem 0;
+    line-height: vw(40vw);
+    padding: vw(5vw) 0;
   }
   .modal-footer {
-    line-height: 0.45rem;
+    line-height: vw(45vw);
     border-top: 0.5px solid #eee;
     span {
       width: 50%;
       line-height: inherit;
-      font-size: 0.14rem;
+      font-size: 0vw(14vw);
       color: #09f;
       border-right: 0.5px solid #eee;
     }
@@ -264,19 +271,19 @@
 .swiper {
   position: relative;
   width: 100%;
-  height: 1.7rem;
+  height: vw(170vw);
   background: #eee;
   overflow: hidden;
   li {
     position: absolute;
     top: 0;
     left: 0;
-    width: 3.75rem;
-    height: 1.7rem;
+    width: vw(375vw);
+    height: vw(170vw);
     overflow: hidden;
     p {
       position: absolute;
-      bottom: 0.4rem;
+      bottom: vw(40vw);
       left: 10%;
       width: 80%;
       text-align: center;
@@ -289,26 +296,26 @@
   }
   .swiper-page {
     position: absolute;
-    bottom: 0.08rem;
+    bottom: vw(8vw);
     width: 100%;
     box-sizing: border-box;
     left: 0;
-    padding: 0 0.05rem;
-    height: 0.1rem;
+    padding: 0 vw(5vw);
+    height: vw(10vw);
     display: flex;
     justify-content: center;
     span {
-      height: 0.1rem;
-      width: 0.1rem;
-      margin: 0 0.05rem;
+      height: vw(10vw);
+      width: vw(10vw);
+      margin: 0 vw(5vw);
       border-radius: 50%;
       background: #fff;
-      border: 0.02rem solid #fff;
+      border: vw(2vw) solid #fff;
       box-sizing: border-box;
     }
     .active {
       background: #fff;
-      border: 0.02rem solid #09f;
+      border: vw(2vw) solid #09f;
     }
     .dice-left {
       justify-content: flex-start;
@@ -323,18 +330,18 @@
   .swiper-btn {
     position: absolute;
     top: 50%;
-    width: 0.32rem;
-    height: 0.32rem;
+    width: vw(32vw);
+    height: vw(32vw);
     color: #fff;
     opacity: 0.5;
-    margin-top: -0.16rem;
+    margin-top: vw(-16vw);
   }
   .swiper-btn-left {
-    left: 0.1rem;
+    left: vw(10vw);
   }
 
   .swiper-btn-right {
-    right: 0.1rem;
+    right: vw(10vw);
   }
   /* 可以设置不同的进入和离开动画 左进左出 */
   /* 设置持续时间和动画函数 */
@@ -365,31 +372,35 @@
 // badge
 .badge {
   position: absolute;
-  top: -.1rem;
-  right: -.1rem;
-  width: .2rem;
-  height: .2rem;
-  line-height: .2rem;
+  top: vw(-10vw);
+  right: vw(-10vw);
+  width: vw(20vw);
+  height: vw(20vw);
+  line-height: vw(20vw);
   text-align: center;
   background: $color-alert;
-  font-size: .12rem;
+  font-size: vw(12vw);
   color: #ffffff;
-  border-radius: 1rem;
+  border-radius: vw(10vw);
 }
 // footer
 .footer {
   position: fixed;
+  right: 0;
   bottom: 0;
   left: 0;
+  width: 100%;
+  max-width: 640px;
   z-index: 999999;
   width: 100%;
-  height: 0.49rem;
+  height: vw(49);
   border-top: 1px solid #eee;
+  margin: 0 auto;
   background: #fff;
   text-align: center;
 
   p {
-    padding-top: 0.02rem;
+    padding-top: vw(2vw);
   }
   .active{
       color: #f55
@@ -399,12 +410,15 @@
 .header{
   position: fixed;
   top: 0;
+  right: 0;
   left: 0;
   width: 100%;
-  height: .44rem;
-  line-height: .44rem;
+  max-width: 640px;
+  height: vw(44vw);
+  line-height: vw(44vw);
   z-index: 999999;
   border-bottom: 1px solid #eee;
+  margin: 0 auto;
   background: #fff;
   text-align: center;
   h1{
@@ -414,7 +428,7 @@
   span{
       position: absolute;
       top: 0;
-      width: .44rem;
+      width: vw(44vw);
       height: inherit;
   }
   .header-l{
@@ -451,15 +465,15 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    margin: -0.25rem;
+    margin: vw(-25vw);
     color: #999;
     animation: changDeg 2s linear 0.2s infinite;
     opacity: .2;
   }
   .icon-close{
     position: absolute;
-    top: .5rem;
-    right: .1rem;
+    top: vw(50vw);
+    right: vw(10vw);
     color: #f5f5f5
   }
 }
@@ -467,8 +481,8 @@
 // media
 .media {
   position: relative;
-  height: .7rem;
-  padding: .1rem;
+  height: vw(70vw);
+  padding: vw(10vw);
   border-bottom: 1px solid #eee;
   min-height: 20;
   .media-left {
@@ -481,7 +495,7 @@
     float: left;
     padding: 10% 0;
     overflow: hidden;
-    border-radius: .05rem;
+    border-radius: vw(5vw);
     img {
       position: absolute;
       top: 50%;
@@ -495,12 +509,12 @@
   .media-body {
     padding-left: 22%;
     line-height: 1.5;
-    font-size: .12rem;
+    font-size: vw(12vw);
     h3 {
-      padding-bottom: .05rem;
+      padding-bottom: vw(5vw);
       line-height: 2;
       font-weight: 600;
-      font-size: .15rem;
+      font-size: vw(15vw);
 
     }
     .media-title {
@@ -544,8 +558,8 @@
 
   .side-body {
     position: absolute;
-    top: 0.45rem;
-    bottom: 0.5rem;
+    top: vw(45vw);
+    bottom: 0vw(50vw);
     right: 0;
     width: 80%;
     background: #fff;
@@ -554,18 +568,18 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: .3rem;
-      padding: .1rem 0;
+      height: vw(30vw);
+      padding: vw(170vw) 0;
       border-top: .5px solid #eee;
     }
       
   }
   .bg-e{
-    padding: .1rem;
+    padding: vw(170vw);
     background: #eee;
 
     .x_btn {
-      margin: 0 .1rem .1rem 0;
+      margin: 0 vw(170vw) vw(170vw) 0;
     }
   }
 }
@@ -573,9 +587,9 @@
 // thumbnail
 .thumbnail {
   box-sizing: border-box;
-  padding: .1rem;
+  padding: vw(10vw);
   background: #ffffff;
-  border-radius: .05rem;
+  border-radius: vw(5vw);
   .pic {
     position: relative;
     width: 100%;
@@ -591,13 +605,13 @@
       left: 0;
       width: 95%;
       padding: 0 2.5%;
-      line-height: .32rem;
+      line-height: vw(32vw);
       color: #fff;
       background: rgba(0,0,0,.5);
     }
   }
   .info {
-    padding-top: .05rem;
+    padding-top: vw(5vw);
     line-height: 1.2;
     text-align: justify;
     overflow: hidden;
@@ -608,7 +622,7 @@
   }
 }
 
-$btn-default: 0.32rem;
+$btn-default: vw(32vw);
 
 @mixin btn($num) {
   height: $btn-default + $num;
@@ -630,7 +644,7 @@ $btn-default: 0.32rem;
 %x_btn {
   position: relative;
   display: inline-block;
-  padding: 0 0.15rem;
+  padding: 0 vw(15vw);
   @include btn(0);
   background: #fff;
   color: #333;
@@ -672,11 +686,11 @@ $btn-default: 0.32rem;
   }
   
   &-small {
-    @include btn(-0.08rem);
+    @include btn(vw(-8vw));
   }
   
   &-big {
-    @include btn(0.08rem);
+    @include btn(vw(8vw));
   }
   
   &-lg {
@@ -689,13 +703,13 @@ $btn-default: 0.32rem;
   position: relative;
   display: flex;
   justify-content: space-between ;
-  height: .44rem;
-  line-height: .24rem;
+  height: vw(44vw);
+  line-height: vw(24vw);
   box-sizing: border-box;
-  padding: .1rem;
+  padding: vw(10vw);
   border-bottom: 1px solid #eee;
   background: #fff;
-  font-size: .16rem;
+  font-size: vw(16vw);
   .cell-left {
     position: relative;
     .date{
@@ -721,10 +735,10 @@ $btn-default: 0.32rem;
 .x-icon {
   position: relative;
   display: inline-block;
-  width: .2rem;
-  height: .2rem;
+  width: vw(20vw);
+  height: vw(20vw);
   line-height: 1em;
-  font-size: .2rem;
+  font-size: vw(20vw);
   vertical-align: middle;
 
 }

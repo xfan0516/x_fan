@@ -77,8 +77,8 @@ export default {
   min-width: 320px;
   box-sizing: border-box;
   margin: 0 auto;
-  padding-top: 0.46rem;
-  padding-bottom: 0.5rem;
+  padding-top: vw(46vw);
+  padding-bottom: vw(50vw);
   overflow-y: auto;
   background: #fafafa;
 }

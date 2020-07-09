@@ -43,7 +43,7 @@ export default {
         {
           id: '7',
           typeName: '业务组件',
-          pushRoute: '/formComponent',
+          pushRoute: '/workComponent',
           icon: 'ios-construct-outline'
         }
       ]

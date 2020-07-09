@@ -110,6 +110,24 @@ export default new Router({
         title: '选择器组件'
       }
     },
+    {
+      path: '/workComponent',
+      name: 'WorkComponent',
+      component: () => import(/* webpackChunkName: "WorkComponent" */ '@/pages/WorkComponent.vue'),
+      meta:{
+        footer: true,
+        title: '业务组件'
+      }
+    },
+    {
+      path: '/demoSwiper',
+      name: 'demoSwiper',
+      component: () => import('@/demo/work/demoSwiper.vue'),
+      meta:{
+        footer: true,
+        title: 'Swiper'
+      }
+    },
 
     
     {

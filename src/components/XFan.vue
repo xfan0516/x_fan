@@ -371,18 +371,18 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 .xfan .box-btn button {
-  margin: 0.1rem;
+  margin: vw(10vw);
 }
 
 .input-text {
   border: 1px solid #ccc;
-  line-height: 0.3rem;
-  padding: 0 0.08rem;
+  line-height: vw(30vw);
+  padding: 0 vw(8vw);
   width: 80%;
 }
 
 .col-xicon {
-  padding: 0.1rem 0;
+  padding: vw(10vw) 0;
   align-items: flex-end;
   text-align: center;
 }
@@ -392,18 +392,18 @@ export default {
 }
 
 .thumbnail-list {
-  padding: 0.05rem;
+  padding: vw(5vw);
   background: #eee;
   overflow: hidden;
 }
 
 .col-thumbnail {
-  padding: 0 0.05rem;
+  padding: 0 vw(5vw);
 }
 
 .col-xcol {
-  height: 0.6rem;
-  line-height: 0.6rem;
+  height: vw(60vw);
+  line-height: vw(60vw);
   text-align: center;
   background: rgba(0, 153, 229, 0.5)
     linear-gradient(

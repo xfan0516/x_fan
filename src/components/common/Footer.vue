@@ -18,11 +18,11 @@
     </div> -->
     
     <div :class="active === 'home' && 'active'" @click="$router.push('/home')">
-      <x-icon type="ios-cart" size=".25rem"><Badge num="13"/></x-icon>
+      <x-icon type="ios-cart" size="big"><Badge num="13"/></x-icon>
       <p>组件</p>
     </div>
     <div :class="active === 'user' && 'active'" @click="$router.push('/user')">
-      <x-icon type="ios-contact" size=".25rem"/>
+      <x-icon type="ios-contact" size="big"/>
       <p>关于</p>
     </div>
   </footer>

@@ -37,7 +37,7 @@ export default {
         {
           id: '5',
           typeName: '弹框组件',
-          pushRoute: '/formComponent',
+          pushRoute: '/promptComponent',
           icon: 'md-copy'
         },
         {

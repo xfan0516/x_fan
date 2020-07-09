@@ -128,6 +128,24 @@ export default new Router({
         title: 'Swiper'
       }
     },
+    {
+      path: '/promptComponent',
+      name: 'PromptComponent',
+      component: () => import(/* webpackChunkName: "PromptComponent" */ '@/pages/PromptComponent.vue'),
+      meta:{
+        footer: true,
+        title: '弹框组件'
+      }
+    },
+    {
+      path: '/demoSwiper',
+      name: 'demoSwiper',
+      component: () => import('@/demo/work/demoSwiper.vue'),
+      meta:{
+        footer: true,
+        title: 'Swiper'
+      }
+    },
 
     
     {

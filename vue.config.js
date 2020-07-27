@@ -40,8 +40,9 @@ module.exports = {
 	css: {
 		loaderOptions: {
 			sass: {
-				prependData: `@import "@/assets/css/index.scss";`
+				// prependData: `@import "@/assets/css/index.scss";`
+				data: `@import "@/assets/css/index.scss";`
 			}
 		}
-	}
+    }
 }

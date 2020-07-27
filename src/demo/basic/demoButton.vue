@@ -2,30 +2,20 @@
   <div class="demo-button">
     <!-- <Header title="按钮组件" back/> -->
     <div class="main">
-      <x-row>
-        <h5>按钮类型</h5>
-      </x-row>
-      <x-row>
+      <x-row title="按钮类型">
         <x-btn text="Default">Default</x-btn>
         <x-btn text="primary" type="primary">primary</x-btn>
         <x-btn text type="success">success</x-btn>
         <x-btn text type="alert">alert</x-btn>
         <x-btn text type="danger">danger</x-btn>
       </x-row>
-      <x-row>
-        <h5>边框按钮</h5>
-      </x-row>
-      <x-row>
+      <x-row title="边框按钮">
         <x-btn text="primary" type="primary" plain>primary</x-btn>
         <x-btn text type="success" plain>success</x-btn>
         <x-btn text type="alert" plain>alert</x-btn>
         <x-btn text type="danger" plain>danger</x-btn>
       </x-row>
-      <x-row>
-        <h5>按钮尺寸</h5>
-      </x-row>
-      <x-row>
-        <x-btn type="primary" size=".44rem">自定义大小</x-btn>
+      <x-row title="按钮尺寸">
         <x-btn type="primary" size="big">big</x-btn>
         <x-btn type="primary" text="primary">Default</x-btn>
         <x-btn type="primary" size="small" text="Default">small</x-btn>

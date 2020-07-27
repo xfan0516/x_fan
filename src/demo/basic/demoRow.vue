@@ -42,19 +42,19 @@ export default {
   }
   
   .col-md-8:nth-child(2n) {
-    line-height: 0.4rem;
+    line-height: vw(4vw);
     background: #0e90d2;
   }
   .col-md-8:nth-child(2n + 1) {
-    line-height: 0.4rem;
+    line-height: vw(4vw);
     background: #5eb95e;
   }
   .col-md-6:nth-child(2n + 1) {
-    line-height: 0.4rem;
+    line-height: vw(4vw);
     background: #5eb95e;
   }
   .col-md-6:nth-child(2n) {
-    line-height: 0.4rem;
+    line-height: vw(4vw);
     background: #0e90d2;
   }
 }

@@ -52,11 +52,11 @@ export default {
   height: inherit;
 
   .main {
-      padding: 10px;
+    padding: 10px;
   }
 
   .x-cell {
-    margin-bottom: 10px;
+    margin-bottom: 2vw;
   }
 }
 </style>

@@ -38,7 +38,7 @@ this.$Message.info(msg) //msg:字符串
 
 XIcon 接收三个props: type, size, color
     type：图标名称 *必填项
-    size：图标大小 small, Default, big,自定义大小 默认：Default
+    size：图标大小 small, Default, big 默认：Default
     color：图标颜色
 ```
 ### header组件 Header

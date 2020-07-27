@@ -3,7 +3,7 @@
     <p class="label" v-if="label">{{label}}</p>
     <div class="select">
       <input class="input-text" type="text" :value="item.text" placeholder="请输入关键字" />
-      <select name="" id="" @change="handlerChange">
+      <select name="" id="" :value="value" @change="handlerChange">
         <slot></slot>
       </select>
       <x-icon class="icon-select" type="ios-arrow-down" size="big"/>
@@ -38,15 +38,6 @@ export default {
       item:{}
     };
   },
-  
-  watch:{
-    value(){
-      this.$nextTick(() => {
-
-        this.item =  this.options.filter(item => item.value == this.value )[0]
-      })
-    }
-  },
   created(){
       this.item =  this.options.filter(item => item.value == this.value )[0] || {}
 
@@ -54,8 +45,10 @@ export default {
   },
   methods:{
     handlerChange(e){
-      
-      this.$emit('change', this.options)
+      var value = e.target.value
+      this.item =  this.options.filter(item => item.value == value )[0]
+      console.log(this.item)
+      this.$emit('change', value)
     }
   },
   model: {

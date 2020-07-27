@@ -77,7 +77,11 @@ input::-webkit-search-cancel-button{display:none}body,html{line-height:1em;heigh
 .x-checkbox{
   position: relative;
   line-height: 1.5em;
-  padding: vw(170vw) vw(5vw);
+  padding: vw(17vw) vw(5vw);
+
+  .x-icon {
+    color: $color-9;
+  }
 
   .native {
     color: $color-primary !important;
@@ -160,8 +164,9 @@ input::-webkit-search-cancel-button{display:none}body,html{line-height:1em;heigh
     height: vw(37vw);
     box-sizing: border-box;
     // border: 1px solid #eee;
-    padding: 0 vw(170vw);
+    padding: 0 vw(17vw);
     border-radius: vw(5vw);
+    box-sizing: border-box;
     font-size: vw(14vw);
     background: transparent;
   }

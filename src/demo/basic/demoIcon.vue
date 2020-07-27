@@ -2647,19 +2647,19 @@ export default {
         text-align: center;
         list-style: none;
         cursor: pointer;
-        height: .6rem;
+        height: vw(60vw);
         color: #5c6b77;
         transition: all .2s ease;
         position: relative;
         padding-top: 10px;
-        font-size: .20rem;
+        font-size: vw(20vw);
 
     }
     p{
-        font-size: .1rem;
-        margin-top: .05rem;
+        font-size: vw(10vw);
+        margin-top: vw(5vw);
         color: #5c6b77;
-        height: .42rem;
+        height: vw(42vw);
         &:hover{
             
             color: #09f

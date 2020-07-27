@@ -4,20 +4,22 @@
       <slot></slot>
     </transition-group>
     <div class="swiper-btn swiper-btn-left" @click="prev">
-      <x-icon type="ios-arrow-dropleft" size=".32rem"/>
+      <x-icon type="ios-arrow-dropleft" size="8vw"/>
     </div>
     <div class="swiper-btn swiper-btn-right" @click="next">
-      <x-icon type="ios-arrow-dropright" size=".32rem"/>
+      <x-icon type="ios-arrow-dropright" size="8vw"/>
     </div>
     <div class="swiper-page">
       <slot name="swiper-page"></slot>
-      <span
-        v-if="isPage"
-        v-for="(item,index) in list"
-        :key="index"
-        @click="pageChange(index)"
-        :class="index === cIndex && 'active'"
-      ></span>
+      <template v-if="isPage">
+        <span
+          v-for="(item,index) in list"
+          :key="index"
+          @click="pageChange(index)"
+          :class="index === cIndex && 'active'"
+        ></span>
+      
+      </template>  
     </div>
   </div>
 </template>

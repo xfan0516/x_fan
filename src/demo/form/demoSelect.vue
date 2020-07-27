@@ -7,6 +7,7 @@
           :value="selectValue"
           :options="selects"
           label="选择语言"
+          @change="selectChange"
         >
           <option :value="item.value" v-for="item in selects" :key="item.value">{{ item.text }}</option>
         </x-select>
@@ -39,6 +40,9 @@ export default {
     }
   },
   methods: {
+    selectChange (obj) {
+      this.selectValue = obj.value
+    }
   }
 }
 </script>

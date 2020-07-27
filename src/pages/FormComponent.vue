@@ -1,5 +1,5 @@
 <template>
-  <div class="basicComponent">
+  <div class="formComponent">
     <!-- <Header title="表单组件" back/> -->
     <div class="main">
       <x-cell v-for="item in list" :key="item.id" @click="$router.push(item.pushRoute)">
@@ -13,10 +13,10 @@
 </template>
 <script>
 export default {
-  name: 'basicComponent',
+  name: 'formComponent',
   data () {
     return {
-      msg: '这是 basicComponent 组件',
+      msg: '这是 formComponent 组件',
       list: [
         {
           id: '1',
@@ -48,7 +48,7 @@ export default {
 }
 </script>
 <style lang="scss">
-.basicComponent {
+.formComponent {
   height: inherit;
 
   .main {
@@ -56,7 +56,7 @@ export default {
   }
 
   .x-cell {
-    margin-bottom: 10px;
+    margin-bottom: 2vw;
   }
 }
 </style>

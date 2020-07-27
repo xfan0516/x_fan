@@ -43,7 +43,8 @@ export default {
     overflow: hidden;
   }
   &-title {
-    margin: .1rem 0 .08rem;
+    height: vw(37vw);
+    line-height: vw(37vw);
   }
   &-left {
     text-align: left;
